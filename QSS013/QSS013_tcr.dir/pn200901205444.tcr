@@ -1,0 +1,12 @@
+#Start recording tcl command: 9/1/2020 20:01:55
+#Project Location: C:/Users/user/Dropbox/projects/QSS013/QSS013; Project name: QSS013
+prj_project open "C:/Users/user/Dropbox/projects/QSS013/QSS013/QSS013.ldf"
+pgr_project close
+prj_run Synthesis -impl impl1
+prj_run Map -impl impl1
+prj_run Map -impl impl1
+prj_run Map -impl impl1
+prj_run Map -impl impl1
+prj_run PAR -impl impl1
+prj_run Export -impl impl1
+#Stop recording: 9/1/2020 20:54:44

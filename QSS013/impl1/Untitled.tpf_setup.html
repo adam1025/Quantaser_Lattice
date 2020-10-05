@@ -1,0 +1,901 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<STYLE type=text/css>
+<!--
+.blink {text-decoration:blink}
+.ms  {font-size: 9pt; font-family: monospace; font-weight: normal}
+.msb {font-size: 9pt; font-family: monospace; font-weight: bold  }
+-->
+</STYLE>
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY><B>
+</B>
+<BR><PRE><A name="Report Header"></A>
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
+Tue Sep 01 20:23:15 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design file:     qss013_top
+Device,speed:    LCMXO2-2000HC,4
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+
+
+</A><A name="PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 n"></A>================================================================================
+Preference: PERIOD PORT "clk" 20.000000 ns HIGH 10.000000 ns ;
+            10 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+<font color=#000000> 
+
+Passed: The following path meets requirements by 2.217ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:integrator_1/SLICE_355">integrator_1/T4_i0_i1</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:integrator_4/SLICE_111">integrator_4/r_t1_2466__i0</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+
+   Delay:              17.509ns  (38.5% logic, 61.5% route), 20 logic levels.
+
+ Constraint Details:
+
+     17.509ns physical path delay integrator_1/SLICE_355 to integrator_4/SLICE_111 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.274ns LSR_SET requirement (totaling 19.726ns) by 2.217ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.452,R4C9C.CLK,R4C9C.Q0,integrator_1/SLICE_355:ROUTE, 2.198,R4C9C.Q0,R4C15B.A0,integrator_1/T4_1:C0TOFCO_DEL, 1.023,R4C15B.A0,R4C15B.FCO,integrator_1/SLICE_427:ROUTE, 0.000,R4C15B.FCO,R4C15C.FCI,integrator_1/n16228:FCITOFCO_DEL, 0.162,R4C15C.FCI,R4C15C.FCO,integrator_1/SLICE_426:ROUTE, 0.000,R4C15C.FCO,R4C15D.FCI,integrator_1/n16229:FCITOFCO_DEL, 0.162,R4C15D.FCI,R4C15D.FCO,integrator_1/SLICE_425:ROUTE, 0.000,R4C15D.FCO,R4C16A.FCI,integrator_1/n16230:FCITOFCO_DEL, 0.162,R4C16A.FCI,R4C16A.FCO,integrator_1/SLICE_418:ROUTE, 0.000,R4C16A.FCO,R4C16B.FCI,integrator_1/n16231:FCITOFCO_DEL, 0.162,R4C16B.FCI,R4C16B.FCO,integrator_1/SLICE_416:ROUTE, 0.000,R4C16B.FCO,R4C16C.FCI,integrator_1/n16232:FCITOFCO_DEL, 0.162,R4C16C.FCI,R4C16C.FCO,integrator_1/SLICE_413:ROUTE, 0.000,R4C16C.FCO,R4C16D.FCI,integrator_1/n16233:FCITOFCO_DEL, 0.162,R4C16D.FCI,R4C16D.FCO,integrator_1/SLICE_410:ROUTE, 0.000,R4C16D.FCO,R4C17A.FCI,integrator_1/n16234:FCITOFCO_DEL, 0.162,R4C17A.FCI,R4C17A.FCO,integrator_1/SLICE_405:ROUTE, 0.000,R4C17A.FCO,R4C17B.FCI,integrator_1/n16235:FCITOFCO_DEL, 0.162,R4C17B.FCI,R4C17B.FCO,integrator_1/SLICE_401:ROUTE, 0.000,R4C17B.FCO,R4C17C.FCI,integrator_1/n16236:FCITOFCO_DEL, 0.162,R4C17C.FCI,R4C17C.FCO,integrator_1/SLICE_400:ROUTE, 0.000,R4C17C.FCO,R4C17D.FCI,integrator_1/n16237:FCITOFCO_DEL, 0.162,R4C17D.FCI,R4C17D.FCO,integrator_1/SLICE_398:ROUTE, 0.000,R4C17D.FCO,R4C18A.FCI,integrator_1/n16238:FCITOF1_DEL, 0.643,R4C18A.FCI,R4C18A.F1,integrator_1/SLICE_397:ROUTE, 2.433,R4C18A.F1,R4C24A.A1,o_sw_N_1374_24:C1TOFCO_DEL, 0.889,R4C24A.A1,R4C24A.FCO,integrator_4/SLICE_131:ROUTE, 0.000,R4C24A.FCO,R4C24B.FCI,integrator_4/n16335:FCITOFCO_DEL, 0.162,R4C24B.FCI,R4C24B.FCO,integrator_4/SLICE_130:ROUTE, 0.000,R4C24B.FCO,R4C24C.FCI,integrator_4/n16336:FCITOFCO_DEL, 0.162,R4C24C.FCI,R4C24C.FCO,integrator_4/SLICE_129:ROUTE, 0.000,R4C24C.FCO,R4C24D.FCI,integrator_4/n16337:FCITOFCO_DEL, 0.162,R4C24D.FCI,R4C24D.FCO,integrator_4/SLICE_126:ROUTE, 0.000,R4C24D.FCO,R4C25A.FCI,integrator_4/n16338:FCITOF1_DEL, 0.643,R4C25A.FCI,R4C25A.F1,integrator_4/SLICE_125:ROUTE, 1.981,R4C25A.F1,R6C13C.D1,integrator_4/n6541:CTOF_DEL, 0.495,R6C13C.D1,R6C13C.F1,SLICE_889:ROUTE, 1.031,R6C13C.F1,R9C13B.D1,integrator_4/n18754:CTOF_DEL, 0.495,R9C13B.D1,R9C13B.F1,integrator_4/SLICE_1005:ROUTE, 3.120,R9C13B.F1,R2C21A.LSR,integrator_4/n10908">Data path</A> integrator_1/SLICE_355 to integrator_4/SLICE_111:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 <A href="#@comp:integrator_1/SLICE_355">integrator_1/SLICE_355</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE         1     2.198<A href="#@net:integrator_1/T4_1:R4C9C.Q0:R4C15B.A0:2.198">       R4C9C.Q0 to R4C15B.A0     </A> <A href="#@net:integrator_1/T4_1">integrator_1/T4_1</A>
+C0TOFCO_DE  ---     1.023      R4C15B.A0 to     R4C15B.FCO <A href="#@comp:integrator_1/SLICE_427">integrator_1/SLICE_427</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16228:R4C15B.FCO:R4C15C.FCI:0.000">     R4C15B.FCO to R4C15C.FCI    </A> <A href="#@net:integrator_1/n16228">integrator_1/n16228</A>
+FCITOFCO_D  ---     0.162     R4C15C.FCI to     R4C15C.FCO <A href="#@comp:integrator_1/SLICE_426">integrator_1/SLICE_426</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16229:R4C15C.FCO:R4C15D.FCI:0.000">     R4C15C.FCO to R4C15D.FCI    </A> <A href="#@net:integrator_1/n16229">integrator_1/n16229</A>
+FCITOFCO_D  ---     0.162     R4C15D.FCI to     R4C15D.FCO <A href="#@comp:integrator_1/SLICE_425">integrator_1/SLICE_425</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16230:R4C15D.FCO:R4C16A.FCI:0.000">     R4C15D.FCO to R4C16A.FCI    </A> <A href="#@net:integrator_1/n16230">integrator_1/n16230</A>
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO <A href="#@comp:integrator_1/SLICE_418">integrator_1/SLICE_418</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16231:R4C16A.FCO:R4C16B.FCI:0.000">     R4C16A.FCO to R4C16B.FCI    </A> <A href="#@net:integrator_1/n16231">integrator_1/n16231</A>
+FCITOFCO_D  ---     0.162     R4C16B.FCI to     R4C16B.FCO <A href="#@comp:integrator_1/SLICE_416">integrator_1/SLICE_416</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16232:R4C16B.FCO:R4C16C.FCI:0.000">     R4C16B.FCO to R4C16C.FCI    </A> <A href="#@net:integrator_1/n16232">integrator_1/n16232</A>
+FCITOFCO_D  ---     0.162     R4C16C.FCI to     R4C16C.FCO <A href="#@comp:integrator_1/SLICE_413">integrator_1/SLICE_413</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16233:R4C16C.FCO:R4C16D.FCI:0.000">     R4C16C.FCO to R4C16D.FCI    </A> <A href="#@net:integrator_1/n16233">integrator_1/n16233</A>
+FCITOFCO_D  ---     0.162     R4C16D.FCI to     R4C16D.FCO <A href="#@comp:integrator_1/SLICE_410">integrator_1/SLICE_410</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16234:R4C16D.FCO:R4C17A.FCI:0.000">     R4C16D.FCO to R4C17A.FCI    </A> <A href="#@net:integrator_1/n16234">integrator_1/n16234</A>
+FCITOFCO_D  ---     0.162     R4C17A.FCI to     R4C17A.FCO <A href="#@comp:integrator_1/SLICE_405">integrator_1/SLICE_405</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16235:R4C17A.FCO:R4C17B.FCI:0.000">     R4C17A.FCO to R4C17B.FCI    </A> <A href="#@net:integrator_1/n16235">integrator_1/n16235</A>
+FCITOFCO_D  ---     0.162     R4C17B.FCI to     R4C17B.FCO <A href="#@comp:integrator_1/SLICE_401">integrator_1/SLICE_401</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16236:R4C17B.FCO:R4C17C.FCI:0.000">     R4C17B.FCO to R4C17C.FCI    </A> <A href="#@net:integrator_1/n16236">integrator_1/n16236</A>
+FCITOFCO_D  ---     0.162     R4C17C.FCI to     R4C17C.FCO <A href="#@comp:integrator_1/SLICE_400">integrator_1/SLICE_400</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16237:R4C17C.FCO:R4C17D.FCI:0.000">     R4C17C.FCO to R4C17D.FCI    </A> <A href="#@net:integrator_1/n16237">integrator_1/n16237</A>
+FCITOFCO_D  ---     0.162     R4C17D.FCI to     R4C17D.FCO <A href="#@comp:integrator_1/SLICE_398">integrator_1/SLICE_398</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16238:R4C17D.FCO:R4C18A.FCI:0.000">     R4C17D.FCO to R4C18A.FCI    </A> <A href="#@net:integrator_1/n16238">integrator_1/n16238</A>
+FCITOF1_DE  ---     0.643     R4C18A.FCI to      R4C18A.F1 <A href="#@comp:integrator_1/SLICE_397">integrator_1/SLICE_397</A>
+ROUTE         4     2.433<A href="#@net:o_sw_N_1374_24:R4C18A.F1:R4C24A.A1:2.433">      R4C18A.F1 to R4C24A.A1     </A> <A href="#@net:o_sw_N_1374_24">o_sw_N_1374_24</A>
+C1TOFCO_DE  ---     0.889      R4C24A.A1 to     R4C24A.FCO <A href="#@comp:integrator_4/SLICE_131">integrator_4/SLICE_131</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16335:R4C24A.FCO:R4C24B.FCI:0.000">     R4C24A.FCO to R4C24B.FCI    </A> <A href="#@net:integrator_4/n16335">integrator_4/n16335</A>
+FCITOFCO_D  ---     0.162     R4C24B.FCI to     R4C24B.FCO <A href="#@comp:integrator_4/SLICE_130">integrator_4/SLICE_130</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16336:R4C24B.FCO:R4C24C.FCI:0.000">     R4C24B.FCO to R4C24C.FCI    </A> <A href="#@net:integrator_4/n16336">integrator_4/n16336</A>
+FCITOFCO_D  ---     0.162     R4C24C.FCI to     R4C24C.FCO <A href="#@comp:integrator_4/SLICE_129">integrator_4/SLICE_129</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16337:R4C24C.FCO:R4C24D.FCI:0.000">     R4C24C.FCO to R4C24D.FCI    </A> <A href="#@net:integrator_4/n16337">integrator_4/n16337</A>
+FCITOFCO_D  ---     0.162     R4C24D.FCI to     R4C24D.FCO <A href="#@comp:integrator_4/SLICE_126">integrator_4/SLICE_126</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16338:R4C24D.FCO:R4C25A.FCI:0.000">     R4C24D.FCO to R4C25A.FCI    </A> <A href="#@net:integrator_4/n16338">integrator_4/n16338</A>
+FCITOF1_DE  ---     0.643     R4C25A.FCI to      R4C25A.F1 <A href="#@comp:integrator_4/SLICE_125">integrator_4/SLICE_125</A>
+ROUTE         5     1.981<A href="#@net:integrator_4/n6541:R4C25A.F1:R6C13C.D1:1.981">      R4C25A.F1 to R6C13C.D1     </A> <A href="#@net:integrator_4/n6541">integrator_4/n6541</A>
+CTOF_DEL    ---     0.495      R6C13C.D1 to      R6C13C.F1 <A href="#@comp:SLICE_889">SLICE_889</A>
+ROUTE         2     1.031<A href="#@net:integrator_4/n18754:R6C13C.F1:R9C13B.D1:1.031">      R6C13C.F1 to R9C13B.D1     </A> <A href="#@net:integrator_4/n18754">integrator_4/n18754</A>
+CTOF_DEL    ---     0.495      R9C13B.D1 to      R9C13B.F1 <A href="#@comp:integrator_4/SLICE_1005">integrator_4/SLICE_1005</A>
+ROUTE        17     3.120<A href="#@net:integrator_4/n10908:R9C13B.F1:R2C21A.LSR:3.120">      R9C13B.F1 to R2C21A.LSR    </A> <A href="#@net:integrator_4/n10908">integrator_4/n10908</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                   17.509   (38.5% logic, 61.5% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R4C9C.CLK,clk_c">Source Clock Path</A> clk to integrator_1/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R4C9C.CLK:2.221">       12.PADDI to R4C9C.CLK     </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R2C21A.CLK,clk_c">Destination Clock Path</A> clk to integrator_4/SLICE_111:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R2C21A.CLK:2.221">       12.PADDI to R2C21A.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 2.217ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:integrator_1/SLICE_355">integrator_1/T4_i0_i1</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:integrator_4/SLICE_102">integrator_4/r_t1_2466__i18</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:integrator_4/r_t1_2466__i17">integrator_4/r_t1_2466__i17</A>
+
+   Delay:              17.509ns  (38.5% logic, 61.5% route), 20 logic levels.
+
+ Constraint Details:
+
+     17.509ns physical path delay integrator_1/SLICE_355 to integrator_4/SLICE_102 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.274ns LSR_SET requirement (totaling 19.726ns) by 2.217ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.452,R4C9C.CLK,R4C9C.Q0,integrator_1/SLICE_355:ROUTE, 2.198,R4C9C.Q0,R4C15B.A0,integrator_1/T4_1:C0TOFCO_DEL, 1.023,R4C15B.A0,R4C15B.FCO,integrator_1/SLICE_427:ROUTE, 0.000,R4C15B.FCO,R4C15C.FCI,integrator_1/n16228:FCITOFCO_DEL, 0.162,R4C15C.FCI,R4C15C.FCO,integrator_1/SLICE_426:ROUTE, 0.000,R4C15C.FCO,R4C15D.FCI,integrator_1/n16229:FCITOFCO_DEL, 0.162,R4C15D.FCI,R4C15D.FCO,integrator_1/SLICE_425:ROUTE, 0.000,R4C15D.FCO,R4C16A.FCI,integrator_1/n16230:FCITOFCO_DEL, 0.162,R4C16A.FCI,R4C16A.FCO,integrator_1/SLICE_418:ROUTE, 0.000,R4C16A.FCO,R4C16B.FCI,integrator_1/n16231:FCITOFCO_DEL, 0.162,R4C16B.FCI,R4C16B.FCO,integrator_1/SLICE_416:ROUTE, 0.000,R4C16B.FCO,R4C16C.FCI,integrator_1/n16232:FCITOFCO_DEL, 0.162,R4C16C.FCI,R4C16C.FCO,integrator_1/SLICE_413:ROUTE, 0.000,R4C16C.FCO,R4C16D.FCI,integrator_1/n16233:FCITOFCO_DEL, 0.162,R4C16D.FCI,R4C16D.FCO,integrator_1/SLICE_410:ROUTE, 0.000,R4C16D.FCO,R4C17A.FCI,integrator_1/n16234:FCITOFCO_DEL, 0.162,R4C17A.FCI,R4C17A.FCO,integrator_1/SLICE_405:ROUTE, 0.000,R4C17A.FCO,R4C17B.FCI,integrator_1/n16235:FCITOFCO_DEL, 0.162,R4C17B.FCI,R4C17B.FCO,integrator_1/SLICE_401:ROUTE, 0.000,R4C17B.FCO,R4C17C.FCI,integrator_1/n16236:FCITOFCO_DEL, 0.162,R4C17C.FCI,R4C17C.FCO,integrator_1/SLICE_400:ROUTE, 0.000,R4C17C.FCO,R4C17D.FCI,integrator_1/n16237:FCITOFCO_DEL, 0.162,R4C17D.FCI,R4C17D.FCO,integrator_1/SLICE_398:ROUTE, 0.000,R4C17D.FCO,R4C18A.FCI,integrator_1/n16238:FCITOF1_DEL, 0.643,R4C18A.FCI,R4C18A.F1,integrator_1/SLICE_397:ROUTE, 2.433,R4C18A.F1,R4C24A.A1,o_sw_N_1374_24:C1TOFCO_DEL, 0.889,R4C24A.A1,R4C24A.FCO,integrator_4/SLICE_131:ROUTE, 0.000,R4C24A.FCO,R4C24B.FCI,integrator_4/n16335:FCITOFCO_DEL, 0.162,R4C24B.FCI,R4C24B.FCO,integrator_4/SLICE_130:ROUTE, 0.000,R4C24B.FCO,R4C24C.FCI,integrator_4/n16336:FCITOFCO_DEL, 0.162,R4C24C.FCI,R4C24C.FCO,integrator_4/SLICE_129:ROUTE, 0.000,R4C24C.FCO,R4C24D.FCI,integrator_4/n16337:FCITOFCO_DEL, 0.162,R4C24D.FCI,R4C24D.FCO,integrator_4/SLICE_126:ROUTE, 0.000,R4C24D.FCO,R4C25A.FCI,integrator_4/n16338:FCITOF1_DEL, 0.643,R4C25A.FCI,R4C25A.F1,integrator_4/SLICE_125:ROUTE, 1.981,R4C25A.F1,R6C13C.D1,integrator_4/n6541:CTOF_DEL, 0.495,R6C13C.D1,R6C13C.F1,SLICE_889:ROUTE, 1.031,R6C13C.F1,R9C13B.D1,integrator_4/n18754:CTOF_DEL, 0.495,R9C13B.D1,R9C13B.F1,integrator_4/SLICE_1005:ROUTE, 3.120,R9C13B.F1,R2C23B.LSR,integrator_4/n10908">Data path</A> integrator_1/SLICE_355 to integrator_4/SLICE_102:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 <A href="#@comp:integrator_1/SLICE_355">integrator_1/SLICE_355</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE         1     2.198<A href="#@net:integrator_1/T4_1:R4C9C.Q0:R4C15B.A0:2.198">       R4C9C.Q0 to R4C15B.A0     </A> <A href="#@net:integrator_1/T4_1">integrator_1/T4_1</A>
+C0TOFCO_DE  ---     1.023      R4C15B.A0 to     R4C15B.FCO <A href="#@comp:integrator_1/SLICE_427">integrator_1/SLICE_427</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16228:R4C15B.FCO:R4C15C.FCI:0.000">     R4C15B.FCO to R4C15C.FCI    </A> <A href="#@net:integrator_1/n16228">integrator_1/n16228</A>
+FCITOFCO_D  ---     0.162     R4C15C.FCI to     R4C15C.FCO <A href="#@comp:integrator_1/SLICE_426">integrator_1/SLICE_426</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16229:R4C15C.FCO:R4C15D.FCI:0.000">     R4C15C.FCO to R4C15D.FCI    </A> <A href="#@net:integrator_1/n16229">integrator_1/n16229</A>
+FCITOFCO_D  ---     0.162     R4C15D.FCI to     R4C15D.FCO <A href="#@comp:integrator_1/SLICE_425">integrator_1/SLICE_425</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16230:R4C15D.FCO:R4C16A.FCI:0.000">     R4C15D.FCO to R4C16A.FCI    </A> <A href="#@net:integrator_1/n16230">integrator_1/n16230</A>
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO <A href="#@comp:integrator_1/SLICE_418">integrator_1/SLICE_418</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16231:R4C16A.FCO:R4C16B.FCI:0.000">     R4C16A.FCO to R4C16B.FCI    </A> <A href="#@net:integrator_1/n16231">integrator_1/n16231</A>
+FCITOFCO_D  ---     0.162     R4C16B.FCI to     R4C16B.FCO <A href="#@comp:integrator_1/SLICE_416">integrator_1/SLICE_416</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16232:R4C16B.FCO:R4C16C.FCI:0.000">     R4C16B.FCO to R4C16C.FCI    </A> <A href="#@net:integrator_1/n16232">integrator_1/n16232</A>
+FCITOFCO_D  ---     0.162     R4C16C.FCI to     R4C16C.FCO <A href="#@comp:integrator_1/SLICE_413">integrator_1/SLICE_413</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16233:R4C16C.FCO:R4C16D.FCI:0.000">     R4C16C.FCO to R4C16D.FCI    </A> <A href="#@net:integrator_1/n16233">integrator_1/n16233</A>
+FCITOFCO_D  ---     0.162     R4C16D.FCI to     R4C16D.FCO <A href="#@comp:integrator_1/SLICE_410">integrator_1/SLICE_410</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16234:R4C16D.FCO:R4C17A.FCI:0.000">     R4C16D.FCO to R4C17A.FCI    </A> <A href="#@net:integrator_1/n16234">integrator_1/n16234</A>
+FCITOFCO_D  ---     0.162     R4C17A.FCI to     R4C17A.FCO <A href="#@comp:integrator_1/SLICE_405">integrator_1/SLICE_405</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16235:R4C17A.FCO:R4C17B.FCI:0.000">     R4C17A.FCO to R4C17B.FCI    </A> <A href="#@net:integrator_1/n16235">integrator_1/n16235</A>
+FCITOFCO_D  ---     0.162     R4C17B.FCI to     R4C17B.FCO <A href="#@comp:integrator_1/SLICE_401">integrator_1/SLICE_401</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16236:R4C17B.FCO:R4C17C.FCI:0.000">     R4C17B.FCO to R4C17C.FCI    </A> <A href="#@net:integrator_1/n16236">integrator_1/n16236</A>
+FCITOFCO_D  ---     0.162     R4C17C.FCI to     R4C17C.FCO <A href="#@comp:integrator_1/SLICE_400">integrator_1/SLICE_400</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16237:R4C17C.FCO:R4C17D.FCI:0.000">     R4C17C.FCO to R4C17D.FCI    </A> <A href="#@net:integrator_1/n16237">integrator_1/n16237</A>
+FCITOFCO_D  ---     0.162     R4C17D.FCI to     R4C17D.FCO <A href="#@comp:integrator_1/SLICE_398">integrator_1/SLICE_398</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16238:R4C17D.FCO:R4C18A.FCI:0.000">     R4C17D.FCO to R4C18A.FCI    </A> <A href="#@net:integrator_1/n16238">integrator_1/n16238</A>
+FCITOF1_DE  ---     0.643     R4C18A.FCI to      R4C18A.F1 <A href="#@comp:integrator_1/SLICE_397">integrator_1/SLICE_397</A>
+ROUTE         4     2.433<A href="#@net:o_sw_N_1374_24:R4C18A.F1:R4C24A.A1:2.433">      R4C18A.F1 to R4C24A.A1     </A> <A href="#@net:o_sw_N_1374_24">o_sw_N_1374_24</A>
+C1TOFCO_DE  ---     0.889      R4C24A.A1 to     R4C24A.FCO <A href="#@comp:integrator_4/SLICE_131">integrator_4/SLICE_131</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16335:R4C24A.FCO:R4C24B.FCI:0.000">     R4C24A.FCO to R4C24B.FCI    </A> <A href="#@net:integrator_4/n16335">integrator_4/n16335</A>
+FCITOFCO_D  ---     0.162     R4C24B.FCI to     R4C24B.FCO <A href="#@comp:integrator_4/SLICE_130">integrator_4/SLICE_130</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16336:R4C24B.FCO:R4C24C.FCI:0.000">     R4C24B.FCO to R4C24C.FCI    </A> <A href="#@net:integrator_4/n16336">integrator_4/n16336</A>
+FCITOFCO_D  ---     0.162     R4C24C.FCI to     R4C24C.FCO <A href="#@comp:integrator_4/SLICE_129">integrator_4/SLICE_129</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16337:R4C24C.FCO:R4C24D.FCI:0.000">     R4C24C.FCO to R4C24D.FCI    </A> <A href="#@net:integrator_4/n16337">integrator_4/n16337</A>
+FCITOFCO_D  ---     0.162     R4C24D.FCI to     R4C24D.FCO <A href="#@comp:integrator_4/SLICE_126">integrator_4/SLICE_126</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16338:R4C24D.FCO:R4C25A.FCI:0.000">     R4C24D.FCO to R4C25A.FCI    </A> <A href="#@net:integrator_4/n16338">integrator_4/n16338</A>
+FCITOF1_DE  ---     0.643     R4C25A.FCI to      R4C25A.F1 <A href="#@comp:integrator_4/SLICE_125">integrator_4/SLICE_125</A>
+ROUTE         5     1.981<A href="#@net:integrator_4/n6541:R4C25A.F1:R6C13C.D1:1.981">      R4C25A.F1 to R6C13C.D1     </A> <A href="#@net:integrator_4/n6541">integrator_4/n6541</A>
+CTOF_DEL    ---     0.495      R6C13C.D1 to      R6C13C.F1 <A href="#@comp:SLICE_889">SLICE_889</A>
+ROUTE         2     1.031<A href="#@net:integrator_4/n18754:R6C13C.F1:R9C13B.D1:1.031">      R6C13C.F1 to R9C13B.D1     </A> <A href="#@net:integrator_4/n18754">integrator_4/n18754</A>
+CTOF_DEL    ---     0.495      R9C13B.D1 to      R9C13B.F1 <A href="#@comp:integrator_4/SLICE_1005">integrator_4/SLICE_1005</A>
+ROUTE        17     3.120<A href="#@net:integrator_4/n10908:R9C13B.F1:R2C23B.LSR:3.120">      R9C13B.F1 to R2C23B.LSR    </A> <A href="#@net:integrator_4/n10908">integrator_4/n10908</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                   17.509   (38.5% logic, 61.5% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R4C9C.CLK,clk_c">Source Clock Path</A> clk to integrator_1/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R4C9C.CLK:2.221">       12.PADDI to R4C9C.CLK     </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R2C23B.CLK,clk_c">Destination Clock Path</A> clk to integrator_4/SLICE_102:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R2C23B.CLK:2.221">       12.PADDI to R2C23B.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 2.217ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:integrator_1/SLICE_355">integrator_1/T4_i0_i1</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:integrator_4/SLICE_99">integrator_4/r_t1_2466__i22</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:integrator_4/r_t1_2466__i21">integrator_4/r_t1_2466__i21</A>
+
+   Delay:              17.509ns  (38.5% logic, 61.5% route), 20 logic levels.
+
+ Constraint Details:
+
+     17.509ns physical path delay integrator_1/SLICE_355 to integrator_4/SLICE_99 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.274ns LSR_SET requirement (totaling 19.726ns) by 2.217ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.452,R4C9C.CLK,R4C9C.Q0,integrator_1/SLICE_355:ROUTE, 2.198,R4C9C.Q0,R4C15B.A0,integrator_1/T4_1:C0TOFCO_DEL, 1.023,R4C15B.A0,R4C15B.FCO,integrator_1/SLICE_427:ROUTE, 0.000,R4C15B.FCO,R4C15C.FCI,integrator_1/n16228:FCITOFCO_DEL, 0.162,R4C15C.FCI,R4C15C.FCO,integrator_1/SLICE_426:ROUTE, 0.000,R4C15C.FCO,R4C15D.FCI,integrator_1/n16229:FCITOFCO_DEL, 0.162,R4C15D.FCI,R4C15D.FCO,integrator_1/SLICE_425:ROUTE, 0.000,R4C15D.FCO,R4C16A.FCI,integrator_1/n16230:FCITOFCO_DEL, 0.162,R4C16A.FCI,R4C16A.FCO,integrator_1/SLICE_418:ROUTE, 0.000,R4C16A.FCO,R4C16B.FCI,integrator_1/n16231:FCITOFCO_DEL, 0.162,R4C16B.FCI,R4C16B.FCO,integrator_1/SLICE_416:ROUTE, 0.000,R4C16B.FCO,R4C16C.FCI,integrator_1/n16232:FCITOFCO_DEL, 0.162,R4C16C.FCI,R4C16C.FCO,integrator_1/SLICE_413:ROUTE, 0.000,R4C16C.FCO,R4C16D.FCI,integrator_1/n16233:FCITOFCO_DEL, 0.162,R4C16D.FCI,R4C16D.FCO,integrator_1/SLICE_410:ROUTE, 0.000,R4C16D.FCO,R4C17A.FCI,integrator_1/n16234:FCITOFCO_DEL, 0.162,R4C17A.FCI,R4C17A.FCO,integrator_1/SLICE_405:ROUTE, 0.000,R4C17A.FCO,R4C17B.FCI,integrator_1/n16235:FCITOFCO_DEL, 0.162,R4C17B.FCI,R4C17B.FCO,integrator_1/SLICE_401:ROUTE, 0.000,R4C17B.FCO,R4C17C.FCI,integrator_1/n16236:FCITOFCO_DEL, 0.162,R4C17C.FCI,R4C17C.FCO,integrator_1/SLICE_400:ROUTE, 0.000,R4C17C.FCO,R4C17D.FCI,integrator_1/n16237:FCITOFCO_DEL, 0.162,R4C17D.FCI,R4C17D.FCO,integrator_1/SLICE_398:ROUTE, 0.000,R4C17D.FCO,R4C18A.FCI,integrator_1/n16238:FCITOF1_DEL, 0.643,R4C18A.FCI,R4C18A.F1,integrator_1/SLICE_397:ROUTE, 2.433,R4C18A.F1,R4C24A.A1,o_sw_N_1374_24:C1TOFCO_DEL, 0.889,R4C24A.A1,R4C24A.FCO,integrator_4/SLICE_131:ROUTE, 0.000,R4C24A.FCO,R4C24B.FCI,integrator_4/n16335:FCITOFCO_DEL, 0.162,R4C24B.FCI,R4C24B.FCO,integrator_4/SLICE_130:ROUTE, 0.000,R4C24B.FCO,R4C24C.FCI,integrator_4/n16336:FCITOFCO_DEL, 0.162,R4C24C.FCI,R4C24C.FCO,integrator_4/SLICE_129:ROUTE, 0.000,R4C24C.FCO,R4C24D.FCI,integrator_4/n16337:FCITOFCO_DEL, 0.162,R4C24D.FCI,R4C24D.FCO,integrator_4/SLICE_126:ROUTE, 0.000,R4C24D.FCO,R4C25A.FCI,integrator_4/n16338:FCITOF1_DEL, 0.643,R4C25A.FCI,R4C25A.F1,integrator_4/SLICE_125:ROUTE, 1.981,R4C25A.F1,R6C13C.D1,integrator_4/n6541:CTOF_DEL, 0.495,R6C13C.D1,R6C13C.F1,SLICE_889:ROUTE, 1.031,R6C13C.F1,R9C13B.D1,integrator_4/n18754:CTOF_DEL, 0.495,R9C13B.D1,R9C13B.F1,integrator_4/SLICE_1005:ROUTE, 3.120,R9C13B.F1,R2C23D.LSR,integrator_4/n10908">Data path</A> integrator_1/SLICE_355 to integrator_4/SLICE_99:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 <A href="#@comp:integrator_1/SLICE_355">integrator_1/SLICE_355</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE         1     2.198<A href="#@net:integrator_1/T4_1:R4C9C.Q0:R4C15B.A0:2.198">       R4C9C.Q0 to R4C15B.A0     </A> <A href="#@net:integrator_1/T4_1">integrator_1/T4_1</A>
+C0TOFCO_DE  ---     1.023      R4C15B.A0 to     R4C15B.FCO <A href="#@comp:integrator_1/SLICE_427">integrator_1/SLICE_427</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16228:R4C15B.FCO:R4C15C.FCI:0.000">     R4C15B.FCO to R4C15C.FCI    </A> <A href="#@net:integrator_1/n16228">integrator_1/n16228</A>
+FCITOFCO_D  ---     0.162     R4C15C.FCI to     R4C15C.FCO <A href="#@comp:integrator_1/SLICE_426">integrator_1/SLICE_426</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16229:R4C15C.FCO:R4C15D.FCI:0.000">     R4C15C.FCO to R4C15D.FCI    </A> <A href="#@net:integrator_1/n16229">integrator_1/n16229</A>
+FCITOFCO_D  ---     0.162     R4C15D.FCI to     R4C15D.FCO <A href="#@comp:integrator_1/SLICE_425">integrator_1/SLICE_425</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16230:R4C15D.FCO:R4C16A.FCI:0.000">     R4C15D.FCO to R4C16A.FCI    </A> <A href="#@net:integrator_1/n16230">integrator_1/n16230</A>
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO <A href="#@comp:integrator_1/SLICE_418">integrator_1/SLICE_418</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16231:R4C16A.FCO:R4C16B.FCI:0.000">     R4C16A.FCO to R4C16B.FCI    </A> <A href="#@net:integrator_1/n16231">integrator_1/n16231</A>
+FCITOFCO_D  ---     0.162     R4C16B.FCI to     R4C16B.FCO <A href="#@comp:integrator_1/SLICE_416">integrator_1/SLICE_416</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16232:R4C16B.FCO:R4C16C.FCI:0.000">     R4C16B.FCO to R4C16C.FCI    </A> <A href="#@net:integrator_1/n16232">integrator_1/n16232</A>
+FCITOFCO_D  ---     0.162     R4C16C.FCI to     R4C16C.FCO <A href="#@comp:integrator_1/SLICE_413">integrator_1/SLICE_413</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16233:R4C16C.FCO:R4C16D.FCI:0.000">     R4C16C.FCO to R4C16D.FCI    </A> <A href="#@net:integrator_1/n16233">integrator_1/n16233</A>
+FCITOFCO_D  ---     0.162     R4C16D.FCI to     R4C16D.FCO <A href="#@comp:integrator_1/SLICE_410">integrator_1/SLICE_410</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16234:R4C16D.FCO:R4C17A.FCI:0.000">     R4C16D.FCO to R4C17A.FCI    </A> <A href="#@net:integrator_1/n16234">integrator_1/n16234</A>
+FCITOFCO_D  ---     0.162     R4C17A.FCI to     R4C17A.FCO <A href="#@comp:integrator_1/SLICE_405">integrator_1/SLICE_405</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16235:R4C17A.FCO:R4C17B.FCI:0.000">     R4C17A.FCO to R4C17B.FCI    </A> <A href="#@net:integrator_1/n16235">integrator_1/n16235</A>
+FCITOFCO_D  ---     0.162     R4C17B.FCI to     R4C17B.FCO <A href="#@comp:integrator_1/SLICE_401">integrator_1/SLICE_401</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16236:R4C17B.FCO:R4C17C.FCI:0.000">     R4C17B.FCO to R4C17C.FCI    </A> <A href="#@net:integrator_1/n16236">integrator_1/n16236</A>
+FCITOFCO_D  ---     0.162     R4C17C.FCI to     R4C17C.FCO <A href="#@comp:integrator_1/SLICE_400">integrator_1/SLICE_400</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16237:R4C17C.FCO:R4C17D.FCI:0.000">     R4C17C.FCO to R4C17D.FCI    </A> <A href="#@net:integrator_1/n16237">integrator_1/n16237</A>
+FCITOFCO_D  ---     0.162     R4C17D.FCI to     R4C17D.FCO <A href="#@comp:integrator_1/SLICE_398">integrator_1/SLICE_398</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16238:R4C17D.FCO:R4C18A.FCI:0.000">     R4C17D.FCO to R4C18A.FCI    </A> <A href="#@net:integrator_1/n16238">integrator_1/n16238</A>
+FCITOF1_DE  ---     0.643     R4C18A.FCI to      R4C18A.F1 <A href="#@comp:integrator_1/SLICE_397">integrator_1/SLICE_397</A>
+ROUTE         4     2.433<A href="#@net:o_sw_N_1374_24:R4C18A.F1:R4C24A.A1:2.433">      R4C18A.F1 to R4C24A.A1     </A> <A href="#@net:o_sw_N_1374_24">o_sw_N_1374_24</A>
+C1TOFCO_DE  ---     0.889      R4C24A.A1 to     R4C24A.FCO <A href="#@comp:integrator_4/SLICE_131">integrator_4/SLICE_131</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16335:R4C24A.FCO:R4C24B.FCI:0.000">     R4C24A.FCO to R4C24B.FCI    </A> <A href="#@net:integrator_4/n16335">integrator_4/n16335</A>
+FCITOFCO_D  ---     0.162     R4C24B.FCI to     R4C24B.FCO <A href="#@comp:integrator_4/SLICE_130">integrator_4/SLICE_130</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16336:R4C24B.FCO:R4C24C.FCI:0.000">     R4C24B.FCO to R4C24C.FCI    </A> <A href="#@net:integrator_4/n16336">integrator_4/n16336</A>
+FCITOFCO_D  ---     0.162     R4C24C.FCI to     R4C24C.FCO <A href="#@comp:integrator_4/SLICE_129">integrator_4/SLICE_129</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16337:R4C24C.FCO:R4C24D.FCI:0.000">     R4C24C.FCO to R4C24D.FCI    </A> <A href="#@net:integrator_4/n16337">integrator_4/n16337</A>
+FCITOFCO_D  ---     0.162     R4C24D.FCI to     R4C24D.FCO <A href="#@comp:integrator_4/SLICE_126">integrator_4/SLICE_126</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16338:R4C24D.FCO:R4C25A.FCI:0.000">     R4C24D.FCO to R4C25A.FCI    </A> <A href="#@net:integrator_4/n16338">integrator_4/n16338</A>
+FCITOF1_DE  ---     0.643     R4C25A.FCI to      R4C25A.F1 <A href="#@comp:integrator_4/SLICE_125">integrator_4/SLICE_125</A>
+ROUTE         5     1.981<A href="#@net:integrator_4/n6541:R4C25A.F1:R6C13C.D1:1.981">      R4C25A.F1 to R6C13C.D1     </A> <A href="#@net:integrator_4/n6541">integrator_4/n6541</A>
+CTOF_DEL    ---     0.495      R6C13C.D1 to      R6C13C.F1 <A href="#@comp:SLICE_889">SLICE_889</A>
+ROUTE         2     1.031<A href="#@net:integrator_4/n18754:R6C13C.F1:R9C13B.D1:1.031">      R6C13C.F1 to R9C13B.D1     </A> <A href="#@net:integrator_4/n18754">integrator_4/n18754</A>
+CTOF_DEL    ---     0.495      R9C13B.D1 to      R9C13B.F1 <A href="#@comp:integrator_4/SLICE_1005">integrator_4/SLICE_1005</A>
+ROUTE        17     3.120<A href="#@net:integrator_4/n10908:R9C13B.F1:R2C23D.LSR:3.120">      R9C13B.F1 to R2C23D.LSR    </A> <A href="#@net:integrator_4/n10908">integrator_4/n10908</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                   17.509   (38.5% logic, 61.5% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R4C9C.CLK,clk_c">Source Clock Path</A> clk to integrator_1/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R4C9C.CLK:2.221">       12.PADDI to R4C9C.CLK     </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R2C23D.CLK,clk_c">Destination Clock Path</A> clk to integrator_4/SLICE_99:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R2C23D.CLK:2.221">       12.PADDI to R2C23D.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 2.217ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:integrator_1/SLICE_355">integrator_1/T4_i0_i1</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:integrator_4/SLICE_92">integrator_4/r_t1_2466__i26</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:integrator_4/r_t1_2466__i25">integrator_4/r_t1_2466__i25</A>
+
+   Delay:              17.509ns  (38.5% logic, 61.5% route), 20 logic levels.
+
+ Constraint Details:
+
+     17.509ns physical path delay integrator_1/SLICE_355 to integrator_4/SLICE_92 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.274ns LSR_SET requirement (totaling 19.726ns) by 2.217ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.452,R4C9C.CLK,R4C9C.Q0,integrator_1/SLICE_355:ROUTE, 2.198,R4C9C.Q0,R4C15B.A0,integrator_1/T4_1:C0TOFCO_DEL, 1.023,R4C15B.A0,R4C15B.FCO,integrator_1/SLICE_427:ROUTE, 0.000,R4C15B.FCO,R4C15C.FCI,integrator_1/n16228:FCITOFCO_DEL, 0.162,R4C15C.FCI,R4C15C.FCO,integrator_1/SLICE_426:ROUTE, 0.000,R4C15C.FCO,R4C15D.FCI,integrator_1/n16229:FCITOFCO_DEL, 0.162,R4C15D.FCI,R4C15D.FCO,integrator_1/SLICE_425:ROUTE, 0.000,R4C15D.FCO,R4C16A.FCI,integrator_1/n16230:FCITOFCO_DEL, 0.162,R4C16A.FCI,R4C16A.FCO,integrator_1/SLICE_418:ROUTE, 0.000,R4C16A.FCO,R4C16B.FCI,integrator_1/n16231:FCITOFCO_DEL, 0.162,R4C16B.FCI,R4C16B.FCO,integrator_1/SLICE_416:ROUTE, 0.000,R4C16B.FCO,R4C16C.FCI,integrator_1/n16232:FCITOFCO_DEL, 0.162,R4C16C.FCI,R4C16C.FCO,integrator_1/SLICE_413:ROUTE, 0.000,R4C16C.FCO,R4C16D.FCI,integrator_1/n16233:FCITOFCO_DEL, 0.162,R4C16D.FCI,R4C16D.FCO,integrator_1/SLICE_410:ROUTE, 0.000,R4C16D.FCO,R4C17A.FCI,integrator_1/n16234:FCITOFCO_DEL, 0.162,R4C17A.FCI,R4C17A.FCO,integrator_1/SLICE_405:ROUTE, 0.000,R4C17A.FCO,R4C17B.FCI,integrator_1/n16235:FCITOFCO_DEL, 0.162,R4C17B.FCI,R4C17B.FCO,integrator_1/SLICE_401:ROUTE, 0.000,R4C17B.FCO,R4C17C.FCI,integrator_1/n16236:FCITOFCO_DEL, 0.162,R4C17C.FCI,R4C17C.FCO,integrator_1/SLICE_400:ROUTE, 0.000,R4C17C.FCO,R4C17D.FCI,integrator_1/n16237:FCITOFCO_DEL, 0.162,R4C17D.FCI,R4C17D.FCO,integrator_1/SLICE_398:ROUTE, 0.000,R4C17D.FCO,R4C18A.FCI,integrator_1/n16238:FCITOF1_DEL, 0.643,R4C18A.FCI,R4C18A.F1,integrator_1/SLICE_397:ROUTE, 2.433,R4C18A.F1,R4C24A.A1,o_sw_N_1374_24:C1TOFCO_DEL, 0.889,R4C24A.A1,R4C24A.FCO,integrator_4/SLICE_131:ROUTE, 0.000,R4C24A.FCO,R4C24B.FCI,integrator_4/n16335:FCITOFCO_DEL, 0.162,R4C24B.FCI,R4C24B.FCO,integrator_4/SLICE_130:ROUTE, 0.000,R4C24B.FCO,R4C24C.FCI,integrator_4/n16336:FCITOFCO_DEL, 0.162,R4C24C.FCI,R4C24C.FCO,integrator_4/SLICE_129:ROUTE, 0.000,R4C24C.FCO,R4C24D.FCI,integrator_4/n16337:FCITOFCO_DEL, 0.162,R4C24D.FCI,R4C24D.FCO,integrator_4/SLICE_126:ROUTE, 0.000,R4C24D.FCO,R4C25A.FCI,integrator_4/n16338:FCITOF1_DEL, 0.643,R4C25A.FCI,R4C25A.F1,integrator_4/SLICE_125:ROUTE, 1.981,R4C25A.F1,R6C13C.D1,integrator_4/n6541:CTOF_DEL, 0.495,R6C13C.D1,R6C13C.F1,SLICE_889:ROUTE, 1.031,R6C13C.F1,R9C13B.D1,integrator_4/n18754:CTOF_DEL, 0.495,R9C13B.D1,R9C13B.F1,integrator_4/SLICE_1005:ROUTE, 3.120,R9C13B.F1,R2C24B.LSR,integrator_4/n10908">Data path</A> integrator_1/SLICE_355 to integrator_4/SLICE_92:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 <A href="#@comp:integrator_1/SLICE_355">integrator_1/SLICE_355</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE         1     2.198<A href="#@net:integrator_1/T4_1:R4C9C.Q0:R4C15B.A0:2.198">       R4C9C.Q0 to R4C15B.A0     </A> <A href="#@net:integrator_1/T4_1">integrator_1/T4_1</A>
+C0TOFCO_DE  ---     1.023      R4C15B.A0 to     R4C15B.FCO <A href="#@comp:integrator_1/SLICE_427">integrator_1/SLICE_427</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16228:R4C15B.FCO:R4C15C.FCI:0.000">     R4C15B.FCO to R4C15C.FCI    </A> <A href="#@net:integrator_1/n16228">integrator_1/n16228</A>
+FCITOFCO_D  ---     0.162     R4C15C.FCI to     R4C15C.FCO <A href="#@comp:integrator_1/SLICE_426">integrator_1/SLICE_426</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16229:R4C15C.FCO:R4C15D.FCI:0.000">     R4C15C.FCO to R4C15D.FCI    </A> <A href="#@net:integrator_1/n16229">integrator_1/n16229</A>
+FCITOFCO_D  ---     0.162     R4C15D.FCI to     R4C15D.FCO <A href="#@comp:integrator_1/SLICE_425">integrator_1/SLICE_425</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16230:R4C15D.FCO:R4C16A.FCI:0.000">     R4C15D.FCO to R4C16A.FCI    </A> <A href="#@net:integrator_1/n16230">integrator_1/n16230</A>
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO <A href="#@comp:integrator_1/SLICE_418">integrator_1/SLICE_418</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16231:R4C16A.FCO:R4C16B.FCI:0.000">     R4C16A.FCO to R4C16B.FCI    </A> <A href="#@net:integrator_1/n16231">integrator_1/n16231</A>
+FCITOFCO_D  ---     0.162     R4C16B.FCI to     R4C16B.FCO <A href="#@comp:integrator_1/SLICE_416">integrator_1/SLICE_416</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16232:R4C16B.FCO:R4C16C.FCI:0.000">     R4C16B.FCO to R4C16C.FCI    </A> <A href="#@net:integrator_1/n16232">integrator_1/n16232</A>
+FCITOFCO_D  ---     0.162     R4C16C.FCI to     R4C16C.FCO <A href="#@comp:integrator_1/SLICE_413">integrator_1/SLICE_413</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16233:R4C16C.FCO:R4C16D.FCI:0.000">     R4C16C.FCO to R4C16D.FCI    </A> <A href="#@net:integrator_1/n16233">integrator_1/n16233</A>
+FCITOFCO_D  ---     0.162     R4C16D.FCI to     R4C16D.FCO <A href="#@comp:integrator_1/SLICE_410">integrator_1/SLICE_410</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16234:R4C16D.FCO:R4C17A.FCI:0.000">     R4C16D.FCO to R4C17A.FCI    </A> <A href="#@net:integrator_1/n16234">integrator_1/n16234</A>
+FCITOFCO_D  ---     0.162     R4C17A.FCI to     R4C17A.FCO <A href="#@comp:integrator_1/SLICE_405">integrator_1/SLICE_405</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16235:R4C17A.FCO:R4C17B.FCI:0.000">     R4C17A.FCO to R4C17B.FCI    </A> <A href="#@net:integrator_1/n16235">integrator_1/n16235</A>
+FCITOFCO_D  ---     0.162     R4C17B.FCI to     R4C17B.FCO <A href="#@comp:integrator_1/SLICE_401">integrator_1/SLICE_401</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16236:R4C17B.FCO:R4C17C.FCI:0.000">     R4C17B.FCO to R4C17C.FCI    </A> <A href="#@net:integrator_1/n16236">integrator_1/n16236</A>
+FCITOFCO_D  ---     0.162     R4C17C.FCI to     R4C17C.FCO <A href="#@comp:integrator_1/SLICE_400">integrator_1/SLICE_400</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16237:R4C17C.FCO:R4C17D.FCI:0.000">     R4C17C.FCO to R4C17D.FCI    </A> <A href="#@net:integrator_1/n16237">integrator_1/n16237</A>
+FCITOFCO_D  ---     0.162     R4C17D.FCI to     R4C17D.FCO <A href="#@comp:integrator_1/SLICE_398">integrator_1/SLICE_398</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16238:R4C17D.FCO:R4C18A.FCI:0.000">     R4C17D.FCO to R4C18A.FCI    </A> <A href="#@net:integrator_1/n16238">integrator_1/n16238</A>
+FCITOF1_DE  ---     0.643     R4C18A.FCI to      R4C18A.F1 <A href="#@comp:integrator_1/SLICE_397">integrator_1/SLICE_397</A>
+ROUTE         4     2.433<A href="#@net:o_sw_N_1374_24:R4C18A.F1:R4C24A.A1:2.433">      R4C18A.F1 to R4C24A.A1     </A> <A href="#@net:o_sw_N_1374_24">o_sw_N_1374_24</A>
+C1TOFCO_DE  ---     0.889      R4C24A.A1 to     R4C24A.FCO <A href="#@comp:integrator_4/SLICE_131">integrator_4/SLICE_131</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16335:R4C24A.FCO:R4C24B.FCI:0.000">     R4C24A.FCO to R4C24B.FCI    </A> <A href="#@net:integrator_4/n16335">integrator_4/n16335</A>
+FCITOFCO_D  ---     0.162     R4C24B.FCI to     R4C24B.FCO <A href="#@comp:integrator_4/SLICE_130">integrator_4/SLICE_130</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16336:R4C24B.FCO:R4C24C.FCI:0.000">     R4C24B.FCO to R4C24C.FCI    </A> <A href="#@net:integrator_4/n16336">integrator_4/n16336</A>
+FCITOFCO_D  ---     0.162     R4C24C.FCI to     R4C24C.FCO <A href="#@comp:integrator_4/SLICE_129">integrator_4/SLICE_129</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16337:R4C24C.FCO:R4C24D.FCI:0.000">     R4C24C.FCO to R4C24D.FCI    </A> <A href="#@net:integrator_4/n16337">integrator_4/n16337</A>
+FCITOFCO_D  ---     0.162     R4C24D.FCI to     R4C24D.FCO <A href="#@comp:integrator_4/SLICE_126">integrator_4/SLICE_126</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16338:R4C24D.FCO:R4C25A.FCI:0.000">     R4C24D.FCO to R4C25A.FCI    </A> <A href="#@net:integrator_4/n16338">integrator_4/n16338</A>
+FCITOF1_DE  ---     0.643     R4C25A.FCI to      R4C25A.F1 <A href="#@comp:integrator_4/SLICE_125">integrator_4/SLICE_125</A>
+ROUTE         5     1.981<A href="#@net:integrator_4/n6541:R4C25A.F1:R6C13C.D1:1.981">      R4C25A.F1 to R6C13C.D1     </A> <A href="#@net:integrator_4/n6541">integrator_4/n6541</A>
+CTOF_DEL    ---     0.495      R6C13C.D1 to      R6C13C.F1 <A href="#@comp:SLICE_889">SLICE_889</A>
+ROUTE         2     1.031<A href="#@net:integrator_4/n18754:R6C13C.F1:R9C13B.D1:1.031">      R6C13C.F1 to R9C13B.D1     </A> <A href="#@net:integrator_4/n18754">integrator_4/n18754</A>
+CTOF_DEL    ---     0.495      R9C13B.D1 to      R9C13B.F1 <A href="#@comp:integrator_4/SLICE_1005">integrator_4/SLICE_1005</A>
+ROUTE        17     3.120<A href="#@net:integrator_4/n10908:R9C13B.F1:R2C24B.LSR:3.120">      R9C13B.F1 to R2C24B.LSR    </A> <A href="#@net:integrator_4/n10908">integrator_4/n10908</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                   17.509   (38.5% logic, 61.5% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R4C9C.CLK,clk_c">Source Clock Path</A> clk to integrator_1/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R4C9C.CLK:2.221">       12.PADDI to R4C9C.CLK     </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R2C24B.CLK,clk_c">Destination Clock Path</A> clk to integrator_4/SLICE_92:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R2C24B.CLK:2.221">       12.PADDI to R2C24B.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 2.217ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:integrator_1/SLICE_355">integrator_1/T4_i0_i1</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:integrator_4/SLICE_86">integrator_4/r_t1_2466__i30</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:integrator_4/r_t1_2466__i29">integrator_4/r_t1_2466__i29</A>
+
+   Delay:              17.509ns  (38.5% logic, 61.5% route), 20 logic levels.
+
+ Constraint Details:
+
+     17.509ns physical path delay integrator_1/SLICE_355 to integrator_4/SLICE_86 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.274ns LSR_SET requirement (totaling 19.726ns) by 2.217ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.452,R4C9C.CLK,R4C9C.Q0,integrator_1/SLICE_355:ROUTE, 2.198,R4C9C.Q0,R4C15B.A0,integrator_1/T4_1:C0TOFCO_DEL, 1.023,R4C15B.A0,R4C15B.FCO,integrator_1/SLICE_427:ROUTE, 0.000,R4C15B.FCO,R4C15C.FCI,integrator_1/n16228:FCITOFCO_DEL, 0.162,R4C15C.FCI,R4C15C.FCO,integrator_1/SLICE_426:ROUTE, 0.000,R4C15C.FCO,R4C15D.FCI,integrator_1/n16229:FCITOFCO_DEL, 0.162,R4C15D.FCI,R4C15D.FCO,integrator_1/SLICE_425:ROUTE, 0.000,R4C15D.FCO,R4C16A.FCI,integrator_1/n16230:FCITOFCO_DEL, 0.162,R4C16A.FCI,R4C16A.FCO,integrator_1/SLICE_418:ROUTE, 0.000,R4C16A.FCO,R4C16B.FCI,integrator_1/n16231:FCITOFCO_DEL, 0.162,R4C16B.FCI,R4C16B.FCO,integrator_1/SLICE_416:ROUTE, 0.000,R4C16B.FCO,R4C16C.FCI,integrator_1/n16232:FCITOFCO_DEL, 0.162,R4C16C.FCI,R4C16C.FCO,integrator_1/SLICE_413:ROUTE, 0.000,R4C16C.FCO,R4C16D.FCI,integrator_1/n16233:FCITOFCO_DEL, 0.162,R4C16D.FCI,R4C16D.FCO,integrator_1/SLICE_410:ROUTE, 0.000,R4C16D.FCO,R4C17A.FCI,integrator_1/n16234:FCITOFCO_DEL, 0.162,R4C17A.FCI,R4C17A.FCO,integrator_1/SLICE_405:ROUTE, 0.000,R4C17A.FCO,R4C17B.FCI,integrator_1/n16235:FCITOFCO_DEL, 0.162,R4C17B.FCI,R4C17B.FCO,integrator_1/SLICE_401:ROUTE, 0.000,R4C17B.FCO,R4C17C.FCI,integrator_1/n16236:FCITOFCO_DEL, 0.162,R4C17C.FCI,R4C17C.FCO,integrator_1/SLICE_400:ROUTE, 0.000,R4C17C.FCO,R4C17D.FCI,integrator_1/n16237:FCITOFCO_DEL, 0.162,R4C17D.FCI,R4C17D.FCO,integrator_1/SLICE_398:ROUTE, 0.000,R4C17D.FCO,R4C18A.FCI,integrator_1/n16238:FCITOF1_DEL, 0.643,R4C18A.FCI,R4C18A.F1,integrator_1/SLICE_397:ROUTE, 2.433,R4C18A.F1,R4C24A.A1,o_sw_N_1374_24:C1TOFCO_DEL, 0.889,R4C24A.A1,R4C24A.FCO,integrator_4/SLICE_131:ROUTE, 0.000,R4C24A.FCO,R4C24B.FCI,integrator_4/n16335:FCITOFCO_DEL, 0.162,R4C24B.FCI,R4C24B.FCO,integrator_4/SLICE_130:ROUTE, 0.000,R4C24B.FCO,R4C24C.FCI,integrator_4/n16336:FCITOFCO_DEL, 0.162,R4C24C.FCI,R4C24C.FCO,integrator_4/SLICE_129:ROUTE, 0.000,R4C24C.FCO,R4C24D.FCI,integrator_4/n16337:FCITOFCO_DEL, 0.162,R4C24D.FCI,R4C24D.FCO,integrator_4/SLICE_126:ROUTE, 0.000,R4C24D.FCO,R4C25A.FCI,integrator_4/n16338:FCITOF1_DEL, 0.643,R4C25A.FCI,R4C25A.F1,integrator_4/SLICE_125:ROUTE, 1.981,R4C25A.F1,R6C13C.D1,integrator_4/n6541:CTOF_DEL, 0.495,R6C13C.D1,R6C13C.F1,SLICE_889:ROUTE, 1.031,R6C13C.F1,R9C13B.D1,integrator_4/n18754:CTOF_DEL, 0.495,R9C13B.D1,R9C13B.F1,integrator_4/SLICE_1005:ROUTE, 3.120,R9C13B.F1,R2C24D.LSR,integrator_4/n10908">Data path</A> integrator_1/SLICE_355 to integrator_4/SLICE_86:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 <A href="#@comp:integrator_1/SLICE_355">integrator_1/SLICE_355</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE         1     2.198<A href="#@net:integrator_1/T4_1:R4C9C.Q0:R4C15B.A0:2.198">       R4C9C.Q0 to R4C15B.A0     </A> <A href="#@net:integrator_1/T4_1">integrator_1/T4_1</A>
+C0TOFCO_DE  ---     1.023      R4C15B.A0 to     R4C15B.FCO <A href="#@comp:integrator_1/SLICE_427">integrator_1/SLICE_427</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16228:R4C15B.FCO:R4C15C.FCI:0.000">     R4C15B.FCO to R4C15C.FCI    </A> <A href="#@net:integrator_1/n16228">integrator_1/n16228</A>
+FCITOFCO_D  ---     0.162     R4C15C.FCI to     R4C15C.FCO <A href="#@comp:integrator_1/SLICE_426">integrator_1/SLICE_426</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16229:R4C15C.FCO:R4C15D.FCI:0.000">     R4C15C.FCO to R4C15D.FCI    </A> <A href="#@net:integrator_1/n16229">integrator_1/n16229</A>
+FCITOFCO_D  ---     0.162     R4C15D.FCI to     R4C15D.FCO <A href="#@comp:integrator_1/SLICE_425">integrator_1/SLICE_425</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16230:R4C15D.FCO:R4C16A.FCI:0.000">     R4C15D.FCO to R4C16A.FCI    </A> <A href="#@net:integrator_1/n16230">integrator_1/n16230</A>
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO <A href="#@comp:integrator_1/SLICE_418">integrator_1/SLICE_418</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16231:R4C16A.FCO:R4C16B.FCI:0.000">     R4C16A.FCO to R4C16B.FCI    </A> <A href="#@net:integrator_1/n16231">integrator_1/n16231</A>
+FCITOFCO_D  ---     0.162     R4C16B.FCI to     R4C16B.FCO <A href="#@comp:integrator_1/SLICE_416">integrator_1/SLICE_416</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16232:R4C16B.FCO:R4C16C.FCI:0.000">     R4C16B.FCO to R4C16C.FCI    </A> <A href="#@net:integrator_1/n16232">integrator_1/n16232</A>
+FCITOFCO_D  ---     0.162     R4C16C.FCI to     R4C16C.FCO <A href="#@comp:integrator_1/SLICE_413">integrator_1/SLICE_413</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16233:R4C16C.FCO:R4C16D.FCI:0.000">     R4C16C.FCO to R4C16D.FCI    </A> <A href="#@net:integrator_1/n16233">integrator_1/n16233</A>
+FCITOFCO_D  ---     0.162     R4C16D.FCI to     R4C16D.FCO <A href="#@comp:integrator_1/SLICE_410">integrator_1/SLICE_410</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16234:R4C16D.FCO:R4C17A.FCI:0.000">     R4C16D.FCO to R4C17A.FCI    </A> <A href="#@net:integrator_1/n16234">integrator_1/n16234</A>
+FCITOFCO_D  ---     0.162     R4C17A.FCI to     R4C17A.FCO <A href="#@comp:integrator_1/SLICE_405">integrator_1/SLICE_405</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16235:R4C17A.FCO:R4C17B.FCI:0.000">     R4C17A.FCO to R4C17B.FCI    </A> <A href="#@net:integrator_1/n16235">integrator_1/n16235</A>
+FCITOFCO_D  ---     0.162     R4C17B.FCI to     R4C17B.FCO <A href="#@comp:integrator_1/SLICE_401">integrator_1/SLICE_401</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16236:R4C17B.FCO:R4C17C.FCI:0.000">     R4C17B.FCO to R4C17C.FCI    </A> <A href="#@net:integrator_1/n16236">integrator_1/n16236</A>
+FCITOFCO_D  ---     0.162     R4C17C.FCI to     R4C17C.FCO <A href="#@comp:integrator_1/SLICE_400">integrator_1/SLICE_400</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16237:R4C17C.FCO:R4C17D.FCI:0.000">     R4C17C.FCO to R4C17D.FCI    </A> <A href="#@net:integrator_1/n16237">integrator_1/n16237</A>
+FCITOFCO_D  ---     0.162     R4C17D.FCI to     R4C17D.FCO <A href="#@comp:integrator_1/SLICE_398">integrator_1/SLICE_398</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16238:R4C17D.FCO:R4C18A.FCI:0.000">     R4C17D.FCO to R4C18A.FCI    </A> <A href="#@net:integrator_1/n16238">integrator_1/n16238</A>
+FCITOF1_DE  ---     0.643     R4C18A.FCI to      R4C18A.F1 <A href="#@comp:integrator_1/SLICE_397">integrator_1/SLICE_397</A>
+ROUTE         4     2.433<A href="#@net:o_sw_N_1374_24:R4C18A.F1:R4C24A.A1:2.433">      R4C18A.F1 to R4C24A.A1     </A> <A href="#@net:o_sw_N_1374_24">o_sw_N_1374_24</A>
+C1TOFCO_DE  ---     0.889      R4C24A.A1 to     R4C24A.FCO <A href="#@comp:integrator_4/SLICE_131">integrator_4/SLICE_131</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16335:R4C24A.FCO:R4C24B.FCI:0.000">     R4C24A.FCO to R4C24B.FCI    </A> <A href="#@net:integrator_4/n16335">integrator_4/n16335</A>
+FCITOFCO_D  ---     0.162     R4C24B.FCI to     R4C24B.FCO <A href="#@comp:integrator_4/SLICE_130">integrator_4/SLICE_130</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16336:R4C24B.FCO:R4C24C.FCI:0.000">     R4C24B.FCO to R4C24C.FCI    </A> <A href="#@net:integrator_4/n16336">integrator_4/n16336</A>
+FCITOFCO_D  ---     0.162     R4C24C.FCI to     R4C24C.FCO <A href="#@comp:integrator_4/SLICE_129">integrator_4/SLICE_129</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16337:R4C24C.FCO:R4C24D.FCI:0.000">     R4C24C.FCO to R4C24D.FCI    </A> <A href="#@net:integrator_4/n16337">integrator_4/n16337</A>
+FCITOFCO_D  ---     0.162     R4C24D.FCI to     R4C24D.FCO <A href="#@comp:integrator_4/SLICE_126">integrator_4/SLICE_126</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16338:R4C24D.FCO:R4C25A.FCI:0.000">     R4C24D.FCO to R4C25A.FCI    </A> <A href="#@net:integrator_4/n16338">integrator_4/n16338</A>
+FCITOF1_DE  ---     0.643     R4C25A.FCI to      R4C25A.F1 <A href="#@comp:integrator_4/SLICE_125">integrator_4/SLICE_125</A>
+ROUTE         5     1.981<A href="#@net:integrator_4/n6541:R4C25A.F1:R6C13C.D1:1.981">      R4C25A.F1 to R6C13C.D1     </A> <A href="#@net:integrator_4/n6541">integrator_4/n6541</A>
+CTOF_DEL    ---     0.495      R6C13C.D1 to      R6C13C.F1 <A href="#@comp:SLICE_889">SLICE_889</A>
+ROUTE         2     1.031<A href="#@net:integrator_4/n18754:R6C13C.F1:R9C13B.D1:1.031">      R6C13C.F1 to R9C13B.D1     </A> <A href="#@net:integrator_4/n18754">integrator_4/n18754</A>
+CTOF_DEL    ---     0.495      R9C13B.D1 to      R9C13B.F1 <A href="#@comp:integrator_4/SLICE_1005">integrator_4/SLICE_1005</A>
+ROUTE        17     3.120<A href="#@net:integrator_4/n10908:R9C13B.F1:R2C24D.LSR:3.120">      R9C13B.F1 to R2C24D.LSR    </A> <A href="#@net:integrator_4/n10908">integrator_4/n10908</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                   17.509   (38.5% logic, 61.5% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R4C9C.CLK,clk_c">Source Clock Path</A> clk to integrator_1/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R4C9C.CLK:2.221">       12.PADDI to R4C9C.CLK     </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R2C24D.CLK,clk_c">Destination Clock Path</A> clk to integrator_4/SLICE_86:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R2C24D.CLK:2.221">       12.PADDI to R2C24D.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 2.217ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:integrator_1/SLICE_355">integrator_1/T4_i0_i1</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:integrator_4/SLICE_98">integrator_4/r_t1_2466__i24</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:integrator_4/r_t1_2466__i23">integrator_4/r_t1_2466__i23</A>
+
+   Delay:              17.509ns  (38.5% logic, 61.5% route), 20 logic levels.
+
+ Constraint Details:
+
+     17.509ns physical path delay integrator_1/SLICE_355 to integrator_4/SLICE_98 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.274ns LSR_SET requirement (totaling 19.726ns) by 2.217ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.452,R4C9C.CLK,R4C9C.Q0,integrator_1/SLICE_355:ROUTE, 2.198,R4C9C.Q0,R4C15B.A0,integrator_1/T4_1:C0TOFCO_DEL, 1.023,R4C15B.A0,R4C15B.FCO,integrator_1/SLICE_427:ROUTE, 0.000,R4C15B.FCO,R4C15C.FCI,integrator_1/n16228:FCITOFCO_DEL, 0.162,R4C15C.FCI,R4C15C.FCO,integrator_1/SLICE_426:ROUTE, 0.000,R4C15C.FCO,R4C15D.FCI,integrator_1/n16229:FCITOFCO_DEL, 0.162,R4C15D.FCI,R4C15D.FCO,integrator_1/SLICE_425:ROUTE, 0.000,R4C15D.FCO,R4C16A.FCI,integrator_1/n16230:FCITOFCO_DEL, 0.162,R4C16A.FCI,R4C16A.FCO,integrator_1/SLICE_418:ROUTE, 0.000,R4C16A.FCO,R4C16B.FCI,integrator_1/n16231:FCITOFCO_DEL, 0.162,R4C16B.FCI,R4C16B.FCO,integrator_1/SLICE_416:ROUTE, 0.000,R4C16B.FCO,R4C16C.FCI,integrator_1/n16232:FCITOFCO_DEL, 0.162,R4C16C.FCI,R4C16C.FCO,integrator_1/SLICE_413:ROUTE, 0.000,R4C16C.FCO,R4C16D.FCI,integrator_1/n16233:FCITOFCO_DEL, 0.162,R4C16D.FCI,R4C16D.FCO,integrator_1/SLICE_410:ROUTE, 0.000,R4C16D.FCO,R4C17A.FCI,integrator_1/n16234:FCITOFCO_DEL, 0.162,R4C17A.FCI,R4C17A.FCO,integrator_1/SLICE_405:ROUTE, 0.000,R4C17A.FCO,R4C17B.FCI,integrator_1/n16235:FCITOFCO_DEL, 0.162,R4C17B.FCI,R4C17B.FCO,integrator_1/SLICE_401:ROUTE, 0.000,R4C17B.FCO,R4C17C.FCI,integrator_1/n16236:FCITOFCO_DEL, 0.162,R4C17C.FCI,R4C17C.FCO,integrator_1/SLICE_400:ROUTE, 0.000,R4C17C.FCO,R4C17D.FCI,integrator_1/n16237:FCITOFCO_DEL, 0.162,R4C17D.FCI,R4C17D.FCO,integrator_1/SLICE_398:ROUTE, 0.000,R4C17D.FCO,R4C18A.FCI,integrator_1/n16238:FCITOF1_DEL, 0.643,R4C18A.FCI,R4C18A.F1,integrator_1/SLICE_397:ROUTE, 2.433,R4C18A.F1,R4C24A.A1,o_sw_N_1374_24:C1TOFCO_DEL, 0.889,R4C24A.A1,R4C24A.FCO,integrator_4/SLICE_131:ROUTE, 0.000,R4C24A.FCO,R4C24B.FCI,integrator_4/n16335:FCITOFCO_DEL, 0.162,R4C24B.FCI,R4C24B.FCO,integrator_4/SLICE_130:ROUTE, 0.000,R4C24B.FCO,R4C24C.FCI,integrator_4/n16336:FCITOFCO_DEL, 0.162,R4C24C.FCI,R4C24C.FCO,integrator_4/SLICE_129:ROUTE, 0.000,R4C24C.FCO,R4C24D.FCI,integrator_4/n16337:FCITOFCO_DEL, 0.162,R4C24D.FCI,R4C24D.FCO,integrator_4/SLICE_126:ROUTE, 0.000,R4C24D.FCO,R4C25A.FCI,integrator_4/n16338:FCITOF1_DEL, 0.643,R4C25A.FCI,R4C25A.F1,integrator_4/SLICE_125:ROUTE, 1.981,R4C25A.F1,R6C13C.D1,integrator_4/n6541:CTOF_DEL, 0.495,R6C13C.D1,R6C13C.F1,SLICE_889:ROUTE, 1.031,R6C13C.F1,R9C13B.D1,integrator_4/n18754:CTOF_DEL, 0.495,R9C13B.D1,R9C13B.F1,integrator_4/SLICE_1005:ROUTE, 3.120,R9C13B.F1,R2C24A.LSR,integrator_4/n10908">Data path</A> integrator_1/SLICE_355 to integrator_4/SLICE_98:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 <A href="#@comp:integrator_1/SLICE_355">integrator_1/SLICE_355</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE         1     2.198<A href="#@net:integrator_1/T4_1:R4C9C.Q0:R4C15B.A0:2.198">       R4C9C.Q0 to R4C15B.A0     </A> <A href="#@net:integrator_1/T4_1">integrator_1/T4_1</A>
+C0TOFCO_DE  ---     1.023      R4C15B.A0 to     R4C15B.FCO <A href="#@comp:integrator_1/SLICE_427">integrator_1/SLICE_427</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16228:R4C15B.FCO:R4C15C.FCI:0.000">     R4C15B.FCO to R4C15C.FCI    </A> <A href="#@net:integrator_1/n16228">integrator_1/n16228</A>
+FCITOFCO_D  ---     0.162     R4C15C.FCI to     R4C15C.FCO <A href="#@comp:integrator_1/SLICE_426">integrator_1/SLICE_426</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16229:R4C15C.FCO:R4C15D.FCI:0.000">     R4C15C.FCO to R4C15D.FCI    </A> <A href="#@net:integrator_1/n16229">integrator_1/n16229</A>
+FCITOFCO_D  ---     0.162     R4C15D.FCI to     R4C15D.FCO <A href="#@comp:integrator_1/SLICE_425">integrator_1/SLICE_425</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16230:R4C15D.FCO:R4C16A.FCI:0.000">     R4C15D.FCO to R4C16A.FCI    </A> <A href="#@net:integrator_1/n16230">integrator_1/n16230</A>
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO <A href="#@comp:integrator_1/SLICE_418">integrator_1/SLICE_418</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16231:R4C16A.FCO:R4C16B.FCI:0.000">     R4C16A.FCO to R4C16B.FCI    </A> <A href="#@net:integrator_1/n16231">integrator_1/n16231</A>
+FCITOFCO_D  ---     0.162     R4C16B.FCI to     R4C16B.FCO <A href="#@comp:integrator_1/SLICE_416">integrator_1/SLICE_416</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16232:R4C16B.FCO:R4C16C.FCI:0.000">     R4C16B.FCO to R4C16C.FCI    </A> <A href="#@net:integrator_1/n16232">integrator_1/n16232</A>
+FCITOFCO_D  ---     0.162     R4C16C.FCI to     R4C16C.FCO <A href="#@comp:integrator_1/SLICE_413">integrator_1/SLICE_413</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16233:R4C16C.FCO:R4C16D.FCI:0.000">     R4C16C.FCO to R4C16D.FCI    </A> <A href="#@net:integrator_1/n16233">integrator_1/n16233</A>
+FCITOFCO_D  ---     0.162     R4C16D.FCI to     R4C16D.FCO <A href="#@comp:integrator_1/SLICE_410">integrator_1/SLICE_410</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16234:R4C16D.FCO:R4C17A.FCI:0.000">     R4C16D.FCO to R4C17A.FCI    </A> <A href="#@net:integrator_1/n16234">integrator_1/n16234</A>
+FCITOFCO_D  ---     0.162     R4C17A.FCI to     R4C17A.FCO <A href="#@comp:integrator_1/SLICE_405">integrator_1/SLICE_405</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16235:R4C17A.FCO:R4C17B.FCI:0.000">     R4C17A.FCO to R4C17B.FCI    </A> <A href="#@net:integrator_1/n16235">integrator_1/n16235</A>
+FCITOFCO_D  ---     0.162     R4C17B.FCI to     R4C17B.FCO <A href="#@comp:integrator_1/SLICE_401">integrator_1/SLICE_401</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16236:R4C17B.FCO:R4C17C.FCI:0.000">     R4C17B.FCO to R4C17C.FCI    </A> <A href="#@net:integrator_1/n16236">integrator_1/n16236</A>
+FCITOFCO_D  ---     0.162     R4C17C.FCI to     R4C17C.FCO <A href="#@comp:integrator_1/SLICE_400">integrator_1/SLICE_400</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16237:R4C17C.FCO:R4C17D.FCI:0.000">     R4C17C.FCO to R4C17D.FCI    </A> <A href="#@net:integrator_1/n16237">integrator_1/n16237</A>
+FCITOFCO_D  ---     0.162     R4C17D.FCI to     R4C17D.FCO <A href="#@comp:integrator_1/SLICE_398">integrator_1/SLICE_398</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16238:R4C17D.FCO:R4C18A.FCI:0.000">     R4C17D.FCO to R4C18A.FCI    </A> <A href="#@net:integrator_1/n16238">integrator_1/n16238</A>
+FCITOF1_DE  ---     0.643     R4C18A.FCI to      R4C18A.F1 <A href="#@comp:integrator_1/SLICE_397">integrator_1/SLICE_397</A>
+ROUTE         4     2.433<A href="#@net:o_sw_N_1374_24:R4C18A.F1:R4C24A.A1:2.433">      R4C18A.F1 to R4C24A.A1     </A> <A href="#@net:o_sw_N_1374_24">o_sw_N_1374_24</A>
+C1TOFCO_DE  ---     0.889      R4C24A.A1 to     R4C24A.FCO <A href="#@comp:integrator_4/SLICE_131">integrator_4/SLICE_131</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16335:R4C24A.FCO:R4C24B.FCI:0.000">     R4C24A.FCO to R4C24B.FCI    </A> <A href="#@net:integrator_4/n16335">integrator_4/n16335</A>
+FCITOFCO_D  ---     0.162     R4C24B.FCI to     R4C24B.FCO <A href="#@comp:integrator_4/SLICE_130">integrator_4/SLICE_130</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16336:R4C24B.FCO:R4C24C.FCI:0.000">     R4C24B.FCO to R4C24C.FCI    </A> <A href="#@net:integrator_4/n16336">integrator_4/n16336</A>
+FCITOFCO_D  ---     0.162     R4C24C.FCI to     R4C24C.FCO <A href="#@comp:integrator_4/SLICE_129">integrator_4/SLICE_129</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16337:R4C24C.FCO:R4C24D.FCI:0.000">     R4C24C.FCO to R4C24D.FCI    </A> <A href="#@net:integrator_4/n16337">integrator_4/n16337</A>
+FCITOFCO_D  ---     0.162     R4C24D.FCI to     R4C24D.FCO <A href="#@comp:integrator_4/SLICE_126">integrator_4/SLICE_126</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16338:R4C24D.FCO:R4C25A.FCI:0.000">     R4C24D.FCO to R4C25A.FCI    </A> <A href="#@net:integrator_4/n16338">integrator_4/n16338</A>
+FCITOF1_DE  ---     0.643     R4C25A.FCI to      R4C25A.F1 <A href="#@comp:integrator_4/SLICE_125">integrator_4/SLICE_125</A>
+ROUTE         5     1.981<A href="#@net:integrator_4/n6541:R4C25A.F1:R6C13C.D1:1.981">      R4C25A.F1 to R6C13C.D1     </A> <A href="#@net:integrator_4/n6541">integrator_4/n6541</A>
+CTOF_DEL    ---     0.495      R6C13C.D1 to      R6C13C.F1 <A href="#@comp:SLICE_889">SLICE_889</A>
+ROUTE         2     1.031<A href="#@net:integrator_4/n18754:R6C13C.F1:R9C13B.D1:1.031">      R6C13C.F1 to R9C13B.D1     </A> <A href="#@net:integrator_4/n18754">integrator_4/n18754</A>
+CTOF_DEL    ---     0.495      R9C13B.D1 to      R9C13B.F1 <A href="#@comp:integrator_4/SLICE_1005">integrator_4/SLICE_1005</A>
+ROUTE        17     3.120<A href="#@net:integrator_4/n10908:R9C13B.F1:R2C24A.LSR:3.120">      R9C13B.F1 to R2C24A.LSR    </A> <A href="#@net:integrator_4/n10908">integrator_4/n10908</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                   17.509   (38.5% logic, 61.5% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R4C9C.CLK,clk_c">Source Clock Path</A> clk to integrator_1/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R4C9C.CLK:2.221">       12.PADDI to R4C9C.CLK     </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R2C24A.CLK,clk_c">Destination Clock Path</A> clk to integrator_4/SLICE_98:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R2C24A.CLK:2.221">       12.PADDI to R2C24A.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 2.217ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:integrator_1/SLICE_355">integrator_1/T4_i0_i1</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:integrator_4/SLICE_103">integrator_4/r_t1_2466__i16</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:integrator_4/r_t1_2466__i15">integrator_4/r_t1_2466__i15</A>
+
+   Delay:              17.509ns  (38.5% logic, 61.5% route), 20 logic levels.
+
+ Constraint Details:
+
+     17.509ns physical path delay integrator_1/SLICE_355 to integrator_4/SLICE_103 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.274ns LSR_SET requirement (totaling 19.726ns) by 2.217ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.452,R4C9C.CLK,R4C9C.Q0,integrator_1/SLICE_355:ROUTE, 2.198,R4C9C.Q0,R4C15B.A0,integrator_1/T4_1:C0TOFCO_DEL, 1.023,R4C15B.A0,R4C15B.FCO,integrator_1/SLICE_427:ROUTE, 0.000,R4C15B.FCO,R4C15C.FCI,integrator_1/n16228:FCITOFCO_DEL, 0.162,R4C15C.FCI,R4C15C.FCO,integrator_1/SLICE_426:ROUTE, 0.000,R4C15C.FCO,R4C15D.FCI,integrator_1/n16229:FCITOFCO_DEL, 0.162,R4C15D.FCI,R4C15D.FCO,integrator_1/SLICE_425:ROUTE, 0.000,R4C15D.FCO,R4C16A.FCI,integrator_1/n16230:FCITOFCO_DEL, 0.162,R4C16A.FCI,R4C16A.FCO,integrator_1/SLICE_418:ROUTE, 0.000,R4C16A.FCO,R4C16B.FCI,integrator_1/n16231:FCITOFCO_DEL, 0.162,R4C16B.FCI,R4C16B.FCO,integrator_1/SLICE_416:ROUTE, 0.000,R4C16B.FCO,R4C16C.FCI,integrator_1/n16232:FCITOFCO_DEL, 0.162,R4C16C.FCI,R4C16C.FCO,integrator_1/SLICE_413:ROUTE, 0.000,R4C16C.FCO,R4C16D.FCI,integrator_1/n16233:FCITOFCO_DEL, 0.162,R4C16D.FCI,R4C16D.FCO,integrator_1/SLICE_410:ROUTE, 0.000,R4C16D.FCO,R4C17A.FCI,integrator_1/n16234:FCITOFCO_DEL, 0.162,R4C17A.FCI,R4C17A.FCO,integrator_1/SLICE_405:ROUTE, 0.000,R4C17A.FCO,R4C17B.FCI,integrator_1/n16235:FCITOFCO_DEL, 0.162,R4C17B.FCI,R4C17B.FCO,integrator_1/SLICE_401:ROUTE, 0.000,R4C17B.FCO,R4C17C.FCI,integrator_1/n16236:FCITOFCO_DEL, 0.162,R4C17C.FCI,R4C17C.FCO,integrator_1/SLICE_400:ROUTE, 0.000,R4C17C.FCO,R4C17D.FCI,integrator_1/n16237:FCITOFCO_DEL, 0.162,R4C17D.FCI,R4C17D.FCO,integrator_1/SLICE_398:ROUTE, 0.000,R4C17D.FCO,R4C18A.FCI,integrator_1/n16238:FCITOF1_DEL, 0.643,R4C18A.FCI,R4C18A.F1,integrator_1/SLICE_397:ROUTE, 2.433,R4C18A.F1,R4C24A.A1,o_sw_N_1374_24:C1TOFCO_DEL, 0.889,R4C24A.A1,R4C24A.FCO,integrator_4/SLICE_131:ROUTE, 0.000,R4C24A.FCO,R4C24B.FCI,integrator_4/n16335:FCITOFCO_DEL, 0.162,R4C24B.FCI,R4C24B.FCO,integrator_4/SLICE_130:ROUTE, 0.000,R4C24B.FCO,R4C24C.FCI,integrator_4/n16336:FCITOFCO_DEL, 0.162,R4C24C.FCI,R4C24C.FCO,integrator_4/SLICE_129:ROUTE, 0.000,R4C24C.FCO,R4C24D.FCI,integrator_4/n16337:FCITOFCO_DEL, 0.162,R4C24D.FCI,R4C24D.FCO,integrator_4/SLICE_126:ROUTE, 0.000,R4C24D.FCO,R4C25A.FCI,integrator_4/n16338:FCITOF1_DEL, 0.643,R4C25A.FCI,R4C25A.F1,integrator_4/SLICE_125:ROUTE, 1.981,R4C25A.F1,R6C13C.D1,integrator_4/n6541:CTOF_DEL, 0.495,R6C13C.D1,R6C13C.F1,SLICE_889:ROUTE, 1.031,R6C13C.F1,R9C13B.D1,integrator_4/n18754:CTOF_DEL, 0.495,R9C13B.D1,R9C13B.F1,integrator_4/SLICE_1005:ROUTE, 3.120,R9C13B.F1,R2C23A.LSR,integrator_4/n10908">Data path</A> integrator_1/SLICE_355 to integrator_4/SLICE_103:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 <A href="#@comp:integrator_1/SLICE_355">integrator_1/SLICE_355</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE         1     2.198<A href="#@net:integrator_1/T4_1:R4C9C.Q0:R4C15B.A0:2.198">       R4C9C.Q0 to R4C15B.A0     </A> <A href="#@net:integrator_1/T4_1">integrator_1/T4_1</A>
+C0TOFCO_DE  ---     1.023      R4C15B.A0 to     R4C15B.FCO <A href="#@comp:integrator_1/SLICE_427">integrator_1/SLICE_427</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16228:R4C15B.FCO:R4C15C.FCI:0.000">     R4C15B.FCO to R4C15C.FCI    </A> <A href="#@net:integrator_1/n16228">integrator_1/n16228</A>
+FCITOFCO_D  ---     0.162     R4C15C.FCI to     R4C15C.FCO <A href="#@comp:integrator_1/SLICE_426">integrator_1/SLICE_426</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16229:R4C15C.FCO:R4C15D.FCI:0.000">     R4C15C.FCO to R4C15D.FCI    </A> <A href="#@net:integrator_1/n16229">integrator_1/n16229</A>
+FCITOFCO_D  ---     0.162     R4C15D.FCI to     R4C15D.FCO <A href="#@comp:integrator_1/SLICE_425">integrator_1/SLICE_425</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16230:R4C15D.FCO:R4C16A.FCI:0.000">     R4C15D.FCO to R4C16A.FCI    </A> <A href="#@net:integrator_1/n16230">integrator_1/n16230</A>
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO <A href="#@comp:integrator_1/SLICE_418">integrator_1/SLICE_418</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16231:R4C16A.FCO:R4C16B.FCI:0.000">     R4C16A.FCO to R4C16B.FCI    </A> <A href="#@net:integrator_1/n16231">integrator_1/n16231</A>
+FCITOFCO_D  ---     0.162     R4C16B.FCI to     R4C16B.FCO <A href="#@comp:integrator_1/SLICE_416">integrator_1/SLICE_416</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16232:R4C16B.FCO:R4C16C.FCI:0.000">     R4C16B.FCO to R4C16C.FCI    </A> <A href="#@net:integrator_1/n16232">integrator_1/n16232</A>
+FCITOFCO_D  ---     0.162     R4C16C.FCI to     R4C16C.FCO <A href="#@comp:integrator_1/SLICE_413">integrator_1/SLICE_413</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16233:R4C16C.FCO:R4C16D.FCI:0.000">     R4C16C.FCO to R4C16D.FCI    </A> <A href="#@net:integrator_1/n16233">integrator_1/n16233</A>
+FCITOFCO_D  ---     0.162     R4C16D.FCI to     R4C16D.FCO <A href="#@comp:integrator_1/SLICE_410">integrator_1/SLICE_410</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16234:R4C16D.FCO:R4C17A.FCI:0.000">     R4C16D.FCO to R4C17A.FCI    </A> <A href="#@net:integrator_1/n16234">integrator_1/n16234</A>
+FCITOFCO_D  ---     0.162     R4C17A.FCI to     R4C17A.FCO <A href="#@comp:integrator_1/SLICE_405">integrator_1/SLICE_405</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16235:R4C17A.FCO:R4C17B.FCI:0.000">     R4C17A.FCO to R4C17B.FCI    </A> <A href="#@net:integrator_1/n16235">integrator_1/n16235</A>
+FCITOFCO_D  ---     0.162     R4C17B.FCI to     R4C17B.FCO <A href="#@comp:integrator_1/SLICE_401">integrator_1/SLICE_401</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16236:R4C17B.FCO:R4C17C.FCI:0.000">     R4C17B.FCO to R4C17C.FCI    </A> <A href="#@net:integrator_1/n16236">integrator_1/n16236</A>
+FCITOFCO_D  ---     0.162     R4C17C.FCI to     R4C17C.FCO <A href="#@comp:integrator_1/SLICE_400">integrator_1/SLICE_400</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16237:R4C17C.FCO:R4C17D.FCI:0.000">     R4C17C.FCO to R4C17D.FCI    </A> <A href="#@net:integrator_1/n16237">integrator_1/n16237</A>
+FCITOFCO_D  ---     0.162     R4C17D.FCI to     R4C17D.FCO <A href="#@comp:integrator_1/SLICE_398">integrator_1/SLICE_398</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16238:R4C17D.FCO:R4C18A.FCI:0.000">     R4C17D.FCO to R4C18A.FCI    </A> <A href="#@net:integrator_1/n16238">integrator_1/n16238</A>
+FCITOF1_DE  ---     0.643     R4C18A.FCI to      R4C18A.F1 <A href="#@comp:integrator_1/SLICE_397">integrator_1/SLICE_397</A>
+ROUTE         4     2.433<A href="#@net:o_sw_N_1374_24:R4C18A.F1:R4C24A.A1:2.433">      R4C18A.F1 to R4C24A.A1     </A> <A href="#@net:o_sw_N_1374_24">o_sw_N_1374_24</A>
+C1TOFCO_DE  ---     0.889      R4C24A.A1 to     R4C24A.FCO <A href="#@comp:integrator_4/SLICE_131">integrator_4/SLICE_131</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16335:R4C24A.FCO:R4C24B.FCI:0.000">     R4C24A.FCO to R4C24B.FCI    </A> <A href="#@net:integrator_4/n16335">integrator_4/n16335</A>
+FCITOFCO_D  ---     0.162     R4C24B.FCI to     R4C24B.FCO <A href="#@comp:integrator_4/SLICE_130">integrator_4/SLICE_130</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16336:R4C24B.FCO:R4C24C.FCI:0.000">     R4C24B.FCO to R4C24C.FCI    </A> <A href="#@net:integrator_4/n16336">integrator_4/n16336</A>
+FCITOFCO_D  ---     0.162     R4C24C.FCI to     R4C24C.FCO <A href="#@comp:integrator_4/SLICE_129">integrator_4/SLICE_129</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16337:R4C24C.FCO:R4C24D.FCI:0.000">     R4C24C.FCO to R4C24D.FCI    </A> <A href="#@net:integrator_4/n16337">integrator_4/n16337</A>
+FCITOFCO_D  ---     0.162     R4C24D.FCI to     R4C24D.FCO <A href="#@comp:integrator_4/SLICE_126">integrator_4/SLICE_126</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16338:R4C24D.FCO:R4C25A.FCI:0.000">     R4C24D.FCO to R4C25A.FCI    </A> <A href="#@net:integrator_4/n16338">integrator_4/n16338</A>
+FCITOF1_DE  ---     0.643     R4C25A.FCI to      R4C25A.F1 <A href="#@comp:integrator_4/SLICE_125">integrator_4/SLICE_125</A>
+ROUTE         5     1.981<A href="#@net:integrator_4/n6541:R4C25A.F1:R6C13C.D1:1.981">      R4C25A.F1 to R6C13C.D1     </A> <A href="#@net:integrator_4/n6541">integrator_4/n6541</A>
+CTOF_DEL    ---     0.495      R6C13C.D1 to      R6C13C.F1 <A href="#@comp:SLICE_889">SLICE_889</A>
+ROUTE         2     1.031<A href="#@net:integrator_4/n18754:R6C13C.F1:R9C13B.D1:1.031">      R6C13C.F1 to R9C13B.D1     </A> <A href="#@net:integrator_4/n18754">integrator_4/n18754</A>
+CTOF_DEL    ---     0.495      R9C13B.D1 to      R9C13B.F1 <A href="#@comp:integrator_4/SLICE_1005">integrator_4/SLICE_1005</A>
+ROUTE        17     3.120<A href="#@net:integrator_4/n10908:R9C13B.F1:R2C23A.LSR:3.120">      R9C13B.F1 to R2C23A.LSR    </A> <A href="#@net:integrator_4/n10908">integrator_4/n10908</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                   17.509   (38.5% logic, 61.5% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R4C9C.CLK,clk_c">Source Clock Path</A> clk to integrator_1/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R4C9C.CLK:2.221">       12.PADDI to R4C9C.CLK     </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R2C23A.CLK,clk_c">Destination Clock Path</A> clk to integrator_4/SLICE_103:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R2C23A.CLK:2.221">       12.PADDI to R2C23A.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 2.217ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:integrator_1/SLICE_355">integrator_1/T4_i0_i1</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:integrator_4/SLICE_83">integrator_4/r_t1_2466__i31</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+
+   Delay:              17.509ns  (38.5% logic, 61.5% route), 20 logic levels.
+
+ Constraint Details:
+
+     17.509ns physical path delay integrator_1/SLICE_355 to integrator_4/SLICE_83 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.274ns LSR_SET requirement (totaling 19.726ns) by 2.217ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.452,R4C9C.CLK,R4C9C.Q0,integrator_1/SLICE_355:ROUTE, 2.198,R4C9C.Q0,R4C15B.A0,integrator_1/T4_1:C0TOFCO_DEL, 1.023,R4C15B.A0,R4C15B.FCO,integrator_1/SLICE_427:ROUTE, 0.000,R4C15B.FCO,R4C15C.FCI,integrator_1/n16228:FCITOFCO_DEL, 0.162,R4C15C.FCI,R4C15C.FCO,integrator_1/SLICE_426:ROUTE, 0.000,R4C15C.FCO,R4C15D.FCI,integrator_1/n16229:FCITOFCO_DEL, 0.162,R4C15D.FCI,R4C15D.FCO,integrator_1/SLICE_425:ROUTE, 0.000,R4C15D.FCO,R4C16A.FCI,integrator_1/n16230:FCITOFCO_DEL, 0.162,R4C16A.FCI,R4C16A.FCO,integrator_1/SLICE_418:ROUTE, 0.000,R4C16A.FCO,R4C16B.FCI,integrator_1/n16231:FCITOFCO_DEL, 0.162,R4C16B.FCI,R4C16B.FCO,integrator_1/SLICE_416:ROUTE, 0.000,R4C16B.FCO,R4C16C.FCI,integrator_1/n16232:FCITOFCO_DEL, 0.162,R4C16C.FCI,R4C16C.FCO,integrator_1/SLICE_413:ROUTE, 0.000,R4C16C.FCO,R4C16D.FCI,integrator_1/n16233:FCITOFCO_DEL, 0.162,R4C16D.FCI,R4C16D.FCO,integrator_1/SLICE_410:ROUTE, 0.000,R4C16D.FCO,R4C17A.FCI,integrator_1/n16234:FCITOFCO_DEL, 0.162,R4C17A.FCI,R4C17A.FCO,integrator_1/SLICE_405:ROUTE, 0.000,R4C17A.FCO,R4C17B.FCI,integrator_1/n16235:FCITOFCO_DEL, 0.162,R4C17B.FCI,R4C17B.FCO,integrator_1/SLICE_401:ROUTE, 0.000,R4C17B.FCO,R4C17C.FCI,integrator_1/n16236:FCITOFCO_DEL, 0.162,R4C17C.FCI,R4C17C.FCO,integrator_1/SLICE_400:ROUTE, 0.000,R4C17C.FCO,R4C17D.FCI,integrator_1/n16237:FCITOFCO_DEL, 0.162,R4C17D.FCI,R4C17D.FCO,integrator_1/SLICE_398:ROUTE, 0.000,R4C17D.FCO,R4C18A.FCI,integrator_1/n16238:FCITOF1_DEL, 0.643,R4C18A.FCI,R4C18A.F1,integrator_1/SLICE_397:ROUTE, 2.433,R4C18A.F1,R4C24A.A1,o_sw_N_1374_24:C1TOFCO_DEL, 0.889,R4C24A.A1,R4C24A.FCO,integrator_4/SLICE_131:ROUTE, 0.000,R4C24A.FCO,R4C24B.FCI,integrator_4/n16335:FCITOFCO_DEL, 0.162,R4C24B.FCI,R4C24B.FCO,integrator_4/SLICE_130:ROUTE, 0.000,R4C24B.FCO,R4C24C.FCI,integrator_4/n16336:FCITOFCO_DEL, 0.162,R4C24C.FCI,R4C24C.FCO,integrator_4/SLICE_129:ROUTE, 0.000,R4C24C.FCO,R4C24D.FCI,integrator_4/n16337:FCITOFCO_DEL, 0.162,R4C24D.FCI,R4C24D.FCO,integrator_4/SLICE_126:ROUTE, 0.000,R4C24D.FCO,R4C25A.FCI,integrator_4/n16338:FCITOF1_DEL, 0.643,R4C25A.FCI,R4C25A.F1,integrator_4/SLICE_125:ROUTE, 1.981,R4C25A.F1,R6C13C.D1,integrator_4/n6541:CTOF_DEL, 0.495,R6C13C.D1,R6C13C.F1,SLICE_889:ROUTE, 1.031,R6C13C.F1,R9C13B.D1,integrator_4/n18754:CTOF_DEL, 0.495,R9C13B.D1,R9C13B.F1,integrator_4/SLICE_1005:ROUTE, 3.120,R9C13B.F1,R2C25A.LSR,integrator_4/n10908">Data path</A> integrator_1/SLICE_355 to integrator_4/SLICE_83:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 <A href="#@comp:integrator_1/SLICE_355">integrator_1/SLICE_355</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE         1     2.198<A href="#@net:integrator_1/T4_1:R4C9C.Q0:R4C15B.A0:2.198">       R4C9C.Q0 to R4C15B.A0     </A> <A href="#@net:integrator_1/T4_1">integrator_1/T4_1</A>
+C0TOFCO_DE  ---     1.023      R4C15B.A0 to     R4C15B.FCO <A href="#@comp:integrator_1/SLICE_427">integrator_1/SLICE_427</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16228:R4C15B.FCO:R4C15C.FCI:0.000">     R4C15B.FCO to R4C15C.FCI    </A> <A href="#@net:integrator_1/n16228">integrator_1/n16228</A>
+FCITOFCO_D  ---     0.162     R4C15C.FCI to     R4C15C.FCO <A href="#@comp:integrator_1/SLICE_426">integrator_1/SLICE_426</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16229:R4C15C.FCO:R4C15D.FCI:0.000">     R4C15C.FCO to R4C15D.FCI    </A> <A href="#@net:integrator_1/n16229">integrator_1/n16229</A>
+FCITOFCO_D  ---     0.162     R4C15D.FCI to     R4C15D.FCO <A href="#@comp:integrator_1/SLICE_425">integrator_1/SLICE_425</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16230:R4C15D.FCO:R4C16A.FCI:0.000">     R4C15D.FCO to R4C16A.FCI    </A> <A href="#@net:integrator_1/n16230">integrator_1/n16230</A>
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO <A href="#@comp:integrator_1/SLICE_418">integrator_1/SLICE_418</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16231:R4C16A.FCO:R4C16B.FCI:0.000">     R4C16A.FCO to R4C16B.FCI    </A> <A href="#@net:integrator_1/n16231">integrator_1/n16231</A>
+FCITOFCO_D  ---     0.162     R4C16B.FCI to     R4C16B.FCO <A href="#@comp:integrator_1/SLICE_416">integrator_1/SLICE_416</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16232:R4C16B.FCO:R4C16C.FCI:0.000">     R4C16B.FCO to R4C16C.FCI    </A> <A href="#@net:integrator_1/n16232">integrator_1/n16232</A>
+FCITOFCO_D  ---     0.162     R4C16C.FCI to     R4C16C.FCO <A href="#@comp:integrator_1/SLICE_413">integrator_1/SLICE_413</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16233:R4C16C.FCO:R4C16D.FCI:0.000">     R4C16C.FCO to R4C16D.FCI    </A> <A href="#@net:integrator_1/n16233">integrator_1/n16233</A>
+FCITOFCO_D  ---     0.162     R4C16D.FCI to     R4C16D.FCO <A href="#@comp:integrator_1/SLICE_410">integrator_1/SLICE_410</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16234:R4C16D.FCO:R4C17A.FCI:0.000">     R4C16D.FCO to R4C17A.FCI    </A> <A href="#@net:integrator_1/n16234">integrator_1/n16234</A>
+FCITOFCO_D  ---     0.162     R4C17A.FCI to     R4C17A.FCO <A href="#@comp:integrator_1/SLICE_405">integrator_1/SLICE_405</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16235:R4C17A.FCO:R4C17B.FCI:0.000">     R4C17A.FCO to R4C17B.FCI    </A> <A href="#@net:integrator_1/n16235">integrator_1/n16235</A>
+FCITOFCO_D  ---     0.162     R4C17B.FCI to     R4C17B.FCO <A href="#@comp:integrator_1/SLICE_401">integrator_1/SLICE_401</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16236:R4C17B.FCO:R4C17C.FCI:0.000">     R4C17B.FCO to R4C17C.FCI    </A> <A href="#@net:integrator_1/n16236">integrator_1/n16236</A>
+FCITOFCO_D  ---     0.162     R4C17C.FCI to     R4C17C.FCO <A href="#@comp:integrator_1/SLICE_400">integrator_1/SLICE_400</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16237:R4C17C.FCO:R4C17D.FCI:0.000">     R4C17C.FCO to R4C17D.FCI    </A> <A href="#@net:integrator_1/n16237">integrator_1/n16237</A>
+FCITOFCO_D  ---     0.162     R4C17D.FCI to     R4C17D.FCO <A href="#@comp:integrator_1/SLICE_398">integrator_1/SLICE_398</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16238:R4C17D.FCO:R4C18A.FCI:0.000">     R4C17D.FCO to R4C18A.FCI    </A> <A href="#@net:integrator_1/n16238">integrator_1/n16238</A>
+FCITOF1_DE  ---     0.643     R4C18A.FCI to      R4C18A.F1 <A href="#@comp:integrator_1/SLICE_397">integrator_1/SLICE_397</A>
+ROUTE         4     2.433<A href="#@net:o_sw_N_1374_24:R4C18A.F1:R4C24A.A1:2.433">      R4C18A.F1 to R4C24A.A1     </A> <A href="#@net:o_sw_N_1374_24">o_sw_N_1374_24</A>
+C1TOFCO_DE  ---     0.889      R4C24A.A1 to     R4C24A.FCO <A href="#@comp:integrator_4/SLICE_131">integrator_4/SLICE_131</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16335:R4C24A.FCO:R4C24B.FCI:0.000">     R4C24A.FCO to R4C24B.FCI    </A> <A href="#@net:integrator_4/n16335">integrator_4/n16335</A>
+FCITOFCO_D  ---     0.162     R4C24B.FCI to     R4C24B.FCO <A href="#@comp:integrator_4/SLICE_130">integrator_4/SLICE_130</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16336:R4C24B.FCO:R4C24C.FCI:0.000">     R4C24B.FCO to R4C24C.FCI    </A> <A href="#@net:integrator_4/n16336">integrator_4/n16336</A>
+FCITOFCO_D  ---     0.162     R4C24C.FCI to     R4C24C.FCO <A href="#@comp:integrator_4/SLICE_129">integrator_4/SLICE_129</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16337:R4C24C.FCO:R4C24D.FCI:0.000">     R4C24C.FCO to R4C24D.FCI    </A> <A href="#@net:integrator_4/n16337">integrator_4/n16337</A>
+FCITOFCO_D  ---     0.162     R4C24D.FCI to     R4C24D.FCO <A href="#@comp:integrator_4/SLICE_126">integrator_4/SLICE_126</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16338:R4C24D.FCO:R4C25A.FCI:0.000">     R4C24D.FCO to R4C25A.FCI    </A> <A href="#@net:integrator_4/n16338">integrator_4/n16338</A>
+FCITOF1_DE  ---     0.643     R4C25A.FCI to      R4C25A.F1 <A href="#@comp:integrator_4/SLICE_125">integrator_4/SLICE_125</A>
+ROUTE         5     1.981<A href="#@net:integrator_4/n6541:R4C25A.F1:R6C13C.D1:1.981">      R4C25A.F1 to R6C13C.D1     </A> <A href="#@net:integrator_4/n6541">integrator_4/n6541</A>
+CTOF_DEL    ---     0.495      R6C13C.D1 to      R6C13C.F1 <A href="#@comp:SLICE_889">SLICE_889</A>
+ROUTE         2     1.031<A href="#@net:integrator_4/n18754:R6C13C.F1:R9C13B.D1:1.031">      R6C13C.F1 to R9C13B.D1     </A> <A href="#@net:integrator_4/n18754">integrator_4/n18754</A>
+CTOF_DEL    ---     0.495      R9C13B.D1 to      R9C13B.F1 <A href="#@comp:integrator_4/SLICE_1005">integrator_4/SLICE_1005</A>
+ROUTE        17     3.120<A href="#@net:integrator_4/n10908:R9C13B.F1:R2C25A.LSR:3.120">      R9C13B.F1 to R2C25A.LSR    </A> <A href="#@net:integrator_4/n10908">integrator_4/n10908</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                   17.509   (38.5% logic, 61.5% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R4C9C.CLK,clk_c">Source Clock Path</A> clk to integrator_1/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R4C9C.CLK:2.221">       12.PADDI to R4C9C.CLK     </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R2C25A.CLK,clk_c">Destination Clock Path</A> clk to integrator_4/SLICE_83:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R2C25A.CLK:2.221">       12.PADDI to R2C25A.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 2.217ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:integrator_1/SLICE_355">integrator_1/T4_i0_i1</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:integrator_4/SLICE_88">integrator_4/r_t1_2466__i28</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:integrator_4/r_t1_2466__i27">integrator_4/r_t1_2466__i27</A>
+
+   Delay:              17.509ns  (38.5% logic, 61.5% route), 20 logic levels.
+
+ Constraint Details:
+
+     17.509ns physical path delay integrator_1/SLICE_355 to integrator_4/SLICE_88 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.274ns LSR_SET requirement (totaling 19.726ns) by 2.217ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.452,R4C9C.CLK,R4C9C.Q0,integrator_1/SLICE_355:ROUTE, 2.198,R4C9C.Q0,R4C15B.A0,integrator_1/T4_1:C0TOFCO_DEL, 1.023,R4C15B.A0,R4C15B.FCO,integrator_1/SLICE_427:ROUTE, 0.000,R4C15B.FCO,R4C15C.FCI,integrator_1/n16228:FCITOFCO_DEL, 0.162,R4C15C.FCI,R4C15C.FCO,integrator_1/SLICE_426:ROUTE, 0.000,R4C15C.FCO,R4C15D.FCI,integrator_1/n16229:FCITOFCO_DEL, 0.162,R4C15D.FCI,R4C15D.FCO,integrator_1/SLICE_425:ROUTE, 0.000,R4C15D.FCO,R4C16A.FCI,integrator_1/n16230:FCITOFCO_DEL, 0.162,R4C16A.FCI,R4C16A.FCO,integrator_1/SLICE_418:ROUTE, 0.000,R4C16A.FCO,R4C16B.FCI,integrator_1/n16231:FCITOFCO_DEL, 0.162,R4C16B.FCI,R4C16B.FCO,integrator_1/SLICE_416:ROUTE, 0.000,R4C16B.FCO,R4C16C.FCI,integrator_1/n16232:FCITOFCO_DEL, 0.162,R4C16C.FCI,R4C16C.FCO,integrator_1/SLICE_413:ROUTE, 0.000,R4C16C.FCO,R4C16D.FCI,integrator_1/n16233:FCITOFCO_DEL, 0.162,R4C16D.FCI,R4C16D.FCO,integrator_1/SLICE_410:ROUTE, 0.000,R4C16D.FCO,R4C17A.FCI,integrator_1/n16234:FCITOFCO_DEL, 0.162,R4C17A.FCI,R4C17A.FCO,integrator_1/SLICE_405:ROUTE, 0.000,R4C17A.FCO,R4C17B.FCI,integrator_1/n16235:FCITOFCO_DEL, 0.162,R4C17B.FCI,R4C17B.FCO,integrator_1/SLICE_401:ROUTE, 0.000,R4C17B.FCO,R4C17C.FCI,integrator_1/n16236:FCITOFCO_DEL, 0.162,R4C17C.FCI,R4C17C.FCO,integrator_1/SLICE_400:ROUTE, 0.000,R4C17C.FCO,R4C17D.FCI,integrator_1/n16237:FCITOFCO_DEL, 0.162,R4C17D.FCI,R4C17D.FCO,integrator_1/SLICE_398:ROUTE, 0.000,R4C17D.FCO,R4C18A.FCI,integrator_1/n16238:FCITOF1_DEL, 0.643,R4C18A.FCI,R4C18A.F1,integrator_1/SLICE_397:ROUTE, 2.433,R4C18A.F1,R4C24A.A1,o_sw_N_1374_24:C1TOFCO_DEL, 0.889,R4C24A.A1,R4C24A.FCO,integrator_4/SLICE_131:ROUTE, 0.000,R4C24A.FCO,R4C24B.FCI,integrator_4/n16335:FCITOFCO_DEL, 0.162,R4C24B.FCI,R4C24B.FCO,integrator_4/SLICE_130:ROUTE, 0.000,R4C24B.FCO,R4C24C.FCI,integrator_4/n16336:FCITOFCO_DEL, 0.162,R4C24C.FCI,R4C24C.FCO,integrator_4/SLICE_129:ROUTE, 0.000,R4C24C.FCO,R4C24D.FCI,integrator_4/n16337:FCITOFCO_DEL, 0.162,R4C24D.FCI,R4C24D.FCO,integrator_4/SLICE_126:ROUTE, 0.000,R4C24D.FCO,R4C25A.FCI,integrator_4/n16338:FCITOF1_DEL, 0.643,R4C25A.FCI,R4C25A.F1,integrator_4/SLICE_125:ROUTE, 1.981,R4C25A.F1,R6C13C.D1,integrator_4/n6541:CTOF_DEL, 0.495,R6C13C.D1,R6C13C.F1,SLICE_889:ROUTE, 1.031,R6C13C.F1,R9C13B.D1,integrator_4/n18754:CTOF_DEL, 0.495,R9C13B.D1,R9C13B.F1,integrator_4/SLICE_1005:ROUTE, 3.120,R9C13B.F1,R2C24C.LSR,integrator_4/n10908">Data path</A> integrator_1/SLICE_355 to integrator_4/SLICE_88:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 <A href="#@comp:integrator_1/SLICE_355">integrator_1/SLICE_355</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE         1     2.198<A href="#@net:integrator_1/T4_1:R4C9C.Q0:R4C15B.A0:2.198">       R4C9C.Q0 to R4C15B.A0     </A> <A href="#@net:integrator_1/T4_1">integrator_1/T4_1</A>
+C0TOFCO_DE  ---     1.023      R4C15B.A0 to     R4C15B.FCO <A href="#@comp:integrator_1/SLICE_427">integrator_1/SLICE_427</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16228:R4C15B.FCO:R4C15C.FCI:0.000">     R4C15B.FCO to R4C15C.FCI    </A> <A href="#@net:integrator_1/n16228">integrator_1/n16228</A>
+FCITOFCO_D  ---     0.162     R4C15C.FCI to     R4C15C.FCO <A href="#@comp:integrator_1/SLICE_426">integrator_1/SLICE_426</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16229:R4C15C.FCO:R4C15D.FCI:0.000">     R4C15C.FCO to R4C15D.FCI    </A> <A href="#@net:integrator_1/n16229">integrator_1/n16229</A>
+FCITOFCO_D  ---     0.162     R4C15D.FCI to     R4C15D.FCO <A href="#@comp:integrator_1/SLICE_425">integrator_1/SLICE_425</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16230:R4C15D.FCO:R4C16A.FCI:0.000">     R4C15D.FCO to R4C16A.FCI    </A> <A href="#@net:integrator_1/n16230">integrator_1/n16230</A>
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO <A href="#@comp:integrator_1/SLICE_418">integrator_1/SLICE_418</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16231:R4C16A.FCO:R4C16B.FCI:0.000">     R4C16A.FCO to R4C16B.FCI    </A> <A href="#@net:integrator_1/n16231">integrator_1/n16231</A>
+FCITOFCO_D  ---     0.162     R4C16B.FCI to     R4C16B.FCO <A href="#@comp:integrator_1/SLICE_416">integrator_1/SLICE_416</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16232:R4C16B.FCO:R4C16C.FCI:0.000">     R4C16B.FCO to R4C16C.FCI    </A> <A href="#@net:integrator_1/n16232">integrator_1/n16232</A>
+FCITOFCO_D  ---     0.162     R4C16C.FCI to     R4C16C.FCO <A href="#@comp:integrator_1/SLICE_413">integrator_1/SLICE_413</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16233:R4C16C.FCO:R4C16D.FCI:0.000">     R4C16C.FCO to R4C16D.FCI    </A> <A href="#@net:integrator_1/n16233">integrator_1/n16233</A>
+FCITOFCO_D  ---     0.162     R4C16D.FCI to     R4C16D.FCO <A href="#@comp:integrator_1/SLICE_410">integrator_1/SLICE_410</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16234:R4C16D.FCO:R4C17A.FCI:0.000">     R4C16D.FCO to R4C17A.FCI    </A> <A href="#@net:integrator_1/n16234">integrator_1/n16234</A>
+FCITOFCO_D  ---     0.162     R4C17A.FCI to     R4C17A.FCO <A href="#@comp:integrator_1/SLICE_405">integrator_1/SLICE_405</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16235:R4C17A.FCO:R4C17B.FCI:0.000">     R4C17A.FCO to R4C17B.FCI    </A> <A href="#@net:integrator_1/n16235">integrator_1/n16235</A>
+FCITOFCO_D  ---     0.162     R4C17B.FCI to     R4C17B.FCO <A href="#@comp:integrator_1/SLICE_401">integrator_1/SLICE_401</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16236:R4C17B.FCO:R4C17C.FCI:0.000">     R4C17B.FCO to R4C17C.FCI    </A> <A href="#@net:integrator_1/n16236">integrator_1/n16236</A>
+FCITOFCO_D  ---     0.162     R4C17C.FCI to     R4C17C.FCO <A href="#@comp:integrator_1/SLICE_400">integrator_1/SLICE_400</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16237:R4C17C.FCO:R4C17D.FCI:0.000">     R4C17C.FCO to R4C17D.FCI    </A> <A href="#@net:integrator_1/n16237">integrator_1/n16237</A>
+FCITOFCO_D  ---     0.162     R4C17D.FCI to     R4C17D.FCO <A href="#@comp:integrator_1/SLICE_398">integrator_1/SLICE_398</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16238:R4C17D.FCO:R4C18A.FCI:0.000">     R4C17D.FCO to R4C18A.FCI    </A> <A href="#@net:integrator_1/n16238">integrator_1/n16238</A>
+FCITOF1_DE  ---     0.643     R4C18A.FCI to      R4C18A.F1 <A href="#@comp:integrator_1/SLICE_397">integrator_1/SLICE_397</A>
+ROUTE         4     2.433<A href="#@net:o_sw_N_1374_24:R4C18A.F1:R4C24A.A1:2.433">      R4C18A.F1 to R4C24A.A1     </A> <A href="#@net:o_sw_N_1374_24">o_sw_N_1374_24</A>
+C1TOFCO_DE  ---     0.889      R4C24A.A1 to     R4C24A.FCO <A href="#@comp:integrator_4/SLICE_131">integrator_4/SLICE_131</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16335:R4C24A.FCO:R4C24B.FCI:0.000">     R4C24A.FCO to R4C24B.FCI    </A> <A href="#@net:integrator_4/n16335">integrator_4/n16335</A>
+FCITOFCO_D  ---     0.162     R4C24B.FCI to     R4C24B.FCO <A href="#@comp:integrator_4/SLICE_130">integrator_4/SLICE_130</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16336:R4C24B.FCO:R4C24C.FCI:0.000">     R4C24B.FCO to R4C24C.FCI    </A> <A href="#@net:integrator_4/n16336">integrator_4/n16336</A>
+FCITOFCO_D  ---     0.162     R4C24C.FCI to     R4C24C.FCO <A href="#@comp:integrator_4/SLICE_129">integrator_4/SLICE_129</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16337:R4C24C.FCO:R4C24D.FCI:0.000">     R4C24C.FCO to R4C24D.FCI    </A> <A href="#@net:integrator_4/n16337">integrator_4/n16337</A>
+FCITOFCO_D  ---     0.162     R4C24D.FCI to     R4C24D.FCO <A href="#@comp:integrator_4/SLICE_126">integrator_4/SLICE_126</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16338:R4C24D.FCO:R4C25A.FCI:0.000">     R4C24D.FCO to R4C25A.FCI    </A> <A href="#@net:integrator_4/n16338">integrator_4/n16338</A>
+FCITOF1_DE  ---     0.643     R4C25A.FCI to      R4C25A.F1 <A href="#@comp:integrator_4/SLICE_125">integrator_4/SLICE_125</A>
+ROUTE         5     1.981<A href="#@net:integrator_4/n6541:R4C25A.F1:R6C13C.D1:1.981">      R4C25A.F1 to R6C13C.D1     </A> <A href="#@net:integrator_4/n6541">integrator_4/n6541</A>
+CTOF_DEL    ---     0.495      R6C13C.D1 to      R6C13C.F1 <A href="#@comp:SLICE_889">SLICE_889</A>
+ROUTE         2     1.031<A href="#@net:integrator_4/n18754:R6C13C.F1:R9C13B.D1:1.031">      R6C13C.F1 to R9C13B.D1     </A> <A href="#@net:integrator_4/n18754">integrator_4/n18754</A>
+CTOF_DEL    ---     0.495      R9C13B.D1 to      R9C13B.F1 <A href="#@comp:integrator_4/SLICE_1005">integrator_4/SLICE_1005</A>
+ROUTE        17     3.120<A href="#@net:integrator_4/n10908:R9C13B.F1:R2C24C.LSR:3.120">      R9C13B.F1 to R2C24C.LSR    </A> <A href="#@net:integrator_4/n10908">integrator_4/n10908</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                   17.509   (38.5% logic, 61.5% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R4C9C.CLK,clk_c">Source Clock Path</A> clk to integrator_1/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R4C9C.CLK:2.221">       12.PADDI to R4C9C.CLK     </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R2C24C.CLK,clk_c">Destination Clock Path</A> clk to integrator_4/SLICE_88:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R2C24C.CLK:2.221">       12.PADDI to R2C24C.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 2.217ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:integrator_1/SLICE_355">integrator_1/T4_i0_i1</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:integrator_4/SLICE_101">integrator_4/r_t1_2466__i20</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:integrator_4/r_t1_2466__i19">integrator_4/r_t1_2466__i19</A>
+
+   Delay:              17.509ns  (38.5% logic, 61.5% route), 20 logic levels.
+
+ Constraint Details:
+
+     17.509ns physical path delay integrator_1/SLICE_355 to integrator_4/SLICE_101 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.274ns LSR_SET requirement (totaling 19.726ns) by 2.217ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.452,R4C9C.CLK,R4C9C.Q0,integrator_1/SLICE_355:ROUTE, 2.198,R4C9C.Q0,R4C15B.A0,integrator_1/T4_1:C0TOFCO_DEL, 1.023,R4C15B.A0,R4C15B.FCO,integrator_1/SLICE_427:ROUTE, 0.000,R4C15B.FCO,R4C15C.FCI,integrator_1/n16228:FCITOFCO_DEL, 0.162,R4C15C.FCI,R4C15C.FCO,integrator_1/SLICE_426:ROUTE, 0.000,R4C15C.FCO,R4C15D.FCI,integrator_1/n16229:FCITOFCO_DEL, 0.162,R4C15D.FCI,R4C15D.FCO,integrator_1/SLICE_425:ROUTE, 0.000,R4C15D.FCO,R4C16A.FCI,integrator_1/n16230:FCITOFCO_DEL, 0.162,R4C16A.FCI,R4C16A.FCO,integrator_1/SLICE_418:ROUTE, 0.000,R4C16A.FCO,R4C16B.FCI,integrator_1/n16231:FCITOFCO_DEL, 0.162,R4C16B.FCI,R4C16B.FCO,integrator_1/SLICE_416:ROUTE, 0.000,R4C16B.FCO,R4C16C.FCI,integrator_1/n16232:FCITOFCO_DEL, 0.162,R4C16C.FCI,R4C16C.FCO,integrator_1/SLICE_413:ROUTE, 0.000,R4C16C.FCO,R4C16D.FCI,integrator_1/n16233:FCITOFCO_DEL, 0.162,R4C16D.FCI,R4C16D.FCO,integrator_1/SLICE_410:ROUTE, 0.000,R4C16D.FCO,R4C17A.FCI,integrator_1/n16234:FCITOFCO_DEL, 0.162,R4C17A.FCI,R4C17A.FCO,integrator_1/SLICE_405:ROUTE, 0.000,R4C17A.FCO,R4C17B.FCI,integrator_1/n16235:FCITOFCO_DEL, 0.162,R4C17B.FCI,R4C17B.FCO,integrator_1/SLICE_401:ROUTE, 0.000,R4C17B.FCO,R4C17C.FCI,integrator_1/n16236:FCITOFCO_DEL, 0.162,R4C17C.FCI,R4C17C.FCO,integrator_1/SLICE_400:ROUTE, 0.000,R4C17C.FCO,R4C17D.FCI,integrator_1/n16237:FCITOFCO_DEL, 0.162,R4C17D.FCI,R4C17D.FCO,integrator_1/SLICE_398:ROUTE, 0.000,R4C17D.FCO,R4C18A.FCI,integrator_1/n16238:FCITOF1_DEL, 0.643,R4C18A.FCI,R4C18A.F1,integrator_1/SLICE_397:ROUTE, 2.433,R4C18A.F1,R4C24A.A1,o_sw_N_1374_24:C1TOFCO_DEL, 0.889,R4C24A.A1,R4C24A.FCO,integrator_4/SLICE_131:ROUTE, 0.000,R4C24A.FCO,R4C24B.FCI,integrator_4/n16335:FCITOFCO_DEL, 0.162,R4C24B.FCI,R4C24B.FCO,integrator_4/SLICE_130:ROUTE, 0.000,R4C24B.FCO,R4C24C.FCI,integrator_4/n16336:FCITOFCO_DEL, 0.162,R4C24C.FCI,R4C24C.FCO,integrator_4/SLICE_129:ROUTE, 0.000,R4C24C.FCO,R4C24D.FCI,integrator_4/n16337:FCITOFCO_DEL, 0.162,R4C24D.FCI,R4C24D.FCO,integrator_4/SLICE_126:ROUTE, 0.000,R4C24D.FCO,R4C25A.FCI,integrator_4/n16338:FCITOF1_DEL, 0.643,R4C25A.FCI,R4C25A.F1,integrator_4/SLICE_125:ROUTE, 1.981,R4C25A.F1,R6C13C.D1,integrator_4/n6541:CTOF_DEL, 0.495,R6C13C.D1,R6C13C.F1,SLICE_889:ROUTE, 1.031,R6C13C.F1,R9C13B.D1,integrator_4/n18754:CTOF_DEL, 0.495,R9C13B.D1,R9C13B.F1,integrator_4/SLICE_1005:ROUTE, 3.120,R9C13B.F1,R2C23C.LSR,integrator_4/n10908">Data path</A> integrator_1/SLICE_355 to integrator_4/SLICE_101:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R4C9C.CLK to       R4C9C.Q0 <A href="#@comp:integrator_1/SLICE_355">integrator_1/SLICE_355</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE         1     2.198<A href="#@net:integrator_1/T4_1:R4C9C.Q0:R4C15B.A0:2.198">       R4C9C.Q0 to R4C15B.A0     </A> <A href="#@net:integrator_1/T4_1">integrator_1/T4_1</A>
+C0TOFCO_DE  ---     1.023      R4C15B.A0 to     R4C15B.FCO <A href="#@comp:integrator_1/SLICE_427">integrator_1/SLICE_427</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16228:R4C15B.FCO:R4C15C.FCI:0.000">     R4C15B.FCO to R4C15C.FCI    </A> <A href="#@net:integrator_1/n16228">integrator_1/n16228</A>
+FCITOFCO_D  ---     0.162     R4C15C.FCI to     R4C15C.FCO <A href="#@comp:integrator_1/SLICE_426">integrator_1/SLICE_426</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16229:R4C15C.FCO:R4C15D.FCI:0.000">     R4C15C.FCO to R4C15D.FCI    </A> <A href="#@net:integrator_1/n16229">integrator_1/n16229</A>
+FCITOFCO_D  ---     0.162     R4C15D.FCI to     R4C15D.FCO <A href="#@comp:integrator_1/SLICE_425">integrator_1/SLICE_425</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16230:R4C15D.FCO:R4C16A.FCI:0.000">     R4C15D.FCO to R4C16A.FCI    </A> <A href="#@net:integrator_1/n16230">integrator_1/n16230</A>
+FCITOFCO_D  ---     0.162     R4C16A.FCI to     R4C16A.FCO <A href="#@comp:integrator_1/SLICE_418">integrator_1/SLICE_418</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16231:R4C16A.FCO:R4C16B.FCI:0.000">     R4C16A.FCO to R4C16B.FCI    </A> <A href="#@net:integrator_1/n16231">integrator_1/n16231</A>
+FCITOFCO_D  ---     0.162     R4C16B.FCI to     R4C16B.FCO <A href="#@comp:integrator_1/SLICE_416">integrator_1/SLICE_416</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16232:R4C16B.FCO:R4C16C.FCI:0.000">     R4C16B.FCO to R4C16C.FCI    </A> <A href="#@net:integrator_1/n16232">integrator_1/n16232</A>
+FCITOFCO_D  ---     0.162     R4C16C.FCI to     R4C16C.FCO <A href="#@comp:integrator_1/SLICE_413">integrator_1/SLICE_413</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16233:R4C16C.FCO:R4C16D.FCI:0.000">     R4C16C.FCO to R4C16D.FCI    </A> <A href="#@net:integrator_1/n16233">integrator_1/n16233</A>
+FCITOFCO_D  ---     0.162     R4C16D.FCI to     R4C16D.FCO <A href="#@comp:integrator_1/SLICE_410">integrator_1/SLICE_410</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16234:R4C16D.FCO:R4C17A.FCI:0.000">     R4C16D.FCO to R4C17A.FCI    </A> <A href="#@net:integrator_1/n16234">integrator_1/n16234</A>
+FCITOFCO_D  ---     0.162     R4C17A.FCI to     R4C17A.FCO <A href="#@comp:integrator_1/SLICE_405">integrator_1/SLICE_405</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16235:R4C17A.FCO:R4C17B.FCI:0.000">     R4C17A.FCO to R4C17B.FCI    </A> <A href="#@net:integrator_1/n16235">integrator_1/n16235</A>
+FCITOFCO_D  ---     0.162     R4C17B.FCI to     R4C17B.FCO <A href="#@comp:integrator_1/SLICE_401">integrator_1/SLICE_401</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16236:R4C17B.FCO:R4C17C.FCI:0.000">     R4C17B.FCO to R4C17C.FCI    </A> <A href="#@net:integrator_1/n16236">integrator_1/n16236</A>
+FCITOFCO_D  ---     0.162     R4C17C.FCI to     R4C17C.FCO <A href="#@comp:integrator_1/SLICE_400">integrator_1/SLICE_400</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16237:R4C17C.FCO:R4C17D.FCI:0.000">     R4C17C.FCO to R4C17D.FCI    </A> <A href="#@net:integrator_1/n16237">integrator_1/n16237</A>
+FCITOFCO_D  ---     0.162     R4C17D.FCI to     R4C17D.FCO <A href="#@comp:integrator_1/SLICE_398">integrator_1/SLICE_398</A>
+ROUTE         1     0.000<A href="#@net:integrator_1/n16238:R4C17D.FCO:R4C18A.FCI:0.000">     R4C17D.FCO to R4C18A.FCI    </A> <A href="#@net:integrator_1/n16238">integrator_1/n16238</A>
+FCITOF1_DE  ---     0.643     R4C18A.FCI to      R4C18A.F1 <A href="#@comp:integrator_1/SLICE_397">integrator_1/SLICE_397</A>
+ROUTE         4     2.433<A href="#@net:o_sw_N_1374_24:R4C18A.F1:R4C24A.A1:2.433">      R4C18A.F1 to R4C24A.A1     </A> <A href="#@net:o_sw_N_1374_24">o_sw_N_1374_24</A>
+C1TOFCO_DE  ---     0.889      R4C24A.A1 to     R4C24A.FCO <A href="#@comp:integrator_4/SLICE_131">integrator_4/SLICE_131</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16335:R4C24A.FCO:R4C24B.FCI:0.000">     R4C24A.FCO to R4C24B.FCI    </A> <A href="#@net:integrator_4/n16335">integrator_4/n16335</A>
+FCITOFCO_D  ---     0.162     R4C24B.FCI to     R4C24B.FCO <A href="#@comp:integrator_4/SLICE_130">integrator_4/SLICE_130</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16336:R4C24B.FCO:R4C24C.FCI:0.000">     R4C24B.FCO to R4C24C.FCI    </A> <A href="#@net:integrator_4/n16336">integrator_4/n16336</A>
+FCITOFCO_D  ---     0.162     R4C24C.FCI to     R4C24C.FCO <A href="#@comp:integrator_4/SLICE_129">integrator_4/SLICE_129</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16337:R4C24C.FCO:R4C24D.FCI:0.000">     R4C24C.FCO to R4C24D.FCI    </A> <A href="#@net:integrator_4/n16337">integrator_4/n16337</A>
+FCITOFCO_D  ---     0.162     R4C24D.FCI to     R4C24D.FCO <A href="#@comp:integrator_4/SLICE_126">integrator_4/SLICE_126</A>
+ROUTE         1     0.000<A href="#@net:integrator_4/n16338:R4C24D.FCO:R4C25A.FCI:0.000">     R4C24D.FCO to R4C25A.FCI    </A> <A href="#@net:integrator_4/n16338">integrator_4/n16338</A>
+FCITOF1_DE  ---     0.643     R4C25A.FCI to      R4C25A.F1 <A href="#@comp:integrator_4/SLICE_125">integrator_4/SLICE_125</A>
+ROUTE         5     1.981<A href="#@net:integrator_4/n6541:R4C25A.F1:R6C13C.D1:1.981">      R4C25A.F1 to R6C13C.D1     </A> <A href="#@net:integrator_4/n6541">integrator_4/n6541</A>
+CTOF_DEL    ---     0.495      R6C13C.D1 to      R6C13C.F1 <A href="#@comp:SLICE_889">SLICE_889</A>
+ROUTE         2     1.031<A href="#@net:integrator_4/n18754:R6C13C.F1:R9C13B.D1:1.031">      R6C13C.F1 to R9C13B.D1     </A> <A href="#@net:integrator_4/n18754">integrator_4/n18754</A>
+CTOF_DEL    ---     0.495      R9C13B.D1 to      R9C13B.F1 <A href="#@comp:integrator_4/SLICE_1005">integrator_4/SLICE_1005</A>
+ROUTE        17     3.120<A href="#@net:integrator_4/n10908:R9C13B.F1:R2C23C.LSR:3.120">      R9C13B.F1 to R2C23C.LSR    </A> <A href="#@net:integrator_4/n10908">integrator_4/n10908</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                   17.509   (38.5% logic, 61.5% route), 20 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R4C9C.CLK,clk_c">Source Clock Path</A> clk to integrator_1/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R4C9C.CLK:2.221">       12.PADDI to R4C9C.CLK     </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:ROUTE, 2.221,12.PADDI,R2C23C.CLK,clk_c">Destination Clock Path</A> clk to integrator_4/SLICE_101:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       564     2.221<A href="#@net:clk_c:12.PADDI:R2C23C.CLK:2.221">       12.PADDI to R2C23C.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    2.221   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:   17.783ns is the minimum period for this preference.
+
+<A name="Report Summary"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+PERIOD PORT "clk" 20.000000 ns HIGH     |             |             |
+10.000000 ns ;                          |    20.000 ns|    17.783 ns|  20  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="Clock Domains Analysis"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>   Source: SLICE_887.F1   Loads: 3
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: <A href="#@net:clk_c">clk_c</A>   Source: clk.PAD
+      Covered under: PERIOD PORT "clk" 20.000000 ns HIGH 10.000000 ns ;   Transfers: 9
+
+Clock Domain: <A href="#@net:clk_c">clk_c</A>   Source: clk.PAD   Loads: 564
+   Covered under: PERIOD PORT "clk" 20.000000 ns HIGH 10.000000 ns ;
+
+   Data transfers from:
+   Clock Domain: <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>   Source: SLICE_887.F1
+      Covered under: PERIOD PORT "clk" 20.000000 ns HIGH 10.000000 ns ;   Transfers: 4
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 233222 paths, 3 nets, and 6660 connections (98.59% coverage)
+

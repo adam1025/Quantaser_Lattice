@@ -1,0 +1,598 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<STYLE type=text/css>
+<!--
+.blink {text-decoration:blink}
+.ms  {font-size: 9pt; font-family: monospace; font-weight: normal}
+.msb {font-size: 9pt; font-family: monospace; font-weight: bold  }
+-->
+</STYLE>
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY><B>
+</B>
+<BR><PRE><A name="Report Header"></A>
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
+Tue Sep 01 20:23:15 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design file:     qss013_top
+Device,speed:    LCMXO2-2000HC,M
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+
+
+</A><A name="PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 n"></A>================================================================================
+Preference: PERIOD PORT "clk" 20.000000 ns HIGH 10.000000 ns ;
+            10 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.138ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_806">ft232h_w/r_ftWait_done_109</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ft232h_w/SLICE_760">ft232h_w/next_state_5__I_0_i3</A>  (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A> +)
+
+   Delay:               1.167ns  (20.1% logic, 79.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.167ns physical path delay SLICE_806 to ft232h_w/SLICE_760 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+     -1.042ns skew requirement (totaling 1.029ns) by 0.138ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.133,R13C7A.CLK,R13C7A.Q0,SLICE_806:ROUTE, 0.933,R13C7A.Q0,R13C7C.D1,next_state_5_N_814_2:CTOF_DEL, 0.101,R13C7C.D1,R13C7C.F1,ft232h_w/SLICE_760:ROUTE, 0.000,R13C7C.F1,R13C7C.DI1,ft232h_w/n7536">Data path</A> SLICE_806 to ft232h_w/SLICE_760:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R13C7A.CLK to      R13C7A.Q0 <A href="#@comp:SLICE_806">SLICE_806</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE         6     0.933<A href="#@net:next_state_5_N_814_2:R13C7A.Q0:R13C7C.D1:0.933">      R13C7A.Q0 to R13C7C.D1     </A> <A href="#@net:next_state_5_N_814_2">next_state_5_N_814_2</A>
+CTOF_DEL    ---     0.101      R13C7C.D1 to      R13C7C.F1 <A href="#@comp:ft232h_w/SLICE_760">ft232h_w/SLICE_760</A>
+ROUTE         1     0.000<A href="#@net:ft232h_w/n7536:R13C7C.F1:R13C7C.DI1:0.000">      R13C7C.F1 to R13C7C.DI1    </A> <A href="#@net:ft232h_w/n7536">ft232h_w/n7536</A> (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>)
+                  --------
+                    1.167   (20.1% logic, 79.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C7A.CLK,clk_c">Source Clock Path</A> clk to SLICE_806:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C7A.CLK:0.818">       12.PADDI to R13C7A.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    1.300   (37.1% logic, 62.9% route), 1 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6D.CLK,clk_c:REG_DEL, 0.154,R13C6D.CLK,R13C6D.Q0,ft232h_w/SLICE_948:ROUTE, 0.504,R13C6D.Q0,R13C8B.A1,ft232h_w/curent_state_2:CTOF_DEL, 0.177,R13C8B.A1,R13C8B.F1,SLICE_887:ROUTE, 0.207,R13C8B.F1,R13C7C.CLK,ft232h_w/next_state_5__N_854">Destination Clock Path</A> clk to ft232h_w/SLICE_760:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6D.CLK:0.818">       12.PADDI to R13C6D.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.154     R13C6D.CLK to      R13C6D.Q0 <A href="#@comp:ft232h_w/SLICE_948">ft232h_w/SLICE_948</A>
+ROUTE        20     0.504<A href="#@net:ft232h_w/curent_state_2:R13C6D.Q0:R13C8B.A1:0.504">      R13C6D.Q0 to R13C8B.A1     </A> <A href="#@net:ft232h_w/curent_state_2">ft232h_w/curent_state_2</A>
+CTOF_DEL    ---     0.177      R13C8B.A1 to      R13C8B.F1 <A href="#@comp:SLICE_887">SLICE_887</A>
+ROUTE         3     0.207<A href="#@net:ft232h_w/next_state_5__N_854:R13C8B.F1:R13C7C.CLK:0.207">      R13C8B.F1 to R13C7C.CLK    </A> <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>
+                  --------
+                    2.342   (34.7% logic, 65.3% route), 3 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.147ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ft232h_w/SLICE_923">ft232h_w/r_wr_n_106</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ft232h_w/SLICE_761">ft232h_w/next_state_5__I_0_i4</A>  (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A> +)
+
+   Delay:               1.168ns  (24.7% logic, 75.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.168ns physical path delay ft232h_w/SLICE_923 to ft232h_w/SLICE_761 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+     -1.034ns skew requirement (totaling 1.021ns) by 0.147ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.133,R12C7A.CLK,R12C7A.Q0,ft232h_w/SLICE_923:ROUTE, 0.879,R12C7A.Q0,R13C8D.A1,wr_n_c_0:CTOOFX_DEL, 0.156,R13C8D.A1,R13C8D.OFX0,ft232h_w/SLICE_761:ROUTE, 0.000,R13C8D.OFX0,R13C8D.DI0,ft232h_w/n18646">Data path</A> ft232h_w/SLICE_923 to ft232h_w/SLICE_761:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R12C7A.CLK to      R12C7A.Q0 <A href="#@comp:ft232h_w/SLICE_923">ft232h_w/SLICE_923</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE         4     0.879<A href="#@net:wr_n_c_0:R12C7A.Q0:R13C8D.A1:0.879">      R12C7A.Q0 to R13C8D.A1     </A> <A href="#@net:wr_n_c_0">wr_n_c_0</A>
+CTOOFX_DEL  ---     0.156      R13C8D.A1 to    R13C8D.OFX0 <A href="#@comp:ft232h_w/SLICE_761">ft232h_w/SLICE_761</A>
+ROUTE         1     0.000<A href="#@net:ft232h_w/n18646:R13C8D.OFX0:R13C8D.DI0:0.000">    R13C8D.OFX0 to R13C8D.DI0    </A> <A href="#@net:ft232h_w/n18646">ft232h_w/n18646</A> (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>)
+                  --------
+                    1.168   (24.7% logic, 75.3% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R12C7A.CLK,clk_c">Source Clock Path</A> clk to ft232h_w/SLICE_923:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R12C7A.CLK:0.818">       12.PADDI to R12C7A.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    1.300   (37.1% logic, 62.9% route), 1 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6D.CLK,clk_c:REG_DEL, 0.154,R13C6D.CLK,R13C6D.Q0,ft232h_w/SLICE_948:ROUTE, 0.504,R13C6D.Q0,R13C8B.A1,ft232h_w/curent_state_2:CTOF_DEL, 0.177,R13C8B.A1,R13C8B.F1,SLICE_887:ROUTE, 0.199,R13C8B.F1,R13C8D.CLK,ft232h_w/next_state_5__N_854">Destination Clock Path</A> clk to ft232h_w/SLICE_761:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6D.CLK:0.818">       12.PADDI to R13C6D.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.154     R13C6D.CLK to      R13C6D.Q0 <A href="#@comp:ft232h_w/SLICE_948">ft232h_w/SLICE_948</A>
+ROUTE        20     0.504<A href="#@net:ft232h_w/curent_state_2:R13C6D.Q0:R13C8B.A1:0.504">      R13C6D.Q0 to R13C8B.A1     </A> <A href="#@net:ft232h_w/curent_state_2">ft232h_w/curent_state_2</A>
+CTOF_DEL    ---     0.177      R13C8B.A1 to      R13C8B.F1 <A href="#@comp:SLICE_887">SLICE_887</A>
+ROUTE         3     0.199<A href="#@net:ft232h_w/next_state_5__N_854:R13C8B.F1:R13C8D.CLK:0.199">      R13C8B.F1 to R13C8D.CLK    </A> <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>
+                  --------
+                    2.334   (34.8% logic, 65.2% route), 3 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.147ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ft232h_w/SLICE_948">ft232h_w/curent_state_i3</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ft232h_w/SLICE_760">ft232h_w/next_state_5__I_0_i3</A>  (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A> +)
+
+   Delay:               1.176ns  (19.9% logic, 80.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.176ns physical path delay ft232h_w/SLICE_948 to ft232h_w/SLICE_760 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+     -1.042ns skew requirement (totaling 1.029ns) by 0.147ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.133,R13C6D.CLK,R13C6D.Q0,ft232h_w/SLICE_948:ROUTE, 0.942,R13C6D.Q0,R13C7C.A1,ft232h_w/curent_state_2:CTOF_DEL, 0.101,R13C7C.A1,R13C7C.F1,ft232h_w/SLICE_760:ROUTE, 0.000,R13C7C.F1,R13C7C.DI1,ft232h_w/n7536">Data path</A> ft232h_w/SLICE_948 to ft232h_w/SLICE_760:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R13C6D.CLK to      R13C6D.Q0 <A href="#@comp:ft232h_w/SLICE_948">ft232h_w/SLICE_948</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE        20     0.942<A href="#@net:ft232h_w/curent_state_2:R13C6D.Q0:R13C7C.A1:0.942">      R13C6D.Q0 to R13C7C.A1     </A> <A href="#@net:ft232h_w/curent_state_2">ft232h_w/curent_state_2</A>
+CTOF_DEL    ---     0.101      R13C7C.A1 to      R13C7C.F1 <A href="#@comp:ft232h_w/SLICE_760">ft232h_w/SLICE_760</A>
+ROUTE         1     0.000<A href="#@net:ft232h_w/n7536:R13C7C.F1:R13C7C.DI1:0.000">      R13C7C.F1 to R13C7C.DI1    </A> <A href="#@net:ft232h_w/n7536">ft232h_w/n7536</A> (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>)
+                  --------
+                    1.176   (19.9% logic, 80.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6D.CLK,clk_c">Source Clock Path</A> clk to ft232h_w/SLICE_948:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6D.CLK:0.818">       12.PADDI to R13C6D.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    1.300   (37.1% logic, 62.9% route), 1 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6D.CLK,clk_c:REG_DEL, 0.154,R13C6D.CLK,R13C6D.Q0,ft232h_w/SLICE_948:ROUTE, 0.504,R13C6D.Q0,R13C8B.A1,ft232h_w/curent_state_2:CTOF_DEL, 0.177,R13C8B.A1,R13C8B.F1,SLICE_887:ROUTE, 0.207,R13C8B.F1,R13C7C.CLK,ft232h_w/next_state_5__N_854">Destination Clock Path</A> clk to ft232h_w/SLICE_760:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6D.CLK:0.818">       12.PADDI to R13C6D.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.154     R13C6D.CLK to      R13C6D.Q0 <A href="#@comp:ft232h_w/SLICE_948">ft232h_w/SLICE_948</A>
+ROUTE        20     0.504<A href="#@net:ft232h_w/curent_state_2:R13C6D.Q0:R13C8B.A1:0.504">      R13C6D.Q0 to R13C8B.A1     </A> <A href="#@net:ft232h_w/curent_state_2">ft232h_w/curent_state_2</A>
+CTOF_DEL    ---     0.177      R13C8B.A1 to      R13C8B.F1 <A href="#@comp:SLICE_887">SLICE_887</A>
+ROUTE         3     0.207<A href="#@net:ft232h_w/next_state_5__N_854:R13C8B.F1:R13C7C.CLK:0.207">      R13C8B.F1 to R13C7C.CLK    </A> <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>
+                  --------
+                    2.342   (34.7% logic, 65.3% route), 3 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.150ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ft232h_w/SLICE_1042">ft232h_w/curent_state_i1</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ft232h_w/SLICE_760">ft232h_w/next_state_5__I_0_i3</A>  (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A> +)
+
+   Delay:               1.179ns  (19.8% logic, 80.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.179ns physical path delay ft232h_w/SLICE_1042 to ft232h_w/SLICE_760 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+     -1.042ns skew requirement (totaling 1.029ns) by 0.150ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.133,R13C6A.CLK,R13C6A.Q0,ft232h_w/SLICE_1042:ROUTE, 0.945,R13C6A.Q0,R13C7C.B1,ft232h_w/curent_state_0:CTOF_DEL, 0.101,R13C7C.B1,R13C7C.F1,ft232h_w/SLICE_760:ROUTE, 0.000,R13C7C.F1,R13C7C.DI1,ft232h_w/n7536">Data path</A> ft232h_w/SLICE_1042 to ft232h_w/SLICE_760:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R13C6A.CLK to      R13C6A.Q0 <A href="#@comp:ft232h_w/SLICE_1042">ft232h_w/SLICE_1042</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE        23     0.945<A href="#@net:ft232h_w/curent_state_0:R13C6A.Q0:R13C7C.B1:0.945">      R13C6A.Q0 to R13C7C.B1     </A> <A href="#@net:ft232h_w/curent_state_0">ft232h_w/curent_state_0</A>
+CTOF_DEL    ---     0.101      R13C7C.B1 to      R13C7C.F1 <A href="#@comp:ft232h_w/SLICE_760">ft232h_w/SLICE_760</A>
+ROUTE         1     0.000<A href="#@net:ft232h_w/n7536:R13C7C.F1:R13C7C.DI1:0.000">      R13C7C.F1 to R13C7C.DI1    </A> <A href="#@net:ft232h_w/n7536">ft232h_w/n7536</A> (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>)
+                  --------
+                    1.179   (19.8% logic, 80.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6A.CLK,clk_c">Source Clock Path</A> clk to ft232h_w/SLICE_1042:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6A.CLK:0.818">       12.PADDI to R13C6A.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    1.300   (37.1% logic, 62.9% route), 1 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6D.CLK,clk_c:REG_DEL, 0.154,R13C6D.CLK,R13C6D.Q0,ft232h_w/SLICE_948:ROUTE, 0.504,R13C6D.Q0,R13C8B.A1,ft232h_w/curent_state_2:CTOF_DEL, 0.177,R13C8B.A1,R13C8B.F1,SLICE_887:ROUTE, 0.207,R13C8B.F1,R13C7C.CLK,ft232h_w/next_state_5__N_854">Destination Clock Path</A> clk to ft232h_w/SLICE_760:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6D.CLK:0.818">       12.PADDI to R13C6D.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.154     R13C6D.CLK to      R13C6D.Q0 <A href="#@comp:ft232h_w/SLICE_948">ft232h_w/SLICE_948</A>
+ROUTE        20     0.504<A href="#@net:ft232h_w/curent_state_2:R13C6D.Q0:R13C8B.A1:0.504">      R13C6D.Q0 to R13C8B.A1     </A> <A href="#@net:ft232h_w/curent_state_2">ft232h_w/curent_state_2</A>
+CTOF_DEL    ---     0.177      R13C8B.A1 to      R13C8B.F1 <A href="#@comp:SLICE_887">SLICE_887</A>
+ROUTE         3     0.207<A href="#@net:ft232h_w/next_state_5__N_854:R13C8B.F1:R13C7C.CLK:0.207">      R13C8B.F1 to R13C7C.CLK    </A> <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>
+                  --------
+                    2.342   (34.7% logic, 65.3% route), 3 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.158ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_806">ft232h_w/r_ftWait_done_109</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ft232h_w/SLICE_759">ft232h_w/next_state_5__I_0_i1</A>  (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A> +)
+
+   Delay:               1.187ns  (24.3% logic, 75.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.187ns physical path delay SLICE_806 to ft232h_w/SLICE_759 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+     -1.042ns skew requirement (totaling 1.029ns) by 0.158ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.133,R13C7A.CLK,R13C7A.Q0,SLICE_806:ROUTE, 0.898,R13C7A.Q0,R13C7D.A1,next_state_5_N_814_2:CTOOFX_DEL, 0.156,R13C7D.A1,R13C7D.OFX0,ft232h_w/SLICE_759:ROUTE, 0.000,R13C7D.OFX0,R13C7D.DI0,ft232h_w/n18482">Data path</A> SLICE_806 to ft232h_w/SLICE_759:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R13C7A.CLK to      R13C7A.Q0 <A href="#@comp:SLICE_806">SLICE_806</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE         6     0.898<A href="#@net:next_state_5_N_814_2:R13C7A.Q0:R13C7D.A1:0.898">      R13C7A.Q0 to R13C7D.A1     </A> <A href="#@net:next_state_5_N_814_2">next_state_5_N_814_2</A>
+CTOOFX_DEL  ---     0.156      R13C7D.A1 to    R13C7D.OFX0 <A href="#@comp:ft232h_w/SLICE_759">ft232h_w/SLICE_759</A>
+ROUTE         1     0.000<A href="#@net:ft232h_w/n18482:R13C7D.OFX0:R13C7D.DI0:0.000">    R13C7D.OFX0 to R13C7D.DI0    </A> <A href="#@net:ft232h_w/n18482">ft232h_w/n18482</A> (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>)
+                  --------
+                    1.187   (24.3% logic, 75.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C7A.CLK,clk_c">Source Clock Path</A> clk to SLICE_806:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C7A.CLK:0.818">       12.PADDI to R13C7A.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    1.300   (37.1% logic, 62.9% route), 1 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6D.CLK,clk_c:REG_DEL, 0.154,R13C6D.CLK,R13C6D.Q0,ft232h_w/SLICE_948:ROUTE, 0.504,R13C6D.Q0,R13C8B.A1,ft232h_w/curent_state_2:CTOF_DEL, 0.177,R13C8B.A1,R13C8B.F1,SLICE_887:ROUTE, 0.207,R13C8B.F1,R13C7D.CLK,ft232h_w/next_state_5__N_854">Destination Clock Path</A> clk to ft232h_w/SLICE_759:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6D.CLK:0.818">       12.PADDI to R13C6D.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.154     R13C6D.CLK to      R13C6D.Q0 <A href="#@comp:ft232h_w/SLICE_948">ft232h_w/SLICE_948</A>
+ROUTE        20     0.504<A href="#@net:ft232h_w/curent_state_2:R13C6D.Q0:R13C8B.A1:0.504">      R13C6D.Q0 to R13C8B.A1     </A> <A href="#@net:ft232h_w/curent_state_2">ft232h_w/curent_state_2</A>
+CTOF_DEL    ---     0.177      R13C8B.A1 to      R13C8B.F1 <A href="#@comp:SLICE_887">SLICE_887</A>
+ROUTE         3     0.207<A href="#@net:ft232h_w/next_state_5__N_854:R13C8B.F1:R13C7D.CLK:0.207">      R13C8B.F1 to R13C7D.CLK    </A> <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>
+                  --------
+                    2.342   (34.7% logic, 65.3% route), 3 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.159ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ft232h_w/SLICE_1042">ft232h_w/curent_state_i1</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ft232h_w/SLICE_759">ft232h_w/next_state_5__I_0_i1</A>  (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A> +)
+
+   Delay:               1.188ns  (24.3% logic, 75.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.188ns physical path delay ft232h_w/SLICE_1042 to ft232h_w/SLICE_759 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+     -1.042ns skew requirement (totaling 1.029ns) by 0.159ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.133,R13C6A.CLK,R13C6A.Q0,ft232h_w/SLICE_1042:ROUTE, 0.899,R13C6A.Q0,R13C7D.D1,ft232h_w/curent_state_0:CTOOFX_DEL, 0.156,R13C7D.D1,R13C7D.OFX0,ft232h_w/SLICE_759:ROUTE, 0.000,R13C7D.OFX0,R13C7D.DI0,ft232h_w/n18482">Data path</A> ft232h_w/SLICE_1042 to ft232h_w/SLICE_759:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R13C6A.CLK to      R13C6A.Q0 <A href="#@comp:ft232h_w/SLICE_1042">ft232h_w/SLICE_1042</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE        23     0.899<A href="#@net:ft232h_w/curent_state_0:R13C6A.Q0:R13C7D.D1:0.899">      R13C6A.Q0 to R13C7D.D1     </A> <A href="#@net:ft232h_w/curent_state_0">ft232h_w/curent_state_0</A>
+CTOOFX_DEL  ---     0.156      R13C7D.D1 to    R13C7D.OFX0 <A href="#@comp:ft232h_w/SLICE_759">ft232h_w/SLICE_759</A>
+ROUTE         1     0.000<A href="#@net:ft232h_w/n18482:R13C7D.OFX0:R13C7D.DI0:0.000">    R13C7D.OFX0 to R13C7D.DI0    </A> <A href="#@net:ft232h_w/n18482">ft232h_w/n18482</A> (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>)
+                  --------
+                    1.188   (24.3% logic, 75.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6A.CLK,clk_c">Source Clock Path</A> clk to ft232h_w/SLICE_1042:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6A.CLK:0.818">       12.PADDI to R13C6A.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    1.300   (37.1% logic, 62.9% route), 1 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6D.CLK,clk_c:REG_DEL, 0.154,R13C6D.CLK,R13C6D.Q0,ft232h_w/SLICE_948:ROUTE, 0.504,R13C6D.Q0,R13C8B.A1,ft232h_w/curent_state_2:CTOF_DEL, 0.177,R13C8B.A1,R13C8B.F1,SLICE_887:ROUTE, 0.207,R13C8B.F1,R13C7D.CLK,ft232h_w/next_state_5__N_854">Destination Clock Path</A> clk to ft232h_w/SLICE_759:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6D.CLK:0.818">       12.PADDI to R13C6D.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.154     R13C6D.CLK to      R13C6D.Q0 <A href="#@comp:ft232h_w/SLICE_948">ft232h_w/SLICE_948</A>
+ROUTE        20     0.504<A href="#@net:ft232h_w/curent_state_2:R13C6D.Q0:R13C8B.A1:0.504">      R13C6D.Q0 to R13C8B.A1     </A> <A href="#@net:ft232h_w/curent_state_2">ft232h_w/curent_state_2</A>
+CTOF_DEL    ---     0.177      R13C8B.A1 to      R13C8B.F1 <A href="#@comp:SLICE_887">SLICE_887</A>
+ROUTE         3     0.207<A href="#@net:ft232h_w/next_state_5__N_854:R13C8B.F1:R13C7D.CLK:0.207">      R13C8B.F1 to R13C7D.CLK    </A> <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>
+                  --------
+                    2.342   (34.7% logic, 65.3% route), 3 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.162ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ft232h_w/SLICE_1042">ft232h_w/curent_state_i2</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ft232h_w/SLICE_759">ft232h_w/next_state_5__I_0_i1</A>  (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A> +)
+
+   Delay:               1.191ns  (24.3% logic, 75.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.191ns physical path delay ft232h_w/SLICE_1042 to ft232h_w/SLICE_759 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+     -1.042ns skew requirement (totaling 1.029ns) by 0.162ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.133,R13C6A.CLK,R13C6A.Q1,ft232h_w/SLICE_1042:ROUTE, 0.902,R13C6A.Q1,R13C7D.A0,ft232h_w/curent_state_1:CTOOFX_DEL, 0.156,R13C7D.A0,R13C7D.OFX0,ft232h_w/SLICE_759:ROUTE, 0.000,R13C7D.OFX0,R13C7D.DI0,ft232h_w/n18482">Data path</A> ft232h_w/SLICE_1042 to ft232h_w/SLICE_759:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R13C6A.CLK to      R13C6A.Q1 <A href="#@comp:ft232h_w/SLICE_1042">ft232h_w/SLICE_1042</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE        19     0.902<A href="#@net:ft232h_w/curent_state_1:R13C6A.Q1:R13C7D.A0:0.902">      R13C6A.Q1 to R13C7D.A0     </A> <A href="#@net:ft232h_w/curent_state_1">ft232h_w/curent_state_1</A>
+CTOOFX_DEL  ---     0.156      R13C7D.A0 to    R13C7D.OFX0 <A href="#@comp:ft232h_w/SLICE_759">ft232h_w/SLICE_759</A>
+ROUTE         1     0.000<A href="#@net:ft232h_w/n18482:R13C7D.OFX0:R13C7D.DI0:0.000">    R13C7D.OFX0 to R13C7D.DI0    </A> <A href="#@net:ft232h_w/n18482">ft232h_w/n18482</A> (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>)
+                  --------
+                    1.191   (24.3% logic, 75.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6A.CLK,clk_c">Source Clock Path</A> clk to ft232h_w/SLICE_1042:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6A.CLK:0.818">       12.PADDI to R13C6A.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    1.300   (37.1% logic, 62.9% route), 1 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6D.CLK,clk_c:REG_DEL, 0.154,R13C6D.CLK,R13C6D.Q0,ft232h_w/SLICE_948:ROUTE, 0.504,R13C6D.Q0,R13C8B.A1,ft232h_w/curent_state_2:CTOF_DEL, 0.177,R13C8B.A1,R13C8B.F1,SLICE_887:ROUTE, 0.207,R13C8B.F1,R13C7D.CLK,ft232h_w/next_state_5__N_854">Destination Clock Path</A> clk to ft232h_w/SLICE_759:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6D.CLK:0.818">       12.PADDI to R13C6D.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.154     R13C6D.CLK to      R13C6D.Q0 <A href="#@comp:ft232h_w/SLICE_948">ft232h_w/SLICE_948</A>
+ROUTE        20     0.504<A href="#@net:ft232h_w/curent_state_2:R13C6D.Q0:R13C8B.A1:0.504">      R13C6D.Q0 to R13C8B.A1     </A> <A href="#@net:ft232h_w/curent_state_2">ft232h_w/curent_state_2</A>
+CTOF_DEL    ---     0.177      R13C8B.A1 to      R13C8B.F1 <A href="#@comp:SLICE_887">SLICE_887</A>
+ROUTE         3     0.207<A href="#@net:ft232h_w/next_state_5__N_854:R13C8B.F1:R13C7D.CLK:0.207">      R13C8B.F1 to R13C7D.CLK    </A> <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>
+                  --------
+                    2.342   (34.7% logic, 65.3% route), 3 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.165ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ft232h_w/SLICE_1042">ft232h_w/curent_state_i2</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ft232h_w/SLICE_760">ft232h_w/next_state_5__I_0_i2</A>  (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A> +)
+
+   Delay:               1.194ns  (19.6% logic, 80.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.194ns physical path delay ft232h_w/SLICE_1042 to ft232h_w/SLICE_760 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+     -1.042ns skew requirement (totaling 1.029ns) by 0.165ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.133,R13C6A.CLK,R13C6A.Q1,ft232h_w/SLICE_1042:ROUTE, 0.960,R13C6A.Q1,R13C7C.A0,ft232h_w/curent_state_1:CTOF_DEL, 0.101,R13C7C.A0,R13C7C.F0,ft232h_w/SLICE_760:ROUTE, 0.000,R13C7C.F0,R13C7C.DI0,ft232h_w/n18589">Data path</A> ft232h_w/SLICE_1042 to ft232h_w/SLICE_760:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R13C6A.CLK to      R13C6A.Q1 <A href="#@comp:ft232h_w/SLICE_1042">ft232h_w/SLICE_1042</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE        19     0.960<A href="#@net:ft232h_w/curent_state_1:R13C6A.Q1:R13C7C.A0:0.960">      R13C6A.Q1 to R13C7C.A0     </A> <A href="#@net:ft232h_w/curent_state_1">ft232h_w/curent_state_1</A>
+CTOF_DEL    ---     0.101      R13C7C.A0 to      R13C7C.F0 <A href="#@comp:ft232h_w/SLICE_760">ft232h_w/SLICE_760</A>
+ROUTE         1     0.000<A href="#@net:ft232h_w/n18589:R13C7C.F0:R13C7C.DI0:0.000">      R13C7C.F0 to R13C7C.DI0    </A> <A href="#@net:ft232h_w/n18589">ft232h_w/n18589</A> (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>)
+                  --------
+                    1.194   (19.6% logic, 80.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6A.CLK,clk_c">Source Clock Path</A> clk to ft232h_w/SLICE_1042:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6A.CLK:0.818">       12.PADDI to R13C6A.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    1.300   (37.1% logic, 62.9% route), 1 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6D.CLK,clk_c:REG_DEL, 0.154,R13C6D.CLK,R13C6D.Q0,ft232h_w/SLICE_948:ROUTE, 0.504,R13C6D.Q0,R13C8B.A1,ft232h_w/curent_state_2:CTOF_DEL, 0.177,R13C8B.A1,R13C8B.F1,SLICE_887:ROUTE, 0.207,R13C8B.F1,R13C7C.CLK,ft232h_w/next_state_5__N_854">Destination Clock Path</A> clk to ft232h_w/SLICE_760:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6D.CLK:0.818">       12.PADDI to R13C6D.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.154     R13C6D.CLK to      R13C6D.Q0 <A href="#@comp:ft232h_w/SLICE_948">ft232h_w/SLICE_948</A>
+ROUTE        20     0.504<A href="#@net:ft232h_w/curent_state_2:R13C6D.Q0:R13C8B.A1:0.504">      R13C6D.Q0 to R13C8B.A1     </A> <A href="#@net:ft232h_w/curent_state_2">ft232h_w/curent_state_2</A>
+CTOF_DEL    ---     0.177      R13C8B.A1 to      R13C8B.F1 <A href="#@comp:SLICE_887">SLICE_887</A>
+ROUTE         3     0.207<A href="#@net:ft232h_w/next_state_5__N_854:R13C8B.F1:R13C7C.CLK:0.207">      R13C8B.F1 to R13C7C.CLK    </A> <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>
+                  --------
+                    2.342   (34.7% logic, 65.3% route), 3 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.171ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ft232h_w/SLICE_923">ft232h_w/r_wr_n_106</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ft232h_w/SLICE_759">ft232h_w/next_state_5__I_0_i1</A>  (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A> +)
+
+   Delay:               1.200ns  (24.1% logic, 75.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.200ns physical path delay ft232h_w/SLICE_923 to ft232h_w/SLICE_759 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+     -1.042ns skew requirement (totaling 1.029ns) by 0.171ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.133,R12C7A.CLK,R12C7A.Q0,ft232h_w/SLICE_923:ROUTE, 0.911,R12C7A.Q0,R13C7D.C1,wr_n_c_0:CTOOFX_DEL, 0.156,R13C7D.C1,R13C7D.OFX0,ft232h_w/SLICE_759:ROUTE, 0.000,R13C7D.OFX0,R13C7D.DI0,ft232h_w/n18482">Data path</A> ft232h_w/SLICE_923 to ft232h_w/SLICE_759:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R12C7A.CLK to      R12C7A.Q0 <A href="#@comp:ft232h_w/SLICE_923">ft232h_w/SLICE_923</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE         4     0.911<A href="#@net:wr_n_c_0:R12C7A.Q0:R13C7D.C1:0.911">      R12C7A.Q0 to R13C7D.C1     </A> <A href="#@net:wr_n_c_0">wr_n_c_0</A>
+CTOOFX_DEL  ---     0.156      R13C7D.C1 to    R13C7D.OFX0 <A href="#@comp:ft232h_w/SLICE_759">ft232h_w/SLICE_759</A>
+ROUTE         1     0.000<A href="#@net:ft232h_w/n18482:R13C7D.OFX0:R13C7D.DI0:0.000">    R13C7D.OFX0 to R13C7D.DI0    </A> <A href="#@net:ft232h_w/n18482">ft232h_w/n18482</A> (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>)
+                  --------
+                    1.200   (24.1% logic, 75.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R12C7A.CLK,clk_c">Source Clock Path</A> clk to ft232h_w/SLICE_923:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R12C7A.CLK:0.818">       12.PADDI to R12C7A.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    1.300   (37.1% logic, 62.9% route), 1 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6D.CLK,clk_c:REG_DEL, 0.154,R13C6D.CLK,R13C6D.Q0,ft232h_w/SLICE_948:ROUTE, 0.504,R13C6D.Q0,R13C8B.A1,ft232h_w/curent_state_2:CTOF_DEL, 0.177,R13C8B.A1,R13C8B.F1,SLICE_887:ROUTE, 0.207,R13C8B.F1,R13C7D.CLK,ft232h_w/next_state_5__N_854">Destination Clock Path</A> clk to ft232h_w/SLICE_759:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6D.CLK:0.818">       12.PADDI to R13C6D.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.154     R13C6D.CLK to      R13C6D.Q0 <A href="#@comp:ft232h_w/SLICE_948">ft232h_w/SLICE_948</A>
+ROUTE        20     0.504<A href="#@net:ft232h_w/curent_state_2:R13C6D.Q0:R13C8B.A1:0.504">      R13C6D.Q0 to R13C8B.A1     </A> <A href="#@net:ft232h_w/curent_state_2">ft232h_w/curent_state_2</A>
+CTOF_DEL    ---     0.177      R13C8B.A1 to      R13C8B.F1 <A href="#@comp:SLICE_887">SLICE_887</A>
+ROUTE         3     0.207<A href="#@net:ft232h_w/next_state_5__N_854:R13C8B.F1:R13C7D.CLK:0.207">      R13C8B.F1 to R13C7D.CLK    </A> <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>
+                  --------
+                    2.342   (34.7% logic, 65.3% route), 3 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.186ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ft232h_w/SLICE_948">ft232h_w/curent_state_i4</A>  (from <A href="#@net:clk_c">clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ft232h_w/SLICE_760">ft232h_w/next_state_5__I_0_i3</A>  (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A> +)
+                   FF                        <A href="#@net:ft232h_w/next_state_5__I_0_i2">ft232h_w/next_state_5__I_0_i2</A>
+
+   Delay:               1.171ns  (11.4% logic, 88.6% route), 1 logic levels.
+
+ Constraint Details:
+
+      1.171ns physical path delay ft232h_w/SLICE_948 to ft232h_w/SLICE_760 meets
+     -0.057ns LSR_HLD and
+      0.000ns delay constraint less
+     -1.042ns skew requirement (totaling 0.985ns) by 0.186ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:REG_DEL, 0.133,R13C6D.CLK,R13C6D.Q1,ft232h_w/SLICE_948:ROUTE, 1.038,R13C6D.Q1,R13C7C.LSR,ft232h_w/curent_state_3">Data path</A> ft232h_w/SLICE_948 to ft232h_w/SLICE_760:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R13C6D.CLK to      R13C6D.Q1 <A href="#@comp:ft232h_w/SLICE_948">ft232h_w/SLICE_948</A> (from <A href="#@net:clk_c">clk_c</A>)
+ROUTE        17     1.038<A href="#@net:ft232h_w/curent_state_3:R13C6D.Q1:R13C7C.LSR:1.038">      R13C6D.Q1 to R13C7C.LSR    </A> <A href="#@net:ft232h_w/curent_state_3">ft232h_w/curent_state_3</A> (to <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>)
+                  --------
+                    1.171   (11.4% logic, 88.6% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6D.CLK,clk_c">Source Clock Path</A> clk to ft232h_w/SLICE_948:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6D.CLK:0.818">       12.PADDI to R13C6D.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    1.300   (37.1% logic, 62.9% route), 1 logic levels.
+
+      <A href="#@path:PERIOD PORT 'clk' 20.000000 ns HIGH 10.000000 ns ;:PADI_DEL, 0.482,12.PAD,12.PADDI,clk:ROUTE, 0.818,12.PADDI,R13C6D.CLK,clk_c:REG_DEL, 0.154,R13C6D.CLK,R13C6D.Q0,ft232h_w/SLICE_948:ROUTE, 0.504,R13C6D.Q0,R13C8B.A1,ft232h_w/curent_state_2:CTOF_DEL, 0.177,R13C8B.A1,R13C8B.F1,SLICE_887:ROUTE, 0.207,R13C8B.F1,R13C7C.CLK,ft232h_w/next_state_5__N_854">Destination Clock Path</A> clk to ft232h_w/SLICE_760:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.482         12.PAD to       12.PADDI <A href="#@comp:clk">clk</A>
+ROUTE       564     0.818<A href="#@net:clk_c:12.PADDI:R13C6D.CLK:0.818">       12.PADDI to R13C6D.CLK    </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.154     R13C6D.CLK to      R13C6D.Q0 <A href="#@comp:ft232h_w/SLICE_948">ft232h_w/SLICE_948</A>
+ROUTE        20     0.504<A href="#@net:ft232h_w/curent_state_2:R13C6D.Q0:R13C8B.A1:0.504">      R13C6D.Q0 to R13C8B.A1     </A> <A href="#@net:ft232h_w/curent_state_2">ft232h_w/curent_state_2</A>
+CTOF_DEL    ---     0.177      R13C8B.A1 to      R13C8B.F1 <A href="#@comp:SLICE_887">SLICE_887</A>
+ROUTE         3     0.207<A href="#@net:ft232h_w/next_state_5__N_854:R13C8B.F1:R13C7C.CLK:0.207">      R13C8B.F1 to R13C7C.CLK    </A> <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>
+                  --------
+                    2.342   (34.7% logic, 65.3% route), 3 logic levels.
+
+<A name="Report Summary"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+PERIOD PORT "clk" 20.000000 ns HIGH     |             |             |
+10.000000 ns ;                          |            -|            -|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="Clock Domains Analysis"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>   Source: SLICE_887.F1   Loads: 3
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: <A href="#@net:clk_c">clk_c</A>   Source: clk.PAD
+      Covered under: PERIOD PORT "clk" 20.000000 ns HIGH 10.000000 ns ;   Transfers: 9
+
+Clock Domain: <A href="#@net:clk_c">clk_c</A>   Source: clk.PAD   Loads: 564
+   Covered under: PERIOD PORT "clk" 20.000000 ns HIGH 10.000000 ns ;
+
+   Data transfers from:
+   Clock Domain: <A href="#@net:ft232h_w/next_state_5__N_854">ft232h_w/next_state_5__N_854</A>   Source: SLICE_887.F1
+      Covered under: PERIOD PORT "clk" 20.000000 ns HIGH 10.000000 ns ;   Transfers: 4
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 233222 paths, 3 nets, and 6660 connections (98.59% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)

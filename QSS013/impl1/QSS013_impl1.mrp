@@ -1,0 +1,3042 @@
+
+          Lattice Mapping Report File for Design Module 'qss013_top'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO2 -p LCMXO2-2000HC -t TQFP100 -s 4 -oc Commercial
+     QSS013_impl1.ngd -o QSS013_impl1_map.ncd -pr QSS013_impl1.prf -mp
+     QSS013_impl1.mrp -lpf C:/Users/user/Desktop/QSS013/impl1/QSS013_impl1.lpf
+     -lpf C:/Users/user/Desktop/QSS013/QSS013.lpf -c 0 -gui -msgset
+     C:/Users/user/Desktop/QSS013/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-2000HCTQFP100
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
+Mapped on:  10/05/20  12:16:13
+
+Design Summary
+--------------
+
+   Number of registers:    965 out of  2352 (41%)
+      PFU registers:          965 out of  2112 (46%)
+      PIO registers:            0 out of   240 (0%)
+   Number of SLICEs:       890 out of  1056 (84%)
+      SLICEs as Logic/ROM:    890 out of  1056 (84%)
+      SLICEs as RAM:            0 out of   792 (0%)
+      SLICEs as Carry:        561 out of  1056 (53%)
+   Number of LUT4s:        1751 out of  2112 (83%)
+      Number used as logic LUTs:        629
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      1122
+      Number used as shift registers:     0
+   Number of PIO sites used: 35 + 1(JTAGENB) out of 80 (45%)
+   Number of block RAMs:  0 out of 8 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 1 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  2
+     Net clk_c: 556 loads, 556 rising, 0 falling (Driver: PIO clk )
+     Net ft232h_w/next_state_5__N_840: 3 loads, 3 rising, 0 falling (Driver:
+     ft232h_w/i9200_1_lut_2_lut_3_lut )
+
+                                    Page 1
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Design Summary (cont)
+---------------------
+   Number of Clock Enables:  109
+     Net clk_c_enable_761: 16 loads, 16 LSLICEs
+     Net clk_c_enable_798: 16 loads, 16 LSLICEs
+     Net clk_c_enable_26: 1 loads, 1 LSLICEs
+     Net clk_c_enable_754: 16 loads, 16 LSLICEs
+     Net clk_c_enable_537: 16 loads, 16 LSLICEs
+     Net clk_c_enable_268: 1 loads, 1 LSLICEs
+     Net clk_c_enable_279: 1 loads, 1 LSLICEs
+     Net r_SM_CS_0: 1 loads, 1 LSLICEs
+     Net o_tx_dv: 1 loads, 1 LSLICEs
+     Net clk_c_enable_288: 1 loads, 1 LSLICEs
+     Net clk_c_enable_307: 1 loads, 1 LSLICEs
+     Net clk_c_enable_308: 1 loads, 1 LSLICEs
+     Net clk_c_enable_341: 1 loads, 1 LSLICEs
+     Net clk_c_enable_766: 1 loads, 1 LSLICEs
+     Net r_SM_CS_0_adj_1846: 1 loads, 1 LSLICEs
+     Net o_tx_dv_adj_1834: 1 loads, 1 LSLICEs
+     Net adc2/clk_c_enable_41: 1 loads, 1 LSLICEs
+     Net adc2/clk_c_enable_493: 14 loads, 14 LSLICEs
+     Net adc2/clk_c_enable_136: 1 loads, 1 LSLICEs
+     Net adc2/clk_c_enable_275: 4 loads, 4 LSLICEs
+     Net adc2/clk_c_enable_494: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/clk_c_enable_129: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/clk_c_enable_681: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_11: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_13: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_19: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_20: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_23: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_42: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_119: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_53: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_105: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_78: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_77: 1 loads, 1 LSLICEs
+     Net clk_c_enable_461: 27 loads, 27 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_106: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_132: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_146: 2 loads, 2 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_345: 2 loads, 2 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_207: 3 loads, 3 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_202: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_747: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_756: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_757: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_340: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_353: 1 loads, 1 LSLICEs
+     Net adc1/clk_c_enable_528: 14 loads, 14 LSLICEs
+     Net adc1/clk_c_enable_533: 1 loads, 1 LSLICEs
+     Net adc1/clk_c_enable_133: 1 loads, 1 LSLICEs
+     Net adc1/clk_c_enable_171: 1 loads, 1 LSLICEs
+     Net adc1/clk_c_enable_227: 4 loads, 4 LSLICEs
+     Net adc1/SPI_module/clk_c_enable_124: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_107: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_333: 2 loads, 2 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_309: 3 loads, 3 LSLICEs
+
+                                    Page 2
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Design Summary (cont)
+---------------------
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_300: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_161: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_695: 2 loads, 2 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_541: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_546: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_338: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_542: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_547: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_551: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_552: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_554: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_555: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_565: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_570: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_571: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_573: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_579: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_598: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_621: 1 loads, 1 LSLICEs
+     Net rst/clk_c_enable_758: 3 loads, 3 LSLICEs
+     Net rst_n: 16 loads, 16 LSLICEs
+     Net clk_c_enable_451: 25 loads, 25 LSLICEs
+     Net integrator_4/clk_c_enable_208: 2 loads, 2 LSLICEs
+     Net integrator_4/clk_c_enable_787: 1 loads, 1 LSLICEs
+     Net integrator_4/clk_c_enable_354: 1 loads, 1 LSLICEs
+     Net clk_c_enable_635: 17 loads, 17 LSLICEs
+     Net integrator_4/clk_c_enable_666: 17 loads, 17 LSLICEs
+     Net integrator_4/clk_c_enable_707: 17 loads, 17 LSLICEs
+     Net ft232h_r5bytes/clk_c_enable_468: 4 loads, 4 LSLICEs
+     Net ft232h_r5bytes/ft232h_r/clk_c_enable_81: 1 loads, 1 LSLICEs
+     Net ft232h_r5bytes/ft232h_r/curent_state_0: 3 loads, 3 LSLICEs
+     Net ft232h_r5bytes/ft232h_r/clk_c_enable_156: 1 loads, 1 LSLICEs
+     Net ft232h_r5bytes/ft232h_r/clk_c_enable_610: 4 loads, 4 LSLICEs
+     Net clk_c_enable_807: 17 loads, 17 LSLICEs
+     Net integrator_3/clk_c_enable_186: 2 loads, 2 LSLICEs
+     Net integrator_3/clk_c_enable_560: 1 loads, 1 LSLICEs
+     Net integrator_3/clk_c_enable_425: 1 loads, 1 LSLICEs
+     Net clk_c_enable_763: 17 loads, 17 LSLICEs
+     Net integrator_3/clk_c_enable_806: 17 loads, 17 LSLICEs
+     Net ft232h_w/clk_c_enable_503: 8 loads, 8 LSLICEs
+     Net ft232h_w/clk_c_enable_297: 1 loads, 1 LSLICEs
+     Net ft232h_w/clk_c_enable_312: 1 loads, 1 LSLICEs
+     Net clk_c_enable_762: 17 loads, 17 LSLICEs
+     Net integrator_1/clk_c_enable_679: 17 loads, 17 LSLICEs
+     Net integrator_1/clk_c_enable_284: 1 loads, 1 LSLICEs
+     Net clk_c_enable_339: 17 loads, 17 LSLICEs
+     Net integrator_1/clk_c_enable_569: 1 loads, 1 LSLICEs
+     Net integrator_1/clk_c_enable_770: 1 loads, 1 LSLICEs
+     Net integrator_2/clk_c_enable_779: 17 loads, 17 LSLICEs
+     Net integrator_2/clk_c_enable_789: 17 loads, 17 LSLICEs
+     Net integrator_2/clk_c_enable_721: 17 loads, 17 LSLICEs
+     Net integrator_2/clk_c_enable_327: 1 loads, 1 LSLICEs
+     Net integrator_2/clk_c_enable_329: 1 loads, 1 LSLICEs
+     Net integrator_2/clk_c_enable_424: 1 loads, 1 LSLICEs
+   Number of LSRs:  42
+     Net n10578: 16 loads, 16 LSLICEs
+
+                                    Page 3
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Design Summary (cont)
+---------------------
+     Net n10640: 16 loads, 16 LSLICEs
+     Net n19260: 60 loads, 60 LSLICEs
+     Net n10609: 16 loads, 16 LSLICEs
+     Net n10344: 16 loads, 16 LSLICEs
+     Net r_SM_CS_0: 1 loads, 1 LSLICEs
+     Net o_tx_dv: 5 loads, 5 LSLICEs
+     Net n10338: 1 loads, 1 LSLICEs
+     Net n13261: 1 loads, 1 LSLICEs
+     Net r_SM_CS_0_adj_1846: 1 loads, 1 LSLICEs
+     Net o_tx_dv_adj_1834: 5 loads, 5 LSLICEs
+     Net adc2/SPI_module/w_Master_Ready: 5 loads, 5 LSLICEs
+     Net adc2/SPI_module/n13267: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/n7458: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/n7453: 2 loads, 2 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/n10559: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/n17796: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/w_Master_Ready: 5 loads, 5 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/n17874: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/n10337: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/n7447: 2 loads, 2 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/n7451: 1 loads, 1 LSLICEs
+     Net n18918: 3 loads, 3 LSLICEs
+     Net integrator_4/n10543: 17 loads, 17 LSLICEs
+     Net integrator_4/n10549: 17 loads, 17 LSLICEs
+     Net integrator_4/n10547: 17 loads, 17 LSLICEs
+     Net ft232h_r5bytes/ft232h_r/curent_state_0: 1 loads, 1 LSLICEs
+     Net ft232h_r5bytes/ft232h_r/n12633: 2 loads, 2 LSLICEs
+     Net integrator_3/n10764: 17 loads, 17 LSLICEs
+     Net n18916: 3 loads, 3 LSLICEs
+     Net integrator_3/n10534: 17 loads, 17 LSLICEs
+     Net integrator_3/n10527: 17 loads, 17 LSLICEs
+     Net ft232h_w/n18849: 2 loads, 2 LSLICEs
+     Net ft232h_w/curent_state_3: 1 loads, 1 LSLICEs
+     Net integrator_1/n10392: 17 loads, 17 LSLICEs
+     Net integrator_1/n10427: 17 loads, 17 LSLICEs
+     Net n18887: 2 loads, 2 LSLICEs
+     Net integrator_1/n10460: 17 loads, 17 LSLICEs
+     Net integrator_2/n10702: 17 loads, 17 LSLICEs
+     Net integrator_2/n10353: 17 loads, 17 LSLICEs
+     Net integrator_2/n10733: 17 loads, 17 LSLICEs
+     Net integrator_2/n18867: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net n19260: 110 loads
+     Net cmd_0: 39 loads
+     Net spi_sm_0: 39 loads
+     Net spi_sm_0_adj_1835: 39 loads
+     Net adc1/spi_sm_1: 38 loads
+     Net adc2/spi_sm_1: 38 loads
+     Net cmd_1: 38 loads
+     Net cmd_3: 31 loads
+     Net r_mode_0_adj_1837: 30 loads
+     Net cmd_2: 28 loads
+
+
+
+
+                                    Page 4
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+
+
+
+   Number of warnings:  2
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: The JTAG port has been disabled in this project and JTAG pins
+     will be configured as General Purpose IO.  You have to use JTAGENB pin in
+     hardware to change the personality of the port from JTAG pins to general
+     purpose IO.  Reference MachXO2 Handbook for details on dual function JTAG
+     port.
+WARNING - map: All configuration ports of the design have been disabled.
+     Reference MachXO2 Handbook for information on the Configuration Ports of
+     MachXO2
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| DBUS[2]             | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DBUS[3]             | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DBUS[4]             | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DBUS[1]             | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DBUS[5]             | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DBUS[6]             | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DBUS[7]             | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DBUS[0]             | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| wr_n                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| rd_n                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sdo0                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sck0                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| scs0                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sdo1                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sck1                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| scs1                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 5
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+IO (PIO) Attributes (cont)
+--------------------------
+| adc1_sck            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| adc1_cs             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| adc2_sck            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| adc2_cs             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sw1                 | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sw2                 | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sw3                 | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sw4                 | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cp                  | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cp_check            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LED[3]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LED[2]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LED[1]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LED[0]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| txe_n               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| rxf_n               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sdi0                | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sdi1                | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block i13074 undriven or does not drive anything - clipped.
+Signal integrator_1/n6896 was merged into signal seq_SM_0
+Signal ft232h_r5bytes/ft232h_r/clk_c_enable_301 was merged into signal
+     ft232h_r5bytes/ft232h_r/curent_state_0
+Signal next_state_5_N_971_0 was merged into signal rxf_n_c
+Signal n18885 was merged into signal n19260
+Signal adc1/SPI_module/n8203 was merged into signal r_SM_CS_0
+Signal adc2/SPI_module/n8212 was merged into signal r_SM_CS_0_adj_1846
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal integrator_2/r_t3_2416_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/r_t3_2416_add_4_33/CO undriven or does not drive anything -
+     clipped.
+
+                                    Page 6
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_2/r_t2_2418_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/r_t2_2418_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_2/r_t2_2418_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/r_t2_2418_add_4_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+
+                                    Page 7
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_2/sub_1886_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1886_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/r_t1_2414_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/r_t1_2414_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+
+                                    Page 8
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_2/sub_1884_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1884_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+
+                                    Page 9
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_2/sub_1882_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1882_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+
+                                   Page 10
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_2/sub_1880_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/r_t1_2414_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/r_t1_2414_add_4_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/r_t3_2416_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/r_t3_2416_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+
+                                   Page 11
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_2/sub_1880_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_2/sub_1880_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+
+                                   Page 12
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_1/sub_1874_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/r_t3_2410_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/r_t3_2410_add_4_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_1/r_t2_2412_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/r_t2_2412_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+
+                                   Page 13
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_1/sub_1874_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1874_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+
+                                   Page 14
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_1/sub_1872_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/r_t1_2408_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/r_t1_2408_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_92_add_2_33/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_92_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/r_t2_2412_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/r_t2_2412_add_4_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1872_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_76_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_76_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_92_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_92_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_76_add_2_33/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_76_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_1/r_t1_2408_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/r_t1_2408_add_4_33/CO undriven or does not drive anything -
+     clipped.
+
+                                   Page 15
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_1/r_t3_2410_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/r_t3_2410_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+
+                                   Page 16
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_1/sub_1878_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1878_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+
+                                   Page 17
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_1/sub_1876_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_1/sub_1876_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+
+                                   Page 18
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_3/sub_1890_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+
+                                   Page 19
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_3/sub_1890_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1894_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_3/r_t3_2422_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/r_t3_2422_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1890_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+
+                                   Page 20
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_3/sub_1888_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1888_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_3/r_t1_2420_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/r_t1_2420_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_3/r_t3_2422_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+
+                                   Page 21
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_3/r_t3_2422_add_4_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+
+                                   Page 22
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_3/sub_1892_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/r_t1_2420_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/r_t1_2420_add_4_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/sub_1892_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_3/r_t2_2424_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/r_t2_2424_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_3/r_t2_2424_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_3/r_t2_2424_add_4_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+
+                                   Page 23
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_4/sub_1896_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_4/r_t2_2430_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/r_t2_2430_add_4_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+
+                                   Page 24
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_4/sub_1902_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1902_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+
+                                   Page 25
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_4/sub_1900_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1900_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_4/r_t1_2426_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/r_t1_2426_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+
+                                   Page 26
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_4/sub_1898_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_21/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/r_t1_2426_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/r_t1_2426_add_4_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_4/r_t3_2428_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/r_t3_2428_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_23/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_23/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_25/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_25/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_27/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_27/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_29/S1 undriven or does not drive anything -
+     clipped.
+
+                                   Page 27
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal integrator_4/sub_1898_add_2_29/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_31/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_31/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_33/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1898_add_2_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/r_t3_2428_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/r_t3_2428_add_4_33/CO undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/r_t2_2430_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/r_t2_2430_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal integrator_4/sub_1896_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal rst/sub_4_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal rst/sub_4_add_2_1/CI undriven or does not drive anything - clipped.
+Signal rst/sub_4_add_2_33/S1 undriven or does not drive anything - clipped.
+Signal rst/sub_4_add_2_33/CO undriven or does not drive anything - clipped.
+
+                                   Page 28
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Removed logic (cont)
+--------------------
+Signal adc1/sub_10_add_2_33/S1 undriven or does not drive anything - clipped.
+Signal adc1/sub_10_add_2_33/CO undriven or does not drive anything - clipped.
+Signal adc1/sub_10_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal adc1/sub_10_add_2_1/CI undriven or does not drive anything - clipped.
+Signal adc2/sub_10_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal adc2/sub_10_add_2_1/CI undriven or does not drive anything - clipped.
+Signal adc2/sub_10_add_2_33/S1 undriven or does not drive anything - clipped.
+Signal adc2/sub_10_add_2_33/CO undriven or does not drive anything - clipped.
+Block integrator_1/i9180_2_lut_3_lut_1_lut was optimized away.
+Block ft232h_r5bytes/ft232h_r/i7555_1_lut_rep_242 was optimized away.
+Block ft232h_r5bytes/ft232h_r/i_rxf_n_I_0_1_lut was optimized away.
+Block ft232h_r5bytes/i_rst_n_I_0_1_lut_rep_227 was optimized away.
+Block adc1/SPI_module/i3229_1_lut was optimized away.
+Block adc2/SPI_module/i3238_1_lut was optimized away.
+Block i1 was optimized away.
+
+     
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'n19260'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'n19260' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 845 
+
+     Type and instance name of component: 
+   Register : r_t4_i21
+   Register : r_t2_i27
+   Register : r_t2_i28
+   Register : r_mode_i0
+   Register : r_t2_i29
+   Register : LTC1865_en_139
+   Register : led_out_i1
+   Register : r_t4_i22
+   Register : r_t2_i30
+   Register : r_t2_i31
+   Register : r_t4_i23
+   Register : r_t4_i24
+   Register : r_t3_i1
+   Register : r_t3_i2
+
+                                   Page 29
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : r_t4_i25
+   Register : r_t3_i3
+   Register : r_t4_i26
+   Register : r_t3_i4
+   Register : r_t3_i5
+   Register : r_t3_i6
+   Register : r_t4_i27
+   Register : r_t4_i28
+   Register : r_t3_i7
+   Register : r_t4_i29
+   Register : r_t1_i0
+   Register : r_t4_i30
+   Register : r_t3_i8
+   Register : r_t1_i1
+   Register : r_t1_i2
+   Register : r_t3_i9
+   Register : r_t1_i3
+   Register : r_t3_i10
+   Register : r_t1_i4
+   Register : r_t4_i31
+   Register : r_t1_i5
+   Register : r_t3_i11
+   Register : r_t1_i6
+   Register : r_t3_i12
+   Register : r_t3_i13
+   Register : r_t1_i7
+   Register : r_t3_i14
+   Register : r_t1_i8
+   Register : r_t3_i15
+   Register : r_t3_i16
+   Register : r_t1_i9
+   Register : r_t1_i10
+   Register : r_t1_i11
+   Register : r_t3_i17
+   Register : r_t3_i18
+   Register : r_t1_i12
+   Register : r_t3_i19
+   Register : r_t1_i13
+   Register : r_t1_i14
+   Register : r_t1_i15
+   Register : r_t1_i16
+   Register : r_t3_i20
+   Register : integrator_4_en_144
+   Register : r_t3_i21
+   Register : r_t3_i22
+   Register : r_t1_i17
+   Register : integrator_3_en_143
+   Register : r_t3_i23
+   Register : integrator_2_en_142
+   Register : r_t1_i18
+   Register : r_t3_i24
+   Register : r_t3_i25
+   Register : r_t3_i26
+   Register : integrator_1_en_141
+   Register : LTC1865_2_en_140
+   Register : r_t1_i19
+
+                                   Page 30
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : r_t1_i20
+   Register : r_t1_i21
+   Register : r_t1_i22
+   Register : r_t3_i27
+   Register : r_t3_i28
+   Register : r_t3_i29
+   Register : r_t1_i23
+   Register : r_t3_i30
+   Register : r_t3_i31
+   Register : r_t4_i1
+   Register : r_t4_i2
+   Register : ch_150
+   Register : r_t1_i24
+   Register : r_t4_i3
+   Register : r_t1_i25
+   Register : r_t4_i4
+   Register : r_t4_i5
+   Register : r_t1_i26
+   Register : r_t1_i27
+   Register : r_t4_i6
+   Register : r_t4_i7
+   Register : r_t4_i8
+   Register : led_out_i4
+   Register : r_t1_i28
+   Register : r_t1_i29
+   Register : led_out_i3
+   Register : led_out_i2
+   Register : r_mode_i1
+   Register : r_t4_i9
+   Register : r_t1_i30
+   Register : r_t1_i31
+   Register : r_t4_i10
+   Register : r_t2_i1
+   Register : r_t2_i2
+   Register : r_t4_i11
+   Register : r_t4_i12
+   Register : r_t2_i3
+   Register : r_t2_i4
+   Register : r_t2_i5
+   Register : r_t2_i6
+   Register : r_t2_i7
+   Register : r_t4_i13
+   Register : r_t2_i8
+   Register : r_t4_i14
+   Register : r_t2_i9
+   Register : r_t2_i10
+   Register : r_t4_i15
+   Register : r_t2_i11
+   Register : r_t2_i12
+   Register : r_t4_i16
+   Register : r_t2_i13
+   Register : r_t4_i0
+   Register : r_t4_i17
+   Register : r_t2_i14
+   Register : r_t2_i15
+   Register : r_t4_i18
+
+                                   Page 31
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : r_t2_i16
+   Register : r_t2_i17
+   Register : r_t2_i18
+   Register : r_t2_i19
+   Register : r_t4_i19
+   Register : r_t2_i20
+   Register : r_t3_i0
+   Register : adc2/r_tx_byte__i1
+   Register : adc2/spi_sm_i0_i0
+   Register : adc2/r_spi_next_valid_i0
+   Register : adc2/r_tx_dv_32
+   Register : adc2/r_spi_next_valid_i1
+   Register : adc2/r_spi_next_valid_i3
+   Register : adc2/r_spi_next_valid_i4
+   Register : adc2/r_spi_next_valid_i5
+   Register : adc2/r_spi_next_valid_i6
+   Register : adc2/r_spi_next_valid_i7
+   Register : adc2/r_spi_next_valid_i31
+   Register : adc2/r_spi_next_valid_i30
+   Register : adc2/r_spi_next_valid_i29
+   Register : adc2/r_spi_next_valid_i28
+   Register : adc2/r_spi_next_valid_i27
+   Register : adc2/r_spi_next_valid_i26
+   Register : adc2/r_spi_next_valid_i25
+   Register : adc2/r_spi_next_valid_i24
+   Register : adc2/r_spi_next_valid_i23
+   Register : adc2/r_spi_next_valid_i22
+   Register : adc2/r_spi_next_valid_i21
+   Register : adc2/r_spi_next_valid_i20
+   Register : adc2/r_spi_next_valid_i19
+   Register : adc2/r_spi_next_valid_i18
+   Register : adc2/r_spi_next_valid_i17
+   Register : adc2/r_spi_next_valid_i16
+   Register : adc2/r_spi_next_valid_i15
+   Register : adc2/r_spi_next_valid_i14
+   Register : adc2/r_spi_next_valid_i13
+   Register : adc2/r_spi_next_valid_i12
+   Register : adc2/r_spi_next_valid_i11
+   Register : adc2/r_spi_next_valid_i10
+   Register : adc2/r_spi_next_valid_i9
+   Register : adc2/r_spi_next_valid_i8
+   Register : adc2/r_spi_next_valid_i2
+   Register : adc2/spi_sm_i0_i1
+   Register : adc2/SPI_module/SPI_Master_Inst/o_RX_DV_114
+   Register : adc1/spi_sm_i0_i0
+   Register : adc1/r_spi_next_valid_i0
+   Register : adc1/r_tx_dv_32
+   Register : adc1/r_tx_byte__i1
+   Register : adc1/r_spi_next_valid_i1
+   Register : adc1/r_spi_next_valid_i3
+   Register : adc1/r_spi_next_valid_i4
+   Register : adc1/r_spi_next_valid_i5
+   Register : adc1/r_spi_next_valid_i6
+   Register : adc1/r_spi_next_valid_i7
+   Register : adc1/r_spi_next_valid_i31
+   Register : adc1/r_spi_next_valid_i30
+
+                                   Page 32
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : adc1/r_spi_next_valid_i29
+   Register : adc1/r_spi_next_valid_i28
+   Register : adc1/r_spi_next_valid_i27
+   Register : adc1/r_spi_next_valid_i26
+   Register : adc1/r_spi_next_valid_i25
+   Register : adc1/r_spi_next_valid_i24
+   Register : adc1/r_spi_next_valid_i23
+   Register : adc1/r_spi_next_valid_i22
+   Register : adc1/r_spi_next_valid_i21
+   Register : adc1/r_spi_next_valid_i20
+   Register : adc1/r_spi_next_valid_i19
+   Register : adc1/r_spi_next_valid_i18
+   Register : adc1/r_spi_next_valid_i17
+   Register : adc1/r_spi_next_valid_i16
+   Register : adc1/r_spi_next_valid_i15
+   Register : adc1/r_spi_next_valid_i14
+   Register : adc1/r_spi_next_valid_i13
+   Register : adc1/r_spi_next_valid_i12
+   Register : adc1/r_spi_next_valid_i11
+   Register : adc1/r_spi_next_valid_i10
+   Register : adc1/r_spi_next_valid_i9
+   Register : adc1/r_spi_next_valid_i8
+   Register : adc1/r_spi_next_valid_i2
+   Register : adc1/spi_sm_i0_i1
+   Register : adc1/SPI_module/SPI_Master_Inst/o_RX_DV_114
+   Register : rst/rst_n_18
+   Register : rst/rst_cnt_i0
+   Register : rst/rst_cnt_i1
+   Register : rst/rst_cnt_i2
+   Register : rst/rst_cnt_i3
+   Register : rst/rst_cnt_i4
+   Register : rst/rst_cnt_i5
+   Register : rst/rst_cnt_i6
+   Register : rst/rst_cnt_i7
+   Register : rst/rst_cnt_i8
+   Register : rst/rst_cnt_i9
+   Register : rst/rst_cnt_i10
+   Register : rst/rst_cnt_i11
+   Register : rst/rst_cnt_i12
+   Register : rst/rst_cnt_i13
+   Register : rst/rst_cnt_i14
+   Register : rst/rst_cnt_i15
+   Register : rst/rst_cnt_i16
+   Register : rst/rst_cnt_i17
+   Register : rst/rst_cnt_i18
+   Register : rst/rst_cnt_i19
+   Register : rst/rst_cnt_i20
+   Register : rst/rst_cnt_i21
+   Register : rst/rst_cnt_i22
+   Register : rst/rst_cnt_i23
+   Register : rst/rst_cnt_i24
+   Register : rst/rst_cnt_i25
+   Register : rst/rst_cnt_i26
+   Register : rst/rst_cnt_i27
+   Register : rst/rst_cnt_i28
+   Register : rst/rst_cnt_i29
+
+                                   Page 33
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : rst/rst_cnt_i30
+   Register : rst/rst_cnt_i31
+   Register : rst/rst_n_18_rep_265
+   Register : rst/rst_n_18_rep_263
+   Register : rst/rst_n_18_rep_264
+   Register : integrator_4/seq_SM__i0
+   Register : integrator_4/seq_SM__i1
+   Register : integrator_4/o_sw_142
+   Register : integrator_4/r_t2_2430__i0
+   Register : integrator_4/r_t3_2428__i0
+   Register : integrator_4/r_t1_2426__i0
+   Register : integrator_4/r_t2_2430__i31
+   Register : integrator_4/r_t2_2430__i30
+   Register : integrator_4/r_t2_2430__i29
+   Register : integrator_4/r_t2_2430__i28
+   Register : integrator_4/r_t2_2430__i27
+   Register : integrator_4/r_t2_2430__i26
+   Register : integrator_4/r_t2_2430__i25
+   Register : integrator_4/r_t2_2430__i24
+   Register : integrator_4/r_t2_2430__i23
+   Register : integrator_4/r_t2_2430__i22
+   Register : integrator_4/r_t2_2430__i21
+   Register : integrator_4/r_t2_2430__i20
+   Register : integrator_4/r_t2_2430__i19
+   Register : integrator_4/r_t2_2430__i18
+   Register : integrator_4/r_t2_2430__i17
+   Register : integrator_4/r_t2_2430__i16
+   Register : integrator_4/r_t2_2430__i15
+   Register : integrator_4/r_t2_2430__i14
+   Register : integrator_4/r_t2_2430__i13
+   Register : integrator_4/r_t2_2430__i12
+   Register : integrator_4/r_t2_2430__i11
+   Register : integrator_4/r_t2_2430__i10
+   Register : integrator_4/r_t2_2430__i9
+   Register : integrator_4/r_t2_2430__i8
+   Register : integrator_4/r_t2_2430__i7
+   Register : integrator_4/r_t2_2430__i6
+   Register : integrator_4/r_t2_2430__i5
+   Register : integrator_4/r_t2_2430__i4
+   Register : integrator_4/r_t2_2430__i3
+   Register : integrator_4/r_t2_2430__i2
+   Register : integrator_4/r_t2_2430__i1
+   Register : integrator_4/r_t3_2428__i31
+   Register : integrator_4/r_t3_2428__i30
+   Register : integrator_4/r_t3_2428__i29
+   Register : integrator_4/r_t3_2428__i28
+   Register : integrator_4/r_t3_2428__i27
+   Register : integrator_4/r_t3_2428__i26
+   Register : integrator_4/r_t3_2428__i25
+   Register : integrator_4/r_t3_2428__i24
+   Register : integrator_4/r_t3_2428__i23
+   Register : integrator_4/r_t3_2428__i22
+   Register : integrator_4/r_t3_2428__i21
+   Register : integrator_4/r_t3_2428__i20
+   Register : integrator_4/r_t3_2428__i19
+   Register : integrator_4/r_t3_2428__i18
+
+                                   Page 34
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : integrator_4/r_t3_2428__i17
+   Register : integrator_4/r_t3_2428__i16
+   Register : integrator_4/r_t3_2428__i15
+   Register : integrator_4/r_t3_2428__i14
+   Register : integrator_4/r_t3_2428__i13
+   Register : integrator_4/r_t3_2428__i12
+   Register : integrator_4/r_t3_2428__i11
+   Register : integrator_4/r_t3_2428__i10
+   Register : integrator_4/r_t3_2428__i9
+   Register : integrator_4/r_t3_2428__i8
+   Register : integrator_4/r_t3_2428__i7
+   Register : integrator_4/r_t3_2428__i6
+   Register : integrator_4/r_t3_2428__i5
+   Register : integrator_4/r_t3_2428__i4
+   Register : integrator_4/r_t3_2428__i3
+   Register : integrator_4/r_t3_2428__i2
+   Register : integrator_4/r_t3_2428__i1
+   Register : integrator_4/r_t1_2426__i31
+   Register : integrator_4/r_t1_2426__i30
+   Register : integrator_4/r_t1_2426__i29
+   Register : integrator_4/r_t1_2426__i28
+   Register : integrator_4/r_t1_2426__i27
+   Register : integrator_4/r_t1_2426__i26
+   Register : integrator_4/r_t1_2426__i25
+   Register : integrator_4/r_t1_2426__i24
+   Register : integrator_4/r_t1_2426__i23
+   Register : integrator_4/r_t1_2426__i22
+   Register : integrator_4/r_t1_2426__i21
+   Register : integrator_4/r_t1_2426__i20
+   Register : integrator_4/r_t1_2426__i19
+   Register : integrator_4/r_t1_2426__i18
+   Register : integrator_4/r_t1_2426__i17
+   Register : integrator_4/r_t1_2426__i16
+   Register : integrator_4/r_t1_2426__i15
+   Register : integrator_4/r_t1_2426__i14
+   Register : integrator_4/r_t1_2426__i13
+   Register : integrator_4/r_t1_2426__i12
+   Register : integrator_4/r_t1_2426__i11
+   Register : integrator_4/r_t1_2426__i10
+   Register : integrator_4/r_t1_2426__i9
+   Register : integrator_4/r_t1_2426__i8
+   Register : integrator_4/r_t1_2426__i7
+   Register : integrator_4/r_t1_2426__i6
+   Register : integrator_4/r_t1_2426__i5
+   Register : integrator_4/r_t1_2426__i4
+   Register : integrator_4/r_t1_2426__i3
+   Register : integrator_4/r_t1_2426__i2
+   Register : integrator_4/r_t1_2426__i1
+   Register : integrator_4/o_cp_143
+   Register : r_t2_i0
+   Register : r_t4_i20
+   Register : r_t2_i21
+   Register : r_t2_i22
+   Register : ft232h_r5bytes/o_cmd_i0_i0
+   Register : ft232h_r5bytes/read_SM_FSM_i1
+   Register : ft232h_r5bytes/o_data_read__i0
+
+                                   Page 35
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : ft232h_r5bytes/o_data_ready_45
+   Register : ft232h_r5bytes/o_data_read__i31
+   Register : ft232h_r5bytes/o_data_read__i30
+   Register : ft232h_r5bytes/o_data_read__i29
+   Register : ft232h_r5bytes/o_data_read__i28
+   Register : ft232h_r5bytes/o_data_read__i27
+   Register : ft232h_r5bytes/o_data_read__i26
+   Register : ft232h_r5bytes/o_data_read__i25
+   Register : ft232h_r5bytes/o_data_read__i24
+   Register : ft232h_r5bytes/o_data_read__i23
+   Register : ft232h_r5bytes/o_data_read__i22
+   Register : ft232h_r5bytes/o_data_read__i21
+   Register : ft232h_r5bytes/o_data_read__i20
+   Register : ft232h_r5bytes/o_data_read__i19
+   Register : ft232h_r5bytes/o_data_read__i18
+   Register : ft232h_r5bytes/o_data_read__i17
+   Register : ft232h_r5bytes/o_data_read__i16
+   Register : ft232h_r5bytes/o_data_read__i15
+   Register : ft232h_r5bytes/o_data_read__i14
+   Register : ft232h_r5bytes/o_data_read__i13
+   Register : ft232h_r5bytes/o_data_read__i12
+   Register : ft232h_r5bytes/o_data_read__i11
+   Register : ft232h_r5bytes/o_data_read__i10
+   Register : ft232h_r5bytes/o_data_read__i9
+   Register : ft232h_r5bytes/o_data_read__i8
+   Register : ft232h_r5bytes/o_data_read__i7
+   Register : ft232h_r5bytes/o_data_read__i6
+   Register : ft232h_r5bytes/o_data_read__i5
+   Register : ft232h_r5bytes/o_data_read__i4
+   Register : ft232h_r5bytes/o_data_read__i3
+   Register : ft232h_r5bytes/o_data_read__i2
+   Register : ft232h_r5bytes/o_data_read__i1
+   Register : ft232h_r5bytes/read_SM_FSM_i10
+   Register : ft232h_r5bytes/read_SM_FSM_i9
+   Register : ft232h_r5bytes/read_SM_FSM_i8
+   Register : ft232h_r5bytes/read_SM_FSM_i7
+   Register : ft232h_r5bytes/read_SM_FSM_i6
+   Register : ft232h_r5bytes/read_SM_FSM_i5
+   Register : ft232h_r5bytes/read_SM_FSM_i4
+   Register : ft232h_r5bytes/read_SM_FSM_i3
+   Register : ft232h_r5bytes/read_SM_FSM_i2
+   Register : ft232h_r5bytes/o_cmd_i0_i7
+   Register : ft232h_r5bytes/o_cmd_i0_i6
+   Register : ft232h_r5bytes/o_cmd_i0_i5
+   Register : ft232h_r5bytes/o_cmd_i0_i4
+   Register : ft232h_r5bytes/o_cmd_i0_i3
+   Register : ft232h_r5bytes/o_cmd_i0_i2
+   Register : ft232h_r5bytes/o_cmd_i0_i1
+   Register : ft232h_r5bytes/ft232h_r/o_data_read_i0_i0
+   Register : ft232h_r5bytes/ft232h_r/o_read_done_89
+   Register : ft232h_r5bytes/ft232h_r/o_data_read_i0_i1
+   Register : ft232h_r5bytes/ft232h_r/o_data_read_i0_i2
+   Register : ft232h_r5bytes/ft232h_r/o_data_read_i0_i3
+   Register : ft232h_r5bytes/ft232h_r/o_data_read_i0_i4
+   Register : ft232h_r5bytes/ft232h_r/o_data_read_i0_i5
+   Register : ft232h_r5bytes/ft232h_r/o_data_read_i0_i6
+
+                                   Page 36
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : ft232h_r5bytes/ft232h_r/o_data_read_i0_i7
+   Register : r_t2_i23
+   Register : r_t2_i24
+   Register : integrator_3/r_t1_2420__i28
+   Register : integrator_3/r_t1_2420__i27
+   Register : integrator_3/r_t1_2420__i26
+   Register : integrator_3/r_t1_2420__i25
+   Register : integrator_3/r_t1_2420__i24
+   Register : integrator_3/r_t1_2420__i23
+   Register : integrator_3/r_t1_2420__i22
+   Register : integrator_3/r_t1_2420__i21
+   Register : integrator_3/r_t1_2420__i20
+   Register : integrator_3/r_t1_2420__i19
+   Register : integrator_3/r_t1_2420__i18
+   Register : integrator_3/r_t1_2420__i17
+   Register : integrator_3/r_t1_2420__i16
+   Register : integrator_3/r_t1_2420__i15
+   Register : integrator_3/r_t1_2420__i14
+   Register : integrator_3/r_t1_2420__i13
+   Register : integrator_3/r_t1_2420__i12
+   Register : integrator_3/r_t1_2420__i11
+   Register : integrator_3/r_t1_2420__i30
+   Register : integrator_3/r_t1_2420__i10
+   Register : integrator_3/r_t1_2420__i9
+   Register : integrator_3/r_t1_2420__i8
+   Register : integrator_3/r_t1_2420__i7
+   Register : integrator_3/r_t1_2420__i6
+   Register : integrator_3/r_t1_2420__i5
+   Register : integrator_3/r_t1_2420__i4
+   Register : integrator_3/r_t1_2420__i3
+   Register : integrator_3/r_t1_2420__i2
+   Register : integrator_3/r_t1_2420__i29
+   Register : integrator_3/r_t1_2420__i1
+   Register : integrator_3/seq_SM__i0
+   Register : integrator_3/seq_SM__i1
+   Register : integrator_3/o_cp_143
+   Register : integrator_3/o_sw_142
+   Register : integrator_3/r_t2_2424__i0
+   Register : integrator_3/r_t3_2422__i0
+   Register : integrator_3/r_t1_2420__i0
+   Register : integrator_3/r_t2_2424__i31
+   Register : integrator_3/r_t2_2424__i30
+   Register : integrator_3/r_t2_2424__i29
+   Register : integrator_3/r_t2_2424__i28
+   Register : integrator_3/r_t2_2424__i27
+   Register : integrator_3/r_t2_2424__i26
+   Register : integrator_3/r_t2_2424__i25
+   Register : integrator_3/r_t2_2424__i24
+   Register : integrator_3/r_t2_2424__i23
+   Register : integrator_3/r_t2_2424__i22
+   Register : integrator_3/r_t2_2424__i21
+   Register : integrator_3/r_t2_2424__i20
+   Register : integrator_3/r_t2_2424__i19
+   Register : integrator_3/r_t2_2424__i18
+   Register : integrator_3/r_t2_2424__i17
+   Register : integrator_3/r_t2_2424__i16
+
+                                   Page 37
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : integrator_3/r_t2_2424__i15
+   Register : integrator_3/r_t2_2424__i14
+   Register : integrator_3/r_t2_2424__i13
+   Register : integrator_3/r_t2_2424__i12
+   Register : integrator_3/r_t2_2424__i11
+   Register : integrator_3/r_t2_2424__i10
+   Register : integrator_3/r_t2_2424__i9
+   Register : integrator_3/r_t2_2424__i8
+   Register : integrator_3/r_t2_2424__i7
+   Register : integrator_3/r_t2_2424__i6
+   Register : integrator_3/r_t2_2424__i5
+   Register : integrator_3/r_t2_2424__i4
+   Register : integrator_3/r_t2_2424__i3
+   Register : integrator_3/r_t2_2424__i2
+   Register : integrator_3/r_t2_2424__i1
+   Register : integrator_3/r_t3_2422__i31
+   Register : integrator_3/r_t3_2422__i30
+   Register : integrator_3/r_t3_2422__i29
+   Register : integrator_3/r_t3_2422__i28
+   Register : integrator_3/r_t3_2422__i27
+   Register : integrator_3/r_t3_2422__i26
+   Register : integrator_3/r_t3_2422__i25
+   Register : integrator_3/r_t3_2422__i24
+   Register : integrator_3/r_t3_2422__i23
+   Register : integrator_3/r_t3_2422__i22
+   Register : integrator_3/r_t3_2422__i21
+   Register : integrator_3/r_t3_2422__i20
+   Register : integrator_3/r_t3_2422__i19
+   Register : integrator_3/r_t3_2422__i18
+   Register : integrator_3/r_t3_2422__i17
+   Register : integrator_3/r_t3_2422__i16
+   Register : integrator_3/r_t3_2422__i15
+   Register : integrator_3/r_t3_2422__i14
+   Register : integrator_3/r_t3_2422__i13
+   Register : integrator_3/r_t3_2422__i12
+   Register : integrator_3/r_t3_2422__i11
+   Register : integrator_3/r_t3_2422__i10
+   Register : integrator_3/r_t3_2422__i9
+   Register : integrator_3/r_t3_2422__i8
+   Register : integrator_3/r_t3_2422__i7
+   Register : integrator_3/r_t3_2422__i6
+   Register : integrator_3/r_t3_2422__i5
+   Register : integrator_3/r_t3_2422__i4
+   Register : integrator_3/r_t3_2422__i3
+   Register : integrator_3/r_t3_2422__i2
+   Register : integrator_3/r_t3_2422__i1
+   Register : integrator_3/r_t1_2420__i31
+   Register : ft232h_w/next_state_5__I_0_i1
+   Register : ft232h_w/next_state_5__I_0_i2
+   Register : ft232h_w/next_state_5__I_0_i3
+   Register : ft232h_w/next_state_5__I_0_i4
+   Register : r_t2_i25
+   Register : r_t2_i26
+   Register : integrator_1/r_t2_2412__i23
+   Register : integrator_1/T1_i0_i0
+   Register : integrator_1/T2_i0_i0
+
+                                   Page 38
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : integrator_1/r_t3_2410__i23
+   Register : integrator_1/r_t3_2410__i24
+   Register : integrator_1/r_t3_2410__i25
+   Register : integrator_1/r_mode_i0
+   Register : integrator_1/T3_i0_i0
+   Register : integrator_1/T4_i0_i0
+   Register : integrator_1/r_t3_2410__i26
+   Register : integrator_1/r_t3_2410__i27
+   Register : integrator_1/r_t3_2410__i28
+   Register : integrator_1/r_t2_2412__i24
+   Register : integrator_1/r_t3_2410__i29
+   Register : integrator_1/r_t3_2410__i30
+   Register : integrator_1/r_t3_2410__i31
+   Register : integrator_1/r_t2_2412__i25
+   Register : integrator_1/r_t2_2412__i1
+   Register : integrator_1/r_t2_2412__i2
+   Register : integrator_1/r_t2_2412__i3
+   Register : integrator_1/r_t2_2412__i0
+   Register : integrator_1/seq_SM__i0
+   Register : integrator_1/r_t2_2412__i4
+   Register : integrator_1/r_t2_2412__i5
+   Register : integrator_1/r_t1_2408__i1
+   Register : integrator_1/r_t1_2408__i2
+   Register : integrator_1/r_t2_2412__i26
+   Register : integrator_1/r_t3_2410__i0
+   Register : integrator_1/r_t1_2408__i0
+   Register : integrator_1/r_t1_2408__i3
+   Register : integrator_1/r_t1_2408__i4
+   Register : integrator_1/r_t1_2408__i5
+   Register : integrator_1/r_t1_2408__i6
+   Register : integrator_1/r_t1_2408__i7
+   Register : integrator_1/r_t1_2408__i8
+   Register : integrator_1/r_t1_2408__i9
+   Register : integrator_1/r_t1_2408__i10
+   Register : integrator_1/r_t1_2408__i11
+   Register : integrator_1/r_t2_2412__i6
+   Register : integrator_1/r_t1_2408__i12
+   Register : integrator_1/r_t1_2408__i13
+   Register : integrator_1/r_t1_2408__i14
+   Register : integrator_1/r_t1_2408__i15
+   Register : integrator_1/r_t2_2412__i7
+   Register : integrator_1/r_t2_2412__i27
+   Register : integrator_1/r_t1_2408__i16
+   Register : integrator_1/r_t1_2408__i17
+   Register : integrator_1/r_t1_2408__i18
+   Register : integrator_1/r_t1_2408__i19
+   Register : integrator_1/r_t1_2408__i20
+   Register : integrator_1/r_t2_2412__i8
+   Register : integrator_1/r_t1_2408__i21
+   Register : integrator_1/r_t1_2408__i22
+   Register : integrator_1/seq_SM__i1
+   Register : integrator_1/r_t2_2412__i9
+   Register : integrator_1/r_t1_2408__i23
+   Register : integrator_1/r_t2_2412__i28
+   Register : integrator_1/r_t1_2408__i24
+   Register : integrator_1/r_t1_2408__i25
+
+                                   Page 39
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : integrator_1/r_t1_2408__i26
+   Register : integrator_1/r_t2_2412__i10
+   Register : integrator_1/r_t1_2408__i27
+   Register : integrator_1/r_t1_2408__i28
+   Register : integrator_1/r_t1_2408__i29
+   Register : integrator_1/r_t1_2408__i30
+   Register : integrator_1/r_t2_2412__i29
+   Register : integrator_1/r_t1_2408__i31
+   Register : integrator_1/r_t2_2412__i11
+   Register : integrator_1/r_t3_2410__i1
+   Register : integrator_1/r_t2_2412__i12
+   Register : integrator_1/r_t2_2412__i13
+   Register : integrator_1/r_t3_2410__i2
+   Register : integrator_1/r_t3_2410__i3
+   Register : integrator_1/r_t3_2410__i4
+   Register : integrator_1/T4_i0_i31
+   Register : integrator_1/T4_i0_i30
+   Register : integrator_1/T4_i0_i29
+   Register : integrator_1/T4_i0_i28
+   Register : integrator_1/T4_i0_i27
+   Register : integrator_1/T4_i0_i26
+   Register : integrator_1/T4_i0_i25
+   Register : integrator_1/T4_i0_i24
+   Register : integrator_1/T4_i0_i23
+   Register : integrator_1/T4_i0_i22
+   Register : integrator_1/T4_i0_i21
+   Register : integrator_1/T4_i0_i20
+   Register : integrator_1/T4_i0_i19
+   Register : integrator_1/T4_i0_i18
+   Register : integrator_1/T4_i0_i17
+   Register : integrator_1/T4_i0_i16
+   Register : integrator_1/T4_i0_i15
+   Register : integrator_1/T4_i0_i14
+   Register : integrator_1/T4_i0_i13
+   Register : integrator_1/T4_i0_i12
+   Register : integrator_1/T4_i0_i11
+   Register : integrator_1/T4_i0_i10
+   Register : integrator_1/T4_i0_i9
+   Register : integrator_1/T4_i0_i8
+   Register : integrator_1/T4_i0_i7
+   Register : integrator_1/T4_i0_i6
+   Register : integrator_1/T4_i0_i5
+   Register : integrator_1/T4_i0_i4
+   Register : integrator_1/T4_i0_i3
+   Register : integrator_1/T4_i0_i2
+   Register : integrator_1/T4_i0_i1
+   Register : integrator_1/T3_i0_i31
+   Register : integrator_1/T3_i0_i30
+   Register : integrator_1/T3_i0_i29
+   Register : integrator_1/T3_i0_i28
+   Register : integrator_1/T3_i0_i27
+   Register : integrator_1/T3_i0_i26
+   Register : integrator_1/T3_i0_i25
+   Register : integrator_1/T3_i0_i24
+   Register : integrator_1/T3_i0_i23
+   Register : integrator_1/T3_i0_i22
+
+                                   Page 40
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : integrator_1/T3_i0_i21
+   Register : integrator_1/T3_i0_i20
+   Register : integrator_1/T3_i0_i19
+   Register : integrator_1/T3_i0_i18
+   Register : integrator_1/T3_i0_i17
+   Register : integrator_1/T3_i0_i16
+   Register : integrator_1/T3_i0_i15
+   Register : integrator_1/T3_i0_i14
+   Register : integrator_1/T3_i0_i13
+   Register : integrator_1/T3_i0_i12
+   Register : integrator_1/T3_i0_i11
+   Register : integrator_1/T3_i0_i10
+   Register : integrator_1/T3_i0_i9
+   Register : integrator_1/T3_i0_i8
+   Register : integrator_1/T3_i0_i7
+   Register : integrator_1/T3_i0_i6
+   Register : integrator_1/T3_i0_i5
+   Register : integrator_1/T3_i0_i4
+   Register : integrator_1/T3_i0_i3
+   Register : integrator_1/T3_i0_i2
+   Register : integrator_1/T3_i0_i1
+   Register : integrator_1/r_mode_i1
+   Register : integrator_1/T2_i0_i31
+   Register : integrator_1/T2_i0_i30
+   Register : integrator_1/T2_i0_i29
+   Register : integrator_1/T2_i0_i28
+   Register : integrator_1/T2_i0_i27
+   Register : integrator_1/T2_i0_i26
+   Register : integrator_1/T2_i0_i25
+   Register : integrator_1/T2_i0_i24
+   Register : integrator_1/T2_i0_i23
+   Register : integrator_1/T2_i0_i22
+   Register : integrator_1/T2_i0_i21
+   Register : integrator_1/T2_i0_i20
+   Register : integrator_1/T2_i0_i19
+   Register : integrator_1/T2_i0_i18
+   Register : integrator_1/T2_i0_i17
+   Register : integrator_1/T2_i0_i16
+   Register : integrator_1/T2_i0_i15
+   Register : integrator_1/T2_i0_i14
+   Register : integrator_1/T2_i0_i13
+   Register : integrator_1/T2_i0_i12
+   Register : integrator_1/T2_i0_i11
+   Register : integrator_1/T2_i0_i10
+   Register : integrator_1/T2_i0_i9
+   Register : integrator_1/T2_i0_i8
+   Register : integrator_1/T2_i0_i7
+   Register : integrator_1/T2_i0_i6
+   Register : integrator_1/T2_i0_i5
+   Register : integrator_1/T2_i0_i4
+   Register : integrator_1/T2_i0_i3
+   Register : integrator_1/T2_i0_i2
+   Register : integrator_1/T2_i0_i1
+   Register : integrator_1/r_t3_2410__i5
+   Register : integrator_1/r_t3_2410__i6
+   Register : integrator_1/T1_i0_i31
+
+                                   Page 41
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : integrator_1/T1_i0_i30
+   Register : integrator_1/T1_i0_i29
+   Register : integrator_1/T1_i0_i28
+   Register : integrator_1/T1_i0_i27
+   Register : integrator_1/T1_i0_i26
+   Register : integrator_1/T1_i0_i25
+   Register : integrator_1/T1_i0_i24
+   Register : integrator_1/T1_i0_i23
+   Register : integrator_1/T1_i0_i22
+   Register : integrator_1/T1_i0_i21
+   Register : integrator_1/T1_i0_i20
+   Register : integrator_1/T1_i0_i19
+   Register : integrator_1/T1_i0_i18
+   Register : integrator_1/T1_i0_i17
+   Register : integrator_1/T1_i0_i16
+   Register : integrator_1/T1_i0_i15
+   Register : integrator_1/T1_i0_i14
+   Register : integrator_1/T1_i0_i13
+   Register : integrator_1/T1_i0_i12
+   Register : integrator_1/T1_i0_i11
+   Register : integrator_1/T1_i0_i10
+   Register : integrator_1/T1_i0_i9
+   Register : integrator_1/T1_i0_i8
+   Register : integrator_1/T1_i0_i7
+   Register : integrator_1/T1_i0_i6
+   Register : integrator_1/T1_i0_i5
+   Register : integrator_1/T1_i0_i4
+   Register : integrator_1/T1_i0_i3
+   Register : integrator_1/T1_i0_i2
+   Register : integrator_1/T1_i0_i1
+   Register : integrator_1/r_t2_2412__i14
+   Register : integrator_1/r_t3_2410__i7
+   Register : integrator_1/r_t2_2412__i15
+   Register : integrator_1/r_t3_2410__i8
+   Register : integrator_1/r_t3_2410__i9
+   Register : integrator_1/r_t3_2410__i10
+   Register : integrator_1/r_t3_2410__i11
+   Register : integrator_1/r_t3_2410__i12
+   Register : integrator_1/r_t3_2410__i13
+   Register : integrator_1/r_t2_2412__i16
+   Register : integrator_1/r_t3_2410__i14
+   Register : integrator_1/o_cp_143
+   Register : integrator_1/r_t2_2412__i17
+   Register : integrator_1/r_t2_2412__i30
+   Register : integrator_1/r_t3_2410__i15
+   Register : integrator_1/r_t3_2410__i16
+   Register : integrator_1/r_t3_2410__i17
+   Register : integrator_1/r_t3_2410__i18
+   Register : integrator_1/r_t3_2410__i19
+   Register : integrator_1/r_t3_2410__i20
+   Register : integrator_1/r_t3_2410__i21
+   Register : integrator_1/r_t3_2410__i22
+   Register : integrator_1/r_t2_2412__i18
+   Register : integrator_1/r_t2_2412__i19
+   Register : integrator_1/r_t2_2412__i20
+   Register : integrator_1/r_t2_2412__i31
+
+                                   Page 42
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : integrator_1/r_t2_2412__i21
+   Register : integrator_1/r_t2_2412__i22
+   Register : integrator_1/o_sw_142
+   Register : integrator_2/r_t3_2416__i11
+   Register : integrator_2/r_t3_2416__i10
+   Register : integrator_2/r_t1_2414__i8
+   Register : integrator_2/r_t3_2416__i9
+   Register : integrator_2/r_t3_2416__i8
+   Register : integrator_2/r_t1_2414__i2
+   Register : integrator_2/r_t1_2414__i9
+   Register : integrator_2/r_t3_2416__i7
+   Register : integrator_2/r_t3_2416__i6
+   Register : integrator_2/r_t1_2414__i3
+   Register : integrator_2/r_t2_2418__i31
+   Register : integrator_2/r_t1_2414__i4
+   Register : integrator_2/r_t1_2414__i5
+   Register : integrator_2/r_t2_2418__i30
+   Register : integrator_2/r_t2_2418__i29
+   Register : integrator_2/r_t2_2418__i28
+   Register : integrator_2/r_t2_2418__i27
+   Register : integrator_2/r_t2_2418__i26
+   Register : integrator_2/r_t2_2418__i25
+   Register : integrator_2/r_t2_2418__i24
+   Register : integrator_2/r_t1_2414__i6
+   Register : integrator_2/r_t2_2418__i23
+   Register : integrator_2/r_t3_2416__i5
+   Register : integrator_2/r_t2_2418__i22
+   Register : integrator_2/r_t3_2416__i4
+   Register : integrator_2/r_t2_2418__i21
+   Register : integrator_2/r_t2_2418__i20
+   Register : integrator_2/r_t2_2418__i19
+   Register : integrator_2/r_t2_2418__i18
+   Register : integrator_2/r_t2_2418__i17
+   Register : integrator_2/r_t2_2418__i16
+   Register : integrator_2/r_t2_2418__i15
+   Register : integrator_2/r_t2_2418__i14
+   Register : integrator_2/r_t2_2418__i13
+   Register : integrator_2/r_t2_2418__i12
+   Register : integrator_2/r_t2_2418__i11
+   Register : integrator_2/r_t2_2418__i10
+   Register : integrator_2/r_t2_2418__i9
+   Register : integrator_2/r_t2_2418__i8
+   Register : integrator_2/r_t2_2418__i7
+   Register : integrator_2/r_t1_2414__i10
+   Register : integrator_2/seq_SM__i0
+   Register : integrator_2/r_t1_2414__i11
+   Register : integrator_2/r_t3_2416__i3
+   Register : integrator_2/r_t3_2416__i2
+   Register : integrator_2/r_t1_2414__i12
+   Register : integrator_2/r_t3_2416__i1
+   Register : integrator_2/r_t2_2418__i6
+   Register : integrator_2/r_t2_2418__i5
+   Register : integrator_2/r_t2_2418__i4
+   Register : integrator_2/r_t2_2418__i3
+   Register : integrator_2/r_t2_2418__i2
+   Register : integrator_2/r_t2_2418__i1
+
+                                   Page 43
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+   Register : integrator_2/r_t3_2416__i31
+   Register : integrator_2/r_t3_2416__i30
+   Register : integrator_2/r_t1_2414__i13
+   Register : integrator_2/r_t3_2416__i29
+   Register : integrator_2/r_t1_2414__i14
+   Register : integrator_2/r_t1_2414__i15
+   Register : integrator_2/r_t3_2416__i28
+   Register : integrator_2/r_t1_2414__i16
+   Register : integrator_2/r_t3_2416__i27
+   Register : integrator_2/r_t1_2414__i17
+   Register : integrator_2/r_t3_2416__i26
+   Register : integrator_2/r_t3_2416__i25
+   Register : integrator_2/r_t3_2416__i24
+   Register : integrator_2/r_t3_2416__i23
+   Register : integrator_2/r_t3_2416__i22
+   Register : integrator_2/r_t3_2416__i21
+   Register : integrator_2/r_t3_2416__i20
+   Register : integrator_2/r_t1_2414__i18
+   Register : integrator_2/r_t3_2416__i19
+   Register : integrator_2/r_t3_2416__i18
+   Register : integrator_2/r_t3_2416__i17
+   Register : integrator_2/r_t3_2416__i16
+   Register : integrator_2/r_t1_2414__i19
+   Register : integrator_2/r_t3_2416__i15
+   Register : integrator_2/r_t1_2414__i20
+   Register : integrator_2/r_t1_2414__i21
+   Register : integrator_2/r_t3_2416__i14
+   Register : integrator_2/r_t1_2414__i22
+   Register : integrator_2/r_t3_2416__i13
+   Register : integrator_2/r_t1_2414__i23
+   Register : integrator_2/r_t1_2414__i24
+   Register : integrator_2/r_t1_2414__i25
+   Register : integrator_2/r_t1_2414__i26
+   Register : integrator_2/seq_SM__i1
+   Register : integrator_2/o_cp_143
+   Register : integrator_2/o_sw_142
+   Register : integrator_2/r_t1_2414__i27
+   Register : integrator_2/r_t1_2414__i28
+   Register : integrator_2/r_t1_2414__i29
+   Register : integrator_2/r_t1_2414__i30
+   Register : integrator_2/r_t1_2414__i31
+   Register : integrator_2/r_t2_2418__i0
+   Register : integrator_2/r_t3_2416__i0
+   Register : integrator_2/r_t1_2414__i0
+   Register : integrator_2/r_t1_2414__i7
+   Register : integrator_2/r_t3_2416__i12
+   Register : integrator_2/r_t1_2414__i1
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'n19260' via the GSR
+     component.
+
+
+                                   Page 44
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+GSR Usage (cont)
+----------------
+     Type and number of components of the type: 
+   Register = 46 
+
+     Type and instance name of component: 
+   Register : adc2/SPI_module/r_TX_Count_i1
+   Register : adc2/SPI_module/r_SM_CS_i1
+   Register : adc2/SPI_module/r_TX_Count_i0
+   Register : adc2/SPI_module/SPI_Master_Inst/r_SPI_Clk_Count__i0
+   Register : adc2/SPI_module/SPI_Master_Inst/r_RX_Bit_Count_i0_i1
+   Register : adc2/SPI_module/SPI_Master_Inst/r_TX_Bit_Count_i0_i0
+   Register : adc2/SPI_module/SPI_Master_Inst/r_RX_Bit_Count_i0_i2
+   Register : adc2/SPI_module/SPI_Master_Inst/r_RX_Bit_Count_i0_i3
+   Register : adc2/SPI_module/SPI_Master_Inst/r_SPI_Clk_Edges_i0
+   Register : adc2/SPI_module/SPI_Master_Inst/r_RX_Bit_Count_i0_i0
+   Register : adc2/SPI_module/SPI_Master_Inst/r_Leading_Edge_109
+   Register : adc2/SPI_module/SPI_Master_Inst/r_SPI_Clk_Edges_i6
+   Register : adc2/SPI_module/SPI_Master_Inst/r_SPI_Clk_Edges_i4
+   Register : adc2/SPI_module/SPI_Master_Inst/r_SPI_Clk_Edges_i3
+   Register : adc2/SPI_module/SPI_Master_Inst/r_SPI_Clk_Edges_i2
+   Register : adc2/SPI_module/SPI_Master_Inst/r_SPI_Clk_Edges_i1
+   Register : adc2/SPI_module/SPI_Master_Inst/o_TX_Ready_106
+   Register : adc2/SPI_module/SPI_Master_Inst/r_Trailing_Edge_110
+   Register : adc2/SPI_module/SPI_Master_Inst/r_SPI_Clk_Count__i1
+   Register : adc2/SPI_module/SPI_Master_Inst/r_TX_Bit_Count_i0_i1
+   Register : adc2/SPI_module/SPI_Master_Inst/r_TX_Bit_Count_i0_i2
+   Register : adc1/SPI_module/r_TX_Count_i1
+   Register : adc1/SPI_module/r_SM_CS_i1
+   Register : adc1/SPI_module/r_TX_Count_i0
+   Register : adc1/SPI_module/SPI_Master_Inst/r_Leading_Edge_109
+   Register : adc1/SPI_module/SPI_Master_Inst/r_SPI_Clk_Edges_i0
+   Register : adc1/SPI_module/SPI_Master_Inst/r_RX_Bit_Count_i0_i0
+   Register : adc1/SPI_module/SPI_Master_Inst/r_SPI_Clk_Count__i0
+   Register : adc1/SPI_module/SPI_Master_Inst/r_TX_Bit_Count_i0_i0
+   Register : adc1/SPI_module/SPI_Master_Inst/r_TX_Bit_Count_i0_i1
+   Register : adc1/SPI_module/SPI_Master_Inst/r_TX_Bit_Count_i0_i2
+   Register : adc1/SPI_module/SPI_Master_Inst/o_TX_Ready_106
+   Register : adc1/SPI_module/SPI_Master_Inst/r_SPI_Clk_Count__i1
+   Register : adc1/SPI_module/SPI_Master_Inst/r_SPI_Clk_Edges_i6
+   Register : adc1/SPI_module/SPI_Master_Inst/r_SPI_Clk_Edges_i4
+   Register : adc1/SPI_module/SPI_Master_Inst/r_SPI_Clk_Edges_i3
+   Register : adc1/SPI_module/SPI_Master_Inst/r_SPI_Clk_Edges_i2
+   Register : adc1/SPI_module/SPI_Master_Inst/r_Trailing_Edge_110
+   Register : adc1/SPI_module/SPI_Master_Inst/r_SPI_Clk_Edges_i1
+   Register : adc1/SPI_module/SPI_Master_Inst/r_RX_Bit_Count_i0_i1
+   Register : adc1/SPI_module/SPI_Master_Inst/r_RX_Bit_Count_i0_i2
+   Register : adc1/SPI_module/SPI_Master_Inst/r_RX_Bit_Count_i0_i3
+   Register : ft232h_r5bytes/ft232h_r/curent_state_i1
+   Register : ft232h_r5bytes/ft232h_r/r_ft_wait_i0_i1
+   Register : ft232h_r5bytes/ft232h_r/r_ft_wait_i0_i2
+   Register : ft232h_r5bytes/ft232h_r/r_ft_wait_i0_i3
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+
+                                   Page 45
+
+
+
+
+Design:  qss013_top                                    Date:  10/05/20  12:16:13
+
+Run Time and Memory Usage (cont)
+--------------------------------
+   Peak Memory Usage: 55 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 46
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
+     reserved.

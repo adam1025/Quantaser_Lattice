@@ -1,0 +1,43 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Mon Oct 05 12:16:50 2020 *
+NOTE DESIGN NAME: qss013_top *
+NOTE DEVICE NAME: LCMXO2-2000HC-4TQFP100 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS DBUS[2] : 95 : inout *
+NOTE PINS DBUS[3] : 90 : inout *
+NOTE PINS DBUS[4] : 88 : inout *
+NOTE PINS DBUS[1] : 94 : inout *
+NOTE PINS DBUS[5] : 87 : inout *
+NOTE PINS DBUS[6] : 86 : inout *
+NOTE PINS DBUS[7] : 85 : inout *
+NOTE PINS DBUS[0] : 91 : inout *
+NOTE PINS wr_n : 78 : out *
+NOTE PINS rd_n : 81 : out *
+NOTE PINS sdo0 : 69 : out *
+NOTE PINS sck0 : 70 : out *
+NOTE PINS scs0 : 71 : out *
+NOTE PINS sdo1 : 62 : out *
+NOTE PINS sck1 : 59 : out *
+NOTE PINS scs1 : 58 : out *
+NOTE PINS adc1_sck : 43 : out *
+NOTE PINS adc1_cs : 45 : out *
+NOTE PINS adc2_sck : 48 : out *
+NOTE PINS adc2_cs : 47 : out *
+NOTE PINS sw1 : 65 : out *
+NOTE PINS sw2 : 64 : out *
+NOTE PINS sw3 : 66 : out *
+NOTE PINS sw4 : 67 : out *
+NOTE PINS cp : 63 : out *
+NOTE PINS cp_check : 42 : out *
+NOTE PINS LED[3] : 38 : out *
+NOTE PINS LED[2] : 39 : out *
+NOTE PINS LED[1] : 40 : out *
+NOTE PINS LED[0] : 41 : out *
+NOTE PINS clk : 3 : in *
+NOTE PINS txe_n : 83 : in *
+NOTE PINS rxf_n : 84 : in *
+NOTE PINS sdi0 : 68 : in *
+NOTE PINS sdi1 : 60 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

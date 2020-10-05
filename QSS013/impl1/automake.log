@@ -1,0 +1,796 @@
+
+map -a "MachXO2" -p LCMXO2-2000HC -t TQFP100 -s 4 -oc Commercial   "QSS013_impl1.ngd" -o "QSS013_impl1_map.ncd" -pr "QSS013_impl1.prf" -mp "QSS013_impl1.mrp" -lpf "C:/Users/user/Desktop/QSS013/impl1/QSS013_impl1.lpf" -lpf "C:/Users/user/Desktop/QSS013/QSS013.lpf" -c 0           
+map:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: QSS013_impl1.ngd
+   Picdevice="LCMXO2-2000HC"
+
+   Pictype="TQFP100"
+
+   Picspeed=4
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LCMXO2-2000HCTQFP100, Performance used: 4.
+
+Loading device for application map from file 'xo2c2000.nph' in environment: D:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+    <postMsg mid="52101186" type="Warning" dynamic="1" navigation="0" arg0="MachXO2"  />
+    <postMsg mid="52101110" type="Warning" dynamic="2" navigation="0" arg0="MachXO2" arg1="MachXO2"  />
+
+
+
+Design Summary:
+   Number of registers:    965 out of  2352 (41%)
+      PFU registers:          965 out of  2112 (46%)
+      PIO registers:            0 out of   240 (0%)
+   Number of SLICEs:       890 out of  1056 (84%)
+      SLICEs as Logic/ROM:    890 out of  1056 (84%)
+      SLICEs as RAM:            0 out of   792 (0%)
+      SLICEs as Carry:        561 out of  1056 (53%)
+   Number of LUT4s:        1751 out of  2112 (83%)
+      Number used as logic LUTs:        629
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      1122
+      Number used as shift registers:     0
+   Number of PIO sites used: 35 + 1(JTAGENB) out of 80 (45%)
+   Number of block RAMs:  0 out of 8 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 1 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+   Number of clocks:  2
+     Net clk_c: 556 loads, 556 rising, 0 falling (Driver: PIO clk )
+     Net ft232h_w/next_state_5__N_840: 3 loads, 3 rising, 0 falling (Driver: ft232h_w/i9200_1_lut_2_lut_3_lut )
+   Number of Clock Enables:  109
+     Net clk_c_enable_761: 16 loads, 16 LSLICEs
+     Net clk_c_enable_798: 16 loads, 16 LSLICEs
+     Net clk_c_enable_26: 1 loads, 1 LSLICEs
+     Net clk_c_enable_754: 16 loads, 16 LSLICEs
+     Net clk_c_enable_537: 16 loads, 16 LSLICEs
+     Net clk_c_enable_268: 1 loads, 1 LSLICEs
+     Net clk_c_enable_279: 1 loads, 1 LSLICEs
+     Net r_SM_CS_0: 1 loads, 1 LSLICEs
+     Net o_tx_dv: 1 loads, 1 LSLICEs
+     Net clk_c_enable_288: 1 loads, 1 LSLICEs
+     Net clk_c_enable_307: 1 loads, 1 LSLICEs
+     Net clk_c_enable_308: 1 loads, 1 LSLICEs
+     Net clk_c_enable_341: 1 loads, 1 LSLICEs
+     Net clk_c_enable_766: 1 loads, 1 LSLICEs
+     Net r_SM_CS_0_adj_1846: 1 loads, 1 LSLICEs
+     Net o_tx_dv_adj_1834: 1 loads, 1 LSLICEs
+     Net adc2/clk_c_enable_41: 1 loads, 1 LSLICEs
+     Net adc2/clk_c_enable_493: 14 loads, 14 LSLICEs
+     Net adc2/clk_c_enable_136: 1 loads, 1 LSLICEs
+     Net adc2/clk_c_enable_275: 4 loads, 4 LSLICEs
+     Net adc2/clk_c_enable_494: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/clk_c_enable_129: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/clk_c_enable_681: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_11: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_13: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_19: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_20: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_23: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_42: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_119: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_53: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_105: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_78: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_77: 1 loads, 1 LSLICEs
+     Net clk_c_enable_461: 27 loads, 27 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_106: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_132: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_146: 2 loads, 2 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_345: 2 loads, 2 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_207: 3 loads, 3 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_202: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_747: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_756: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_757: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_340: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/clk_c_enable_353: 1 loads, 1 LSLICEs
+     Net adc1/clk_c_enable_528: 14 loads, 14 LSLICEs
+     Net adc1/clk_c_enable_533: 1 loads, 1 LSLICEs
+     Net adc1/clk_c_enable_133: 1 loads, 1 LSLICEs
+     Net adc1/clk_c_enable_171: 1 loads, 1 LSLICEs
+     Net adc1/clk_c_enable_227: 4 loads, 4 LSLICEs
+     Net adc1/SPI_module/clk_c_enable_124: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_107: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_333: 2 loads, 2 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_309: 3 loads, 3 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_300: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_161: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_695: 2 loads, 2 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_541: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_546: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_338: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_542: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_547: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_551: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_552: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_554: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_555: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_565: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_570: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_571: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_573: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_579: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_598: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/clk_c_enable_621: 1 loads, 1 LSLICEs
+     Net rst/clk_c_enable_758: 3 loads, 3 LSLICEs
+     Net rst_n: 16 loads, 16 LSLICEs
+     Net clk_c_enable_451: 25 loads, 25 LSLICEs
+     Net integrator_4/clk_c_enable_208: 2 loads, 2 LSLICEs
+     Net integrator_4/clk_c_enable_787: 1 loads, 1 LSLICEs
+     Net integrator_4/clk_c_enable_354: 1 loads, 1 LSLICEs
+     Net clk_c_enable_635: 17 loads, 17 LSLICEs
+     Net integrator_4/clk_c_enable_666: 17 loads, 17 LSLICEs
+     Net integrator_4/clk_c_enable_707: 17 loads, 17 LSLICEs
+     Net ft232h_r5bytes/clk_c_enable_468: 4 loads, 4 LSLICEs
+     Net ft232h_r5bytes/ft232h_r/clk_c_enable_81: 1 loads, 1 LSLICEs
+     Net ft232h_r5bytes/ft232h_r/curent_state_0: 3 loads, 3 LSLICEs
+     Net ft232h_r5bytes/ft232h_r/clk_c_enable_156: 1 loads, 1 LSLICEs
+     Net ft232h_r5bytes/ft232h_r/clk_c_enable_610: 4 loads, 4 LSLICEs
+     Net clk_c_enable_807: 17 loads, 17 LSLICEs
+     Net integrator_3/clk_c_enable_186: 2 loads, 2 LSLICEs
+     Net integrator_3/clk_c_enable_560: 1 loads, 1 LSLICEs
+     Net integrator_3/clk_c_enable_425: 1 loads, 1 LSLICEs
+     Net clk_c_enable_763: 17 loads, 17 LSLICEs
+     Net integrator_3/clk_c_enable_806: 17 loads, 17 LSLICEs
+     Net ft232h_w/clk_c_enable_503: 8 loads, 8 LSLICEs
+     Net ft232h_w/clk_c_enable_297: 1 loads, 1 LSLICEs
+     Net ft232h_w/clk_c_enable_312: 1 loads, 1 LSLICEs
+     Net clk_c_enable_762: 17 loads, 17 LSLICEs
+     Net integrator_1/clk_c_enable_679: 17 loads, 17 LSLICEs
+     Net integrator_1/clk_c_enable_284: 1 loads, 1 LSLICEs
+     Net clk_c_enable_339: 17 loads, 17 LSLICEs
+     Net integrator_1/clk_c_enable_569: 1 loads, 1 LSLICEs
+     Net integrator_1/clk_c_enable_770: 1 loads, 1 LSLICEs
+     Net integrator_2/clk_c_enable_779: 17 loads, 17 LSLICEs
+     Net integrator_2/clk_c_enable_789: 17 loads, 17 LSLICEs
+     Net integrator_2/clk_c_enable_721: 17 loads, 17 LSLICEs
+     Net integrator_2/clk_c_enable_327: 1 loads, 1 LSLICEs
+     Net integrator_2/clk_c_enable_329: 1 loads, 1 LSLICEs
+     Net integrator_2/clk_c_enable_424: 1 loads, 1 LSLICEs
+   Number of LSRs:  42
+     Net n10578: 16 loads, 16 LSLICEs
+     Net n10640: 16 loads, 16 LSLICEs
+     Net n19260: 60 loads, 60 LSLICEs
+     Net n10609: 16 loads, 16 LSLICEs
+     Net n10344: 16 loads, 16 LSLICEs
+     Net r_SM_CS_0: 1 loads, 1 LSLICEs
+     Net o_tx_dv: 5 loads, 5 LSLICEs
+     Net n10338: 1 loads, 1 LSLICEs
+     Net n13261: 1 loads, 1 LSLICEs
+     Net r_SM_CS_0_adj_1846: 1 loads, 1 LSLICEs
+     Net o_tx_dv_adj_1834: 5 loads, 5 LSLICEs
+     Net adc2/SPI_module/w_Master_Ready: 5 loads, 5 LSLICEs
+     Net adc2/SPI_module/n13267: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/n7458: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/n7453: 2 loads, 2 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/n10559: 1 loads, 1 LSLICEs
+     Net adc2/SPI_module/SPI_Master_Inst/n17796: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/w_Master_Ready: 5 loads, 5 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/n17874: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/n10337: 1 loads, 1 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/n7447: 2 loads, 2 LSLICEs
+     Net adc1/SPI_module/SPI_Master_Inst/n7451: 1 loads, 1 LSLICEs
+     Net n18918: 3 loads, 3 LSLICEs
+     Net integrator_4/n10543: 17 loads, 17 LSLICEs
+     Net integrator_4/n10549: 17 loads, 17 LSLICEs
+     Net integrator_4/n10547: 17 loads, 17 LSLICEs
+     Net ft232h_r5bytes/ft232h_r/curent_state_0: 1 loads, 1 LSLICEs
+     Net ft232h_r5bytes/ft232h_r/n12633: 2 loads, 2 LSLICEs
+     Net integrator_3/n10764: 17 loads, 17 LSLICEs
+     Net n18916: 3 loads, 3 LSLICEs
+     Net integrator_3/n10534: 17 loads, 17 LSLICEs
+     Net integrator_3/n10527: 17 loads, 17 LSLICEs
+     Net ft232h_w/n18849: 2 loads, 2 LSLICEs
+     Net ft232h_w/curent_state_3: 1 loads, 1 LSLICEs
+     Net integrator_1/n10392: 17 loads, 17 LSLICEs
+     Net integrator_1/n10427: 17 loads, 17 LSLICEs
+     Net n18887: 2 loads, 2 LSLICEs
+     Net integrator_1/n10460: 17 loads, 17 LSLICEs
+     Net integrator_2/n10702: 17 loads, 17 LSLICEs
+     Net integrator_2/n10353: 17 loads, 17 LSLICEs
+     Net integrator_2/n10733: 17 loads, 17 LSLICEs
+     Net integrator_2/n18867: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net n19260: 110 loads
+     Net cmd_0: 39 loads
+     Net spi_sm_0: 39 loads
+     Net spi_sm_0_adj_1835: 39 loads
+     Net adc1/spi_sm_1: 38 loads
+     Net adc2/spi_sm_1: 38 loads
+     Net cmd_1: 38 loads
+     Net cmd_3: 31 loads
+     Net r_mode_0_adj_1837: 30 loads
+     Net cmd_2: 28 loads
+ 
+
+   Number of warnings:  2
+   Number of errors:    0
+
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 55 MB
+
+Dumping design to file QSS013_impl1_map.ncd.
+
+ncd2vdb "QSS013_impl1_map.ncd" ".vdbs/QSS013_impl1_map.vdb"
+
+Loading device for application ncd2vdb from file 'xo2c2000.nph' in environment: D:/lscc/diamond/3.11_x64/ispfpga.
+
+mpartrce -p "QSS013_impl1.p2t" -f "QSS013_impl1.p3t" -tf "QSS013_impl1.pt" "QSS013_impl1_map.ncd" "QSS013_impl1.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "QSS013_impl1_map.ncd"
+Mon Oct 05 12:16:15 2020
+
+PAR: Place And Route Diamond (64-bit) 3.11.0.396.4.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/user/Desktop/QSS013/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF QSS013_impl1_map.ncd QSS013_impl1.dir/5_1.ncd QSS013_impl1.prf
+Preference file: QSS013_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file QSS013_impl1_map.ncd.
+Design name: qss013_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-2000HC
+Package:     TQFP100
+Performance: 4
+Loading device for application par from file 'xo2c2000.nph' in environment: D:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)   35+1(JTAGENB)/216 17% used
+                  35+1(JTAGENB)/80  45% bonded
+
+   SLICE            890/1056         84% used
+
+   GSR                1/1           100% used
+
+
+Number of Signals: 2668
+Number of Connections: 6671
+    <postMsg mid="61061044" type="Warning" dynamic="1" navigation="0" arg0="MachXO2"  />
+
+Pin Constraint Summary:
+   35 out of 35 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_c (driver: clk, clk load #: 556)
+
+
+The following 8 signals are selected to use the secondary clock routing resources:
+    n19260 (driver: rst/SLICE_793, clk load #: 0, sr load #: 60, ce load #: 0)
+    clk_c_enable_461 (driver: rst/SLICE_718, clk load #: 0, sr load #: 0, ce load #: 27)
+    clk_c_enable_451 (driver: rst/SLICE_718, clk load #: 0, sr load #: 0, ce load #: 25)
+    integrator_4/n10543 (driver: SLICE_992, clk load #: 0, sr load #: 17, ce load #: 0)
+    clk_c_enable_635 (driver: SLICE_996, clk load #: 0, sr load #: 0, ce load #: 17)
+    integrator_4/n10549 (driver: integrator_4/SLICE_994, clk load #: 0, sr load #: 17, ce load #: 0)
+    integrator_4/clk_c_enable_666 (driver: integrator_4/SLICE_1026, clk load #: 0, sr load #: 0, ce load #: 17)
+    integrator_4/n10547 (driver: SLICE_876, clk load #: 0, sr load #: 17, ce load #: 0)
+
+Signal n19260 is selected as Global Set/Reset.
+Starting Placer Phase 0.
+..........
+Finished Placer Phase 0.  REAL time: 4 secs 
+
+Starting Placer Phase 1.
+...................
+Placer score = 417967.
+Finished Placer Phase 1.  REAL time: 8 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  412374
+Finished Placer Phase 2.  REAL time: 8 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 1 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "3 (PL3A)", clk load = 556
+  SECONDARY "n19260" from Q0 on comp "rst/SLICE_793" on site "R9C15A", clk load = 0, ce load = 0, sr load = 60
+  SECONDARY "clk_c_enable_461" from Q1 on comp "rst/SLICE_718" on site "R9C13C", clk load = 0, ce load = 27, sr load = 0
+  SECONDARY "clk_c_enable_451" from Q0 on comp "rst/SLICE_718" on site "R9C13C", clk load = 0, ce load = 25, sr load = 0
+  SECONDARY "integrator_4/n10543" from F0 on comp "SLICE_992" on site "R9C15B", clk load = 0, ce load = 0, sr load = 17
+  SECONDARY "clk_c_enable_635" from F1 on comp "SLICE_996" on site "R9C13D", clk load = 0, ce load = 17, sr load = 0
+  SECONDARY "integrator_4/n10549" from F1 on comp "integrator_4/SLICE_994" on site "R9C15D", clk load = 0, ce load = 0, sr load = 17
+  SECONDARY "integrator_4/clk_c_enable_666" from F0 on comp "integrator_4/SLICE_1026" on site "R9C13B", clk load = 0, ce load = 17, sr load = 0
+  SECONDARY "integrator_4/n10547" from F1 on comp "SLICE_876" on site "R9C15C", clk load = 0, ce load = 0, sr load = 17
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 8 out of 8 (100%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   35 + 1(JTAGENB) out of 216 (16.7%) PIO sites used.
+   35 + 1(JTAGENB) out of 80 (45.0%) bonded PIO sites used.
+   Number of PIO comps: 35; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+-----------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref |
++----------+----------------+------------+-----------+
+| 0        | 12 / 19 ( 63%) | 2.5V       | -         |
+| 1        | 13 / 21 ( 61%) | 2.5V       | -         |
+| 2        | 9 / 20 ( 45%)  | 2.5V       | -         |
+| 3        | 0 / 6 (  0%)   | -          | -         |
+| 4        | 0 / 6 (  0%)   | -          | -         |
+| 5        | 1 / 8 ( 12%)   | 2.5V       | -         |
++----------+----------------+------------+-----------+
+
+Total placer CPU time: 7 secs 
+
+Dumping design to file QSS013_impl1.dir/5_1.ncd.
+
+0 connections routed; 6671 unrouted.
+Starting router resource preassignment
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=ft232h_w/next_state_5__N_840 loads=3 clock_loads=3"  />
+
+Completed router resource preassignment. Real time: 10 secs 
+
+Start NBR router at 12:16:25 10/05/20
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 12:16:25 10/05/20
+
+Start NBR section for initial routing at 12:16:25 10/05/20
+Level 1, iteration 1
+0(0.00%) conflict; 4717(70.71%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.238ns/0.000ns; real time: 11 secs 
+Level 2, iteration 1
+16(0.01%) conflicts; 4699(70.44%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.311ns/0.000ns; real time: 11 secs 
+Level 3, iteration 1
+39(0.03%) conflicts; 4308(64.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.711ns/0.000ns; real time: 12 secs 
+Level 4, iteration 1
+141(0.11%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.684ns/0.000ns; real time: 13 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 12:16:28 10/05/20
+Level 1, iteration 1
+0(0.00%) conflict; 173(2.59%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.684ns/0.000ns; real time: 13 secs 
+Level 4, iteration 1
+66(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.848ns/0.000ns; real time: 13 secs 
+Level 4, iteration 2
+24(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.717ns/0.000ns; real time: 13 secs 
+Level 4, iteration 3
+8(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.602ns/0.000ns; real time: 13 secs 
+Level 4, iteration 4
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.602ns/0.000ns; real time: 13 secs 
+Level 4, iteration 5
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.717ns/0.000ns; real time: 13 secs 
+Level 4, iteration 6
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.717ns/0.000ns; real time: 13 secs 
+Level 4, iteration 7
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.717ns/0.000ns; real time: 13 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 12:16:28 10/05/20
+Level 4, iteration 0
+Level 4, iteration 1
+5(0.00%) conflicts; 35(0.52%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.139ns/0.000ns; real time: 15 secs 
+Level 4, iteration 2
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 3
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 4
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 5
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 6
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 7
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 8
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 9
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 10
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 11
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 12
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 13
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 14
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 15
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 16
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 17
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 18
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 19
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 20
+1(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 21
+0(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.299ns/0.000ns; real time: 15 secs 
+Level 4, iteration 0
+0(0.00%) conflict; 39(0.58%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.697ns/0.000ns; real time: 16 secs 
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.697ns/0.000ns; real time: 16 secs 
+Level 4, iteration 0
+0(0.00%) conflict; 0(0.00%) untouched conn; 35769 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: -1.297ns/-35.769ns; real time: 16 secs 
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 33605 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: -1.297ns/-33.605ns; real time: 16 secs 
+Level 4, iteration 0
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.697ns/0.000ns; real time: 16 secs 
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.697ns/0.000ns; real time: 16 secs 
+Level 4, iteration 0
+0(0.00%) conflict; 0(0.00%) untouched conn; 33605 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: -1.297ns/-33.605ns; real time: 16 secs 
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 33501 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: -1.297ns/-33.501ns; real time: 16 secs 
+Level 4, iteration 0
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.697ns/0.000ns; real time: 16 secs 
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.697ns/0.000ns; real time: 16 secs 
+
+Start NBR section for re-routing at 12:16:32 10/05/20
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.717ns/0.000ns; real time: 17 secs 
+
+Start NBR section for post-routing at 12:16:32 10/05/20
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 2.717ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=ft232h_w/next_state_5__N_840 loads=3 clock_loads=3"  />
+
+Total CPU time 16 secs 
+Total REAL time: 18 secs 
+Completely routed.
+End of route.  6671 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 26, hold timing errors: 36
+
+Timing score: 0 
+
+Dumping design to file QSS013_impl1.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 2.717
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = -1.292
+PAR_SUMMARY::Timing score<hold /<ns>> = 26.187
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 16 secs 
+Total REAL time to completion: 18 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "QSS013_impl1.pt" -o "QSS013_impl1.twr" "QSS013_impl1.ncd" "QSS013_impl1.prf"
+trce:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file qss013_impl1.ncd.
+Design name: qss013_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-2000HC
+Package:     TQFP100
+Performance: 4
+Loading device for application trce from file 'xo2c2000.nph' in environment: D:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
+Mon Oct 05 12:16:34 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o QSS013_impl1.twr -gui -msgset C:/Users/user/Desktop/QSS013/promote.xml QSS013_impl1.ncd QSS013_impl1.prf 
+Design file:     qss013_impl1.ncd
+Preference file: qss013_impl1.prf
+Device,speed:    LCMXO2-2000HC,4
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 229989 paths, 3 nets, and 6576 connections (98.58% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
+Mon Oct 05 12:16:34 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o QSS013_impl1.twr -gui -msgset C:/Users/user/Desktop/QSS013/promote.xml QSS013_impl1.ncd QSS013_impl1.prf 
+Design file:     qss013_impl1.ncd
+Preference file: qss013_impl1.prf
+Device,speed:    LCMXO2-2000HC,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 36  Score: 26187
+Cumulative negative slack: 26187
+
+Constraints cover 229989 paths, 3 nets, and 6576 connections (98.58% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 36 (hold)
+Score: 0 (setup), 26187 (hold)
+Cumulative negative slack: 26187 (0+26187)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 62 MB
+
+
+tmcheck -par "QSS013_impl1.par" 
+
+bitgen -f "QSS013_impl1.t2b" -w "QSS013_impl1.ncd"  -jedec "QSS013_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.11.0.396.4
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file QSS013_impl1.ncd.
+Design name: qss013_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-2000HC
+Package:     TQFP100
+Performance: 4
+Loading device for application Bitgen from file 'xo2c2000.nph' in environment: D:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from QSS013_impl1.prf.
+    <postMsg mid="1083784" type="Warning" dynamic="0" navigation="0"  />
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                         2.08**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                        DISABLE  |
++---------------------------------+---------------------------------+
+|                       SDM_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                       I2C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|        MUX_CONFIGURATION_PORTS  |                         ENABLE  |
++---------------------------------+---------------------------------+
+|                  CONFIGURATION  |                          CFG**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                           ON**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 ENABLE_TRANSFR  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  SHAREDEBRINIT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 1.95.
+ 
+Saving bit stream in "QSS013_impl1.jed".
+ 
+===========
+UFM Summary.
+===========
+UFM Size:        639 Pages (128*639 Bits).
+UFM Utilization: General Purpose Flash Memory.
+ 
+Available General Purpose Flash Memory:  639 Pages (Page 0 to Page 638).
+Initialized UFM Pages:                     0 Page.
+ 
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 266 MB

@@ -1,0 +1,241 @@
+----------------------------------------------------------------------
+Report for cell qss013_top.TECH
+Register bits:  965 of 2352 (41.029%)
+I/O cells:      35
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                 BB         8          100.0
+                              CCU2D       561          100.0
+                            FD1P3AX       213          100.0
+                            FD1P3AY         9          100.0
+                            FD1P3IX       583          100.0
+                            FD1P3JX        39          100.0
+                             FD1S1I         4          100.0
+                            FD1S3AX        42          100.0
+                            FD1S3AY        15          100.0
+                            FD1S3IX        55          100.0
+                            FD1S3JX         5          100.0
+                                GSR         1          100.0
+                                 IB         5          100.0
+                               LUT4       629          100.0
+                                 OB        22          100.0
+                              PFUMX        28          100.0
+                        VERIFIC_PWR         1          100.0
+SUB MODULES
+             SPI_Master(SPI_MODE=3)         1
+          SPI_Master(SPI_MODE=3)_U0         1
+SPI_Master_With_Single_CS(SPI_MODE=3)         1
+SPI_Master_With_Single_CS(SPI_MODE=3)_U1         1
+                  ft232h_asynFIFO_r         1
+            ft232h_asynFIFO_r5bytes         1
+                  ft232h_asynFIFO_w         1
+                     integrator_seq         1
+                  integrator_seq_U2         1
+                  integrator_seq_U3         1
+                  integrator_seq_U4         1
+ltc1865_controller(SPI_NEXT_VALID_NUM=250,SCK_HALF_PERIOD_CLK=2)         1
+ltc1865_controller(SPI_NEXT_VALID_NUM=250,SCK_HALF_PERIOD_CLK=2)_U5         1
+         rstn_gen(RST_CNT=50000000)         1
+                              TOTAL      2234
+----------------------------------------------------------------------
+Report for cell ltc1865_controller(SPI_NEXT_VALID_NUM=250,SCK_HALF_PERIOD_CLK=2).v1
+Instance Path : adc2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        17            3.0
+                            FD1P3AX        22           10.3
+                            FD1P3AY         3           33.3
+                            FD1P3IX        36            6.2
+                            FD1P3JX        11           28.2
+                            FD1S3AX         3            7.1
+                            FD1S3AY         1            6.7
+                            FD1S3IX         6           10.9
+                            FD1S3JX         2           40.0
+                               LUT4       125           19.9
+                              PFUMX         1            3.6
+SUB MODULES
+             SPI_Master(SPI_MODE=3)         1
+SPI_Master_With_Single_CS(SPI_MODE=3)         1
+                              TOTAL       229
+----------------------------------------------------------------------
+Report for cell SPI_Master_With_Single_CS(SPI_MODE=3).v1
+Instance Path : adc2.SPI_module
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        20            9.4
+                            FD1P3AY         3           33.3
+                            FD1P3IX         9            1.5
+                            FD1P3JX         5           12.8
+                            FD1S3AX         2            4.8
+                            FD1S3AY         1            6.7
+                            FD1S3IX         6           10.9
+                            FD1S3JX         2           40.0
+                               LUT4        71           11.3
+SUB MODULES
+             SPI_Master(SPI_MODE=3)         1
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell SPI_Master(SPI_MODE=3).v1
+Instance Path : adc2.SPI_module.SPI_Master_Inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        20            9.4
+                            FD1P3AY         1           11.1
+                            FD1P3IX         7            1.2
+                            FD1P3JX         5           12.8
+                            FD1S3AX         1            2.4
+                            FD1S3AY         1            6.7
+                            FD1S3IX         5            9.1
+                            FD1S3JX         2           40.0
+                               LUT4        60            9.5
+                              TOTAL       102
+----------------------------------------------------------------------
+Report for cell ltc1865_controller(SPI_NEXT_VALID_NUM=250,SCK_HALF_PERIOD_CLK=2)_U5.v1
+Instance Path : adc1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        17            3.0
+                            FD1P3AX        22           10.3
+                            FD1P3AY         3           33.3
+                            FD1P3IX        36            6.2
+                            FD1P3JX        11           28.2
+                            FD1S3AX         3            7.1
+                            FD1S3AY         1            6.7
+                            FD1S3IX         6           10.9
+                            FD1S3JX         2           40.0
+                               LUT4       122           19.4
+                              PFUMX         1            3.6
+SUB MODULES
+          SPI_Master(SPI_MODE=3)_U0         1
+SPI_Master_With_Single_CS(SPI_MODE=3)_U1         1
+                              TOTAL       226
+----------------------------------------------------------------------
+Report for cell SPI_Master_With_Single_CS(SPI_MODE=3)_U1.v1
+Instance Path : adc1.SPI_module
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        20            9.4
+                            FD1P3AY         3           33.3
+                            FD1P3IX         9            1.5
+                            FD1P3JX         5           12.8
+                            FD1S3AX         2            4.8
+                            FD1S3AY         1            6.7
+                            FD1S3IX         6           10.9
+                            FD1S3JX         2           40.0
+                               LUT4        68           10.8
+SUB MODULES
+          SPI_Master(SPI_MODE=3)_U0         1
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell SPI_Master(SPI_MODE=3)_U0.v1
+Instance Path : adc1.SPI_module.SPI_Master_Inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        20            9.4
+                            FD1P3AY         1           11.1
+                            FD1P3IX         7            1.2
+                            FD1P3JX         5           12.8
+                            FD1S3AX         1            2.4
+                            FD1S3AY         1            6.7
+                            FD1S3IX         5            9.1
+                            FD1S3JX         2           40.0
+                               LUT4        60            9.5
+                              TOTAL       102
+----------------------------------------------------------------------
+Report for cell rstn_gen(RST_CNT=50000000).v1
+Instance Path : rst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        17            3.0
+                            FD1P3AX         4            1.9
+                            FD1S3AX        20           47.6
+                            FD1S3AY        12           80.0
+                               LUT4        16            2.5
+                              TOTAL        69
+----------------------------------------------------------------------
+Report for cell integrator_seq.v1
+Instance Path : integrator_4
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       119           21.2
+                            FD1P3AX         1            0.5
+                            FD1P3IX        99           17.0
+                               LUT4        28            4.5
+                              PFUMX         2            7.1
+                              TOTAL       249
+----------------------------------------------------------------------
+Report for cell ft232h_asynFIFO_r5bytes.v1
+Instance Path : ft232h_r5bytes
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        18            8.5
+                            FD1P3AY         2           22.2
+                            FD1P3IX         3            0.5
+                            FD1S3AX         1            2.4
+                            FD1S3IX        43           78.2
+                            FD1S3JX         1           20.0
+                               LUT4        72           11.4
+                              PFUMX         2            7.1
+SUB MODULES
+                  ft232h_asynFIFO_r         1
+                              TOTAL       143
+----------------------------------------------------------------------
+Report for cell ft232h_asynFIFO_r.v1
+Instance Path : ft232h_r5bytes.ft232h_r
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        10            4.7
+                            FD1P3AY         2           22.2
+                            FD1P3IX         3            0.5
+                            FD1S3AX         1            2.4
+                            FD1S3IX         1            1.8
+                               LUT4        17            2.7
+                              PFUMX         1            3.6
+                              TOTAL        35
+----------------------------------------------------------------------
+Report for cell integrator_seq_U2.v1
+Instance Path : integrator_3
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       119           21.2
+                            FD1P3AX         1            0.5
+                            FD1P3IX        99           17.0
+                               LUT4        25            4.0
+                              PFUMX         1            3.6
+                              TOTAL       245
+----------------------------------------------------------------------
+Report for cell ft232h_asynFIFO_w.v1
+Instance Path : ft232h_w
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX         9            4.2
+                            FD1P3AY         1           11.1
+                             FD1S1I         4          100.0
+                            FD1S3AX         7           16.7
+                            FD1S3AY         1            6.7
+                               LUT4        43            6.8
+                              PFUMX        11           39.3
+                              TOTAL        76
+----------------------------------------------------------------------
+Report for cell integrator_seq_U4.v1
+Instance Path : integrator_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       153           27.3
+                            FD1P3AX       129           60.6
+                            FD1P3IX        99           17.0
+                            FD1S3AX         2            4.8
+                               LUT4        24            3.8
+                              PFUMX         1            3.6
+                              TOTAL       408
+----------------------------------------------------------------------
+Report for cell integrator_seq_U3.v1
+Instance Path : integrator_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       119           21.2
+                            FD1P3AX         1            0.5
+                            FD1P3IX        99           17.0
+                               LUT4        37            5.9
+                              PFUMX         2            7.1
+                              TOTAL       258

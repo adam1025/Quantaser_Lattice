@@ -1,0 +1,50 @@
+-a "MachXO2"
+-d LCMXO2-2000HC
+-t TQFP100
+-s 4
+-sdc "C:/Users/user/Desktop/QSS013/impl1/source/qss013_sdc.ldc"
+-frequency 200
+-optimization_goal Balanced
+-bram_utilization 100
+-ramstyle Auto
+-romstyle auto
+-dsp_utilization 100
+-use_dsp 1
+-use_carry_chain 1
+-carry_chain_length 0
+-force_gsr Auto
+-resource_sharing 1
+-propagate_constants 1
+-remove_duplicate_regs 1
+-mux_style Auto
+-max_fanout 1000
+-fsm_encoding_style Auto
+-twr_paths 3
+-fix_gated_clocks 1
+-loop_limit 1950
+
+
+
+-use_io_insertion 1
+-resolve_mixed_drivers 0
+-use_io_reg auto
+
+
+-lpf 1
+-p "C:/Users/user/Desktop/QSS013"
+-ver "C:/Users/user/Desktop/QSS013/qss013.v"
+"C:/Users/user/Documents/GitHub/Quantaser_Lattice/QSS013_Library/rstn_gen.v"
+"C:/Users/user/Documents/GitHub/Quantaser_Lattice/QSS013_Library/ltc1865_controller.v"
+"C:/Users/user/Documents/GitHub/Quantaser_Lattice/QSS013_Library/ft232h_asynFIFO_w.v"
+"C:/Users/user/Documents/GitHub/Quantaser_Lattice/QSS013_Library/ft232h_asynFIFO_r5bytes.v"
+"C:/Users/user/Documents/GitHub/Quantaser_Lattice/QSS013_Library/integrator_seq.v"
+"C:/Users/user/Documents/GitHub/Quantaser_Lattice/QSS013_Library/SPI_Master.v"
+"C:/Users/user/Documents/GitHub/Quantaser_Lattice/QSS013_Library/SPI_Master_With_Single_CS.v"
+"C:/Users/user/Documents/GitHub/Quantaser_Lattice/QSS013_Library/ft232h_asynFIFO_r.v"
+-top qss013_top
+
+
+-p "D:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data" "C:/Users/user/Desktop/QSS013/impl1" "C:/Users/user/Desktop/QSS013"
+
+-ngd "QSS013_impl1.ngd"
+

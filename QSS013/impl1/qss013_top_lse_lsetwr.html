@@ -1,0 +1,323 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Mon Oct 05 12:16:09 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     qss013_top
+Constraint file: qss013_top_temp_lse.sdc 
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 20.000000 -waveform { 0.000000 10.000000 } -name clk [ get_ports { clk } ]
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 3.069ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \integrator_1/T1_i0_i0  (from clk +)
+   Destination:    FD1P3AX    SP             \integrator_1/o_cp_143  (to clk +)
+
+   Delay:                  16.646ns  (44.8% logic, 55.2% route), 23 logic levels.
+
+ Constraint Details:
+
+     16.646ns data_path \integrator_1/T1_i0_i0 to \integrator_1/o_cp_143 meets
+     20.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 19.715ns) by 3.069ns
+
+ Path Details: \integrator_1/T1_i0_i0 to \integrator_1/o_cp_143
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \integrator_1/T1_i0_i0 (from clk)
+Route         5   e 1.462                                  T1[0]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \integrator_1/sub_76_add_2_1
+Route         1   e 0.020                                  \integrator_1/n16715
+FCI_TO_F    ---     0.598            CIN to S[2]           \integrator_1/sub_76_add_2_3
+Route         4   e 1.686                                  o_sw_N_1360[2]
+A1_TO_FCO   ---     0.827           B[2] to COUT           \integrator_1/sub_1872_add_2_3
+Route         1   e 0.020                                  \integrator_1/n16700
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_5
+Route         1   e 0.020                                  \integrator_1/n16701
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_7
+Route         1   e 0.020                                  \integrator_1/n16702
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_9
+Route         1   e 0.020                                  \integrator_1/n16703
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_11
+Route         1   e 0.020                                  \integrator_1/n16704
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_13
+Route         1   e 0.020                                  \integrator_1/n16705
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_15
+Route         1   e 0.020                                  \integrator_1/n16706
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_17
+Route         1   e 0.020                                  \integrator_1/n16707
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_19
+Route         1   e 0.020                                  \integrator_1/n16708
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_21
+Route         1   e 0.020                                  \integrator_1/n16709
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_23
+Route         1   e 0.020                                  \integrator_1/n16710
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_25
+Route         1   e 0.020                                  \integrator_1/n16711
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_27
+Route         1   e 0.020                                  \integrator_1/n16712
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_29
+Route         1   e 0.020                                  \integrator_1/n16713
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_31
+Route         1   e 0.020                                  \integrator_1/n16714
+FCI_TO_F    ---     0.598            CIN to S[2]           \integrator_1/sub_1872_add_2_33
+Route         5   e 1.750                                  n6101
+LUT4        ---     0.493              B to Z              \integrator_1/i1_3_lut
+Route         2   e 1.141                                  \integrator_1/n17463
+LUT4        ---     0.493              C to Z              \integrator_1/i12765_4_lut_4_lut
+Route         1   e 0.941                                  \integrator_1/n51
+LUT4        ---     0.493              A to Z              \integrator_1/i35_4_lut
+Route         1   e 0.941                                  \integrator_1/n16
+LUT4        ---     0.493              D to Z              \integrator_1/i12621_4_lut
+Route         1   e 0.941                                  \integrator_1/clk_c_enable_569
+                  --------
+                   16.646  (44.8% logic, 55.2% route), 23 logic levels.
+
+
+Passed:  The following path meets requirements by 3.069ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \integrator_1/T1_i0_i0  (from clk +)
+   Destination:    FD1P3AX    SP             \integrator_1/o_cp_143  (to clk +)
+
+   Delay:                  16.646ns  (44.8% logic, 55.2% route), 23 logic levels.
+
+ Constraint Details:
+
+     16.646ns data_path \integrator_1/T1_i0_i0 to \integrator_1/o_cp_143 meets
+     20.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 19.715ns) by 3.069ns
+
+ Path Details: \integrator_1/T1_i0_i0 to \integrator_1/o_cp_143
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \integrator_1/T1_i0_i0 (from clk)
+Route         5   e 1.462                                  T1[0]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \integrator_1/sub_76_add_2_1
+Route         1   e 0.020                                  \integrator_1/n16715
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_3
+Route         1   e 0.020                                  \integrator_1/n16716
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_5
+Route         1   e 0.020                                  \integrator_1/n16717
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_7
+Route         1   e 0.020                                  \integrator_1/n16718
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_9
+Route         1   e 0.020                                  \integrator_1/n16719
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_11
+Route         1   e 0.020                                  \integrator_1/n16720
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_13
+Route         1   e 0.020                                  \integrator_1/n16721
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_15
+Route         1   e 0.020                                  \integrator_1/n16722
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_17
+Route         1   e 0.020                                  \integrator_1/n16723
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_19
+Route         1   e 0.020                                  \integrator_1/n16724
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_21
+Route         1   e 0.020                                  \integrator_1/n16725
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_23
+Route         1   e 0.020                                  \integrator_1/n16726
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_25
+Route         1   e 0.020                                  \integrator_1/n16727
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_27
+Route         1   e 0.020                                  \integrator_1/n16728
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_29
+Route         1   e 0.020                                  \integrator_1/n16729
+FCI_TO_F    ---     0.598            CIN to S[2]           \integrator_1/sub_76_add_2_31
+Route         4   e 1.686                                  o_sw_N_1360[30]
+A1_TO_FCO   ---     0.827           B[2] to COUT           \integrator_1/sub_1872_add_2_31
+Route         1   e 0.020                                  \integrator_1/n16714
+FCI_TO_F    ---     0.598            CIN to S[2]           \integrator_1/sub_1872_add_2_33
+Route         5   e 1.750                                  n6101
+LUT4        ---     0.493              B to Z              \integrator_1/i1_3_lut
+Route         2   e 1.141                                  \integrator_1/n17463
+LUT4        ---     0.493              C to Z              \integrator_1/i12765_4_lut_4_lut
+Route         1   e 0.941                                  \integrator_1/n51
+LUT4        ---     0.493              A to Z              \integrator_1/i35_4_lut
+Route         1   e 0.941                                  \integrator_1/n16
+LUT4        ---     0.493              D to Z              \integrator_1/i12621_4_lut
+Route         1   e 0.941                                  \integrator_1/clk_c_enable_569
+                  --------
+                   16.646  (44.8% logic, 55.2% route), 23 logic levels.
+
+
+Passed:  The following path meets requirements by 3.069ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \integrator_1/T1_i0_i0  (from clk +)
+   Destination:    FD1P3AX    SP             \integrator_1/o_cp_143  (to clk +)
+
+   Delay:                  16.646ns  (44.8% logic, 55.2% route), 23 logic levels.
+
+ Constraint Details:
+
+     16.646ns data_path \integrator_1/T1_i0_i0 to \integrator_1/o_cp_143 meets
+     20.000ns delay constraint less
+      0.285ns LCE_S requirement (totaling 19.715ns) by 3.069ns
+
+ Path Details: \integrator_1/T1_i0_i0 to \integrator_1/o_cp_143
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \integrator_1/T1_i0_i0 (from clk)
+Route         5   e 1.462                                  T1[0]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \integrator_1/sub_76_add_2_1
+Route         1   e 0.020                                  \integrator_1/n16715
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_3
+Route         1   e 0.020                                  \integrator_1/n16716
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_5
+Route         1   e 0.020                                  \integrator_1/n16717
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_7
+Route         1   e 0.020                                  \integrator_1/n16718
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_9
+Route         1   e 0.020                                  \integrator_1/n16719
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_11
+Route         1   e 0.020                                  \integrator_1/n16720
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_13
+Route         1   e 0.020                                  \integrator_1/n16721
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_15
+Route         1   e 0.020                                  \integrator_1/n16722
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_17
+Route         1   e 0.020                                  \integrator_1/n16723
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_76_add_2_19
+Route         1   e 0.020                                  \integrator_1/n16724
+FCI_TO_F    ---     0.598            CIN to S[2]           \integrator_1/sub_76_add_2_21
+Route         4   e 1.686                                  o_sw_N_1360[20]
+A1_TO_FCO   ---     0.827           B[2] to COUT           \integrator_1/sub_1872_add_2_21
+Route         1   e 0.020                                  \integrator_1/n16709
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_23
+Route         1   e 0.020                                  \integrator_1/n16710
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_25
+Route         1   e 0.020                                  \integrator_1/n16711
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_27
+Route         1   e 0.020                                  \integrator_1/n16712
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_29
+Route         1   e 0.020                                  \integrator_1/n16713
+FCI_TO_FCO  ---     0.157            CIN to COUT           \integrator_1/sub_1872_add_2_31
+Route         1   e 0.020                                  \integrator_1/n16714
+FCI_TO_F    ---     0.598            CIN to S[2]           \integrator_1/sub_1872_add_2_33
+Route         5   e 1.750                                  n6101
+LUT4        ---     0.493              B to Z              \integrator_1/i1_3_lut
+Route         2   e 1.141                                  \integrator_1/n17463
+LUT4        ---     0.493              C to Z              \integrator_1/i12765_4_lut_4_lut
+Route         1   e 0.941                                  \integrator_1/n51
+LUT4        ---     0.493              A to Z              \integrator_1/i35_4_lut
+Route         1   e 0.941                                  \integrator_1/n16
+LUT4        ---     0.493              D to Z              \integrator_1/i12621_4_lut
+Route         1   e 0.941                                  \integrator_1/clk_c_enable_569
+                  --------
+                   16.646  (44.8% logic, 55.2% route), 23 logic levels.
+
+Report: 16.931 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 20.000000          |             |             |
+-waveform { 0.000000 10.000000 } -name  |             |             |
+clk [ get_ports { clk } ]               |    20.000 ns|    16.931 ns|    23  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover  388294 paths, 2686 nets, and 7696 connections (98.6% coverage)
+
+
+Peak memory: 96739328 bytes, TRCE: 11698176 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

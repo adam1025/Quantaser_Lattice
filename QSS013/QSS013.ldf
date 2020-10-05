@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="QSS013" device="LCMXO2-2000HC-4TG100C" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="qss013_top" top="qss013_top"/>
+        <Source name="qss013.v" type="Verilog" type_short="Verilog">
+            <Options top_module="qss013_top"/>
+        </Source>
+        <Source name="../../Documents/GitHub/Quantaser_Lattice/QSS013_Library/rstn_gen.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../Documents/GitHub/Quantaser_Lattice/QSS013_Library/ltc1865_controller.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../Documents/GitHub/Quantaser_Lattice/QSS013_Library/ft232h_asynFIFO_w.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../Documents/GitHub/Quantaser_Lattice/QSS013_Library/ft232h_asynFIFO_r5bytes.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../Documents/GitHub/Quantaser_Lattice/QSS013_Library/integrator_seq.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../Documents/GitHub/Quantaser_Lattice/QSS013_Library/SPI_Master.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../Documents/GitHub/Quantaser_Lattice/QSS013_Library/SPI_Master_With_Single_CS.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../Documents/GitHub/Quantaser_Lattice/QSS013_Library/ft232h_asynFIFO_r.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/qss013_sdc.ldc" type="LSE Design Constraints File" type_short="LDC">
+            <Options/>
+        </Source>
+        <Source name="QSS013.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="QSS013_RW1.sty"/>
+</BaliProject>
